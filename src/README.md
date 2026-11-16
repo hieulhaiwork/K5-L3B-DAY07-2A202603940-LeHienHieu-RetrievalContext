@@ -50,6 +50,33 @@ File output là JSON array để dùng với công cụ tổng hợp của start
 
 Trace có câu hỏi, cấu hình, model yêu cầu/thực trả, request và response tool, query/filter/top-k, kết quả retrieval, context cuối, câu trả lời, citation, token usage, thời gian, chi phí và lỗi. Không ghi API key hoặc chuỗi kết nối database. Chi phí OpenAI là ước tính từ token usage và bảng giá trong cấu hình; usage không xác định được giữ `null`. Chi phí embedding lưu theo số liệu provider trả về.
 
-Các lượt thử ngoài benchmark được lưu trong `results/agent_dense_smoke.json`, gồm cả lần bị chặn do thiếu citation trong nội dung trả lời. Không dùng chúng làm kết quả dev/test. Kiểm tra ID citation chỉ bảo đảm ID có trong context và xuất hiện trong câu trả lời; chất lượng hỗ trợ từng khẳng định vẫn cần đọc đối chiếu evidence khi đánh giá.
 
 Tham khảo: [OpenAI function calling](https://developers.openai.com/api/docs/guides/function-calling), [GPT-4o và bảng giá](https://developers.openai.com/api/docs/models/gpt-4o).
+
+## Benchmark Dense
+
+Bộ `data/questions.json` có 24 câu: dev 17 và test 7. Chỉ dùng dev để phát triển/chọn cấu hình; chạy test sau khi chốt. Kết quả baseline hiện tại đã bao gồm cả hai split.
+
+Chạy benchmark với thư mục kết quả mới:
+
+```powershell
+python -X utf8 -B -m src.benchmark --split all --output results/dense_baseline
+```
+
+Có thể chọn `--split dev` hoặc `--split test`. Runner chỉ truyền question và filter vào agent; gold được dùng sau đó để tính retrieval metrics. Trace được lưu sau từng câu. File trace có sẵn được bảo vệ khỏi chạy đè.
+
+Chỉ chạy lại các câu lỗi mạng/provider, giữ nguyên cấu hình và lưu lịch sử vào `previous_attempts`:
+
+```powershell
+python -X utf8 -B -m src.benchmark --split all --output results/dense_baseline --retry-errors
+```
+
+Sau khi đối chiếu context, câu trả lời và citation, lưu nhãn theo schema `results/dense_baseline/reviews.json`, rồi tổng hợp mà không gọi API:
+
+```powershell
+python -X utf8 -B -m src.benchmark --split all --output results/dense_baseline --summarize-only --reviews results/dense_baseline/reviews.json
+```
+
+Kết quả gồm `traces.json`, `retrieval.json`, `reviews.json` và `summary.json`. Nhãn câu trả lời/citation được tổng hợp bằng `starter/agent_metrics.py`. Câu thiếu evidence không tham gia mẫu số retrieval. `context_exact_evidence` ghi khớp trích dẫn nguyên văn; Context Evidence Rate dùng nhãn đủ bằng chứng của context cuối. ID citation hợp lệ vẫn cần được đối chiếu với các khẳng định trong câu trả lời.
+
+Thời gian và usage có tính cả lịch sử retry. Chi phí chat được ước tính từ usage đã nhận; nếu request lỗi không có usage, tổng chi phí giữ `null` và báo riêng phần đã xác định cùng số request chưa xác định.

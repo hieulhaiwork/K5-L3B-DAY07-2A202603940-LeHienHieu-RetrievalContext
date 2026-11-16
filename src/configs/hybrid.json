@@ -1,0 +1,5 @@
+{
+  "lexical": "tfidf",
+  "candidate_k": 20,
+  "rrf_k": 60
+}

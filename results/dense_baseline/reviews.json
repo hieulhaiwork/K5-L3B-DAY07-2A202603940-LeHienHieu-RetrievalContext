@@ -1,0 +1,207 @@
+[
+  {
+    "query_id": "q01",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Context trang 151 nêu đúng điều kiện phải áp dụng heading cho section/subsection; câu trả lời và citation khớp."
+  },
+  {
+    "query_id": "q02",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Context trang 155 nêu đủ Layout > Margins > Custom Margins và hộp thoại điều chỉnh; câu trả lời đầy đủ."
+  },
+  {
+    "query_id": "q03",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Sau khi chạy lại lỗi mạng với cấu hình giữ nguyên, context trang 155 xác nhận landscape phù hợp bảng/đồ thị không vừa trang đứng; câu trả lời đúng và citation hỗ trợ."
+  },
+  {
+    "query_id": "q04",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Context trang 163 giải thích tăng khả năng quan sát sửa đổi và định nghĩa double-spacing; câu trả lời được hỗ trợ."
+  },
+  {
+    "query_id": "q05",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Context trang 167 nêu cả tính thiếu logic của thứ bậc màu và vấn đề accessibility; câu trả lời đủ hai ý."
+  },
+  {
+    "query_id": "q06",
+    "answer_grade": 1,
+    "context_grade": 2,
+    "citation_support": [
+      false
+    ],
+    "reason": "So sánh deleting/resolving đúng với trang 171, nhưng câu trả lời bổ sung rằng comment không hiện trong main document view; các đoạn context không xác nhận chi tiết này. Citation chưa hỗ trợ toàn bộ phần giải thích."
+  },
+  {
+    "query_id": "q07",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Context trang 170 nêu đúng ví dụ four/for, giới hạn spell-check và yêu cầu tự proofread; câu trả lời đủ các ý."
+  },
+  {
+    "query_id": "q08",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true,
+      true
+    ],
+    "reason": "Hai citation trang 176 lần lượt giải thích vai trò mã style và cách áp dụng Normal/Heading trước theme; các khẳng định được hai đoạn hỗ trợ."
+  },
+  {
+    "query_id": "q09",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Context trang 179 nêu trực tiếp Semitransparent làm watermark ít hiện hơn; câu trả lời đúng và ngắn gọn."
+  },
+  {
+    "query_id": "q10",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Sau khi chạy lại lỗi mạng với cấu hình giữ nguyên, context trang 181 nêu Paste without formatting loại font, size và color của nguồn; câu trả lời đầy đủ."
+  },
+  {
+    "query_id": "q11",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Context trang 188 nêu heading được thêm vào outline và outline phản ánh hierarchy, kèm ví dụ Industry and Market Analysis; câu trả lời được hỗ trợ."
+  },
+  {
+    "query_id": "q12",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Context trang 190 phân biệt thụt đầu dòng với dịch cả paragraph và nêu đủ đường dẫn Format > Align & indent > Increase indent."
+  },
+  {
+    "query_id": "q13",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Context trang 195 xác nhận Continuous giữ cùng trang và next page mở trang mới; câu trả lời đúng cả hai loại."
+  },
+  {
+    "query_id": "q14",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Context trang 196 nêu rõ phải Delete từ bên trái và không dùng Backspace từ bên phải; câu trả lời giữ đủ điều kiện."
+  },
+  {
+    "query_id": "q15",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Evidence đầy đủ ở hạng 2 trang 203 nêu Suggesting mode và Editing dropdown; agent trích đúng đoạn và trả lời đủ. Hạng 1 chỉ nói cách chia sẻ Commenter, chưa đủ cho câu hỏi."
+  },
+  {
+    "query_id": "q16",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Context trang 207 nêu đúng File > Version history > See version history; câu trả lời và citation đủ đường dẫn."
+  },
+  {
+    "query_id": "q17",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Context trang 209 chỉ rõ hover trên đoạn thay đổi để hiện tên người sửa; câu trả lời không nhầm với danh sách người dùng trong sidebar."
+  },
+  {
+    "query_id": "q18",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Context trang 212 nêu rõ bản copy không mang version history, comments và suggestions; câu trả lời giữ đủ ba thành phần."
+  },
+  {
+    "query_id": "q19",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Context trang 213 nêu trực tiếp nhấn tam giác bên trái version để xem micro changes; câu trả lời và citation khớp."
+  },
+  {
+    "query_id": "q20",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Context trang 214 nêu OneDrive hoặc SharePoint là điều kiện lưu để có version history; câu trả lời đúng, không bỏ điều kiện."
+  },
+  {
+    "query_id": "q21",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "Agent đã tìm được hướng dẫn chấp nhận Track Changes qua giao diện nhưng không có mã VBA; câu trả lời cuối từ chối và không tự bổ sung code."
+  },
+  {
+    "query_id": "q22",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "Context chỉ xác nhận nơi lưu và cách mở version history, không cung cấp thời hạn OneDrive tính bằng ngày; agent từ chối, không suy diễn số ngày."
+  },
+  {
+    "query_id": "q23",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "Context chỉ mô tả giao diện tạo/chèn nội dung Google Docs, không có Apps Script xuất PDF; agent từ chối và không tự tạo mã."
+  },
+  {
+    "query_id": "q24",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "Context không có quota API theo phút/người dùng; agent từ chối, không đưa ra con số từ kiến thức ngoài corpus."
+  }
+]

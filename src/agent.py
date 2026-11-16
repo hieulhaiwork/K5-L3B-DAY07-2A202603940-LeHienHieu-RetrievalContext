@@ -67,12 +67,17 @@ def run_agent(question, controller, retriever, config, *, query_id="manual", fil
     embedder = getattr(retriever, "embedder", None)
     embed_start = len(getattr(embedder, "events", []))
     cache_start = getattr(embedder, "cache_hits", 0)
-    trace = {"query_id": query_id, "question": question, "strategy": "dense",
+    trace = {"query_id": query_id, "question": question, "strategy": config.get("retrieval_method", "dense"),
              "started_at": datetime.now(timezone.utc).isoformat(), "config": copy.deepcopy(config),
              "filters": filters, "status": "error", "answer": "", "citations": [],
              "events": [], "context": "[]", "context_ids": []}
-    messages = [{"role": "system", "content": SYSTEM}, {"role": "user", "content": question}]
+    system = SYSTEM
+    if config.get("retrieval_method") == "hybrid":
+        system = system.replace("this Dense baseline", "this Hybrid configuration")
+    messages = [{"role": "system", "content": system}, {"role": "user", "content": question}]
     search_tool = copy.deepcopy(SEARCH)
+    if config.get("retrieval_method") == "hybrid":
+        search_tool["function"]["description"] = "Find evidence using Dense + TF-IDF retrieval fused by RRF."
     search_tool["function"]["parameters"]["properties"]["query"]["enum"] = [question]
     candidates, searches, finalizations = [], 0, 0
     final_limit = config.get("max_finalization_attempts", 1)
@@ -111,6 +116,8 @@ def run_agent(question, controller, retriever, config, *, query_id="manual", fil
                 finally:
                     event["elapsed_ms"] = round((time.perf_counter() - search_start) * 1000, 3)
                 event["results"] = results
+                if getattr(retriever, "last_search", None) is not None:
+                    event["retrieval_details"] = copy.deepcopy(retriever.last_search)
                 if len(results) > config["top_k"] or len({r["id"] for r in results}) != len(results):
                     raise ValueError("Retriever returned too many or duplicate chunks")
                 candidates.extend(results)
