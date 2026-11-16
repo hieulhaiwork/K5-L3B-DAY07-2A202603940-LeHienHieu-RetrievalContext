@@ -1,6 +1,6 @@
 # Chạy và tái lập bài nộp cơ bản
 
-Cấu hình được chọn là **Dense + GPT-4o rerank**, ghi tại `src/configs/selected.json`. Kết quả dev của ba phương pháp nằm trong `results/dense_baseline`, `results/hybrid`, `results/rerank`. Kết quả test cuối nằm riêng trong `results/final_dense` và `results/final_selected`.
+Cấu hình được chọn là **Dense + GPT-4o rerank**, ghi tại `src/configs/selected.json`. Kết quả dev của ba phương pháp nằm trong `results/dense_baseline`, `results/hybrid`, `results/rerank`. Mỗi thư mục chứa cả kết quả dev và test; test chỉ chạy sau khi chốt cấu hình trên dev.
 
 ## Tái lập trên máy mới
 
@@ -26,21 +26,20 @@ Dựng mới index dùng 317 chunks được chia sẻ tại `data/chunks.json`,
 
 ## Cấu hình chọn và đánh giá cuối
 
-Tiêu chí chọn chỉ dùng dev: grounded answer, Context Evidence Rate, Evidence Hit@3, abstention, rồi Hit@1 khi hòa. Rerank đạt Hit@1 15/15 so với Dense 14/15; chi phí model bổ sung được báo như đánh đổi. Cấu hình được khóa trước khi đánh giá trên test mới.
+Tiêu chí chọn chỉ dùng dev: grounded answer, Context Evidence Rate, Evidence Hit@3, abstention, rồi Hit@1 khi hòa. Rerank đạt Hit@1 15/15 so với Dense 14/15; chi phí model bổ sung được báo như đánh đổi. Cấu hình được khóa trước khi chạy test.
 
-- `data/questions.json`: benchmark thí nghiệm ban đầu; test cũ chỉ giữ để đối chiếu lịch sử.
-- `data/questions_final.json`: giữ nguyên 17 câu dev và dùng 7 câu test mới (`f01–f07`).
+- `data/questions.json`: benchmark 24 câu (17 dev + 7 test).
 - `src/configs/selected.json`: tiêu chí, kết quả dev và snapshot cấu hình chọn/baseline.
 - `--selection`: từ chối cấu hình hoặc file benchmark khác với snapshot đã khóa.
 
-Chạy lại đánh giá cuối, dùng thư mục output mới để giữ kết quả đã nộp:
+Chạy lại test, dùng thư mục output mới để giữ kết quả đã nộp:
 
 ```powershell
-python -X utf8 -B -m src.benchmark --method dense --questions data/questions_final.json --split test --selection src/configs/selected.json --output results/reproduction/final_dense
-python -X utf8 -B -m src.benchmark --method rerank --questions data/questions_final.json --split test --selection src/configs/selected.json --output results/reproduction/final_selected
+python -X utf8 -B -m src.benchmark --method dense --questions data/questions.json --split test --selection src/configs/selected.json --output results/reproduction/test_dense
+python -X utf8 -B -m src.benchmark --method rerank --questions data/questions.json --split test --selection src/configs/selected.json --output results/reproduction/test_rerank
 ```
 
-Dev của cả ba phương pháp có thể tái chạy bằng `--questions data/questions_final.json --split dev --method dense|hybrid|rerank`, mỗi phương pháp dùng thư mục output riêng, bỏ `--selection` cho lượt thí nghiệm dev. Lỗi API được lưu để chạy lại bằng `--retry-errors`; giữ nguyên cấu hình. Hạn mức OpenRouter được tính cho cả dựng index và query embedding.
+Dev của cả ba phương pháp có thể tái chạy bằng `--questions data/questions.json --split dev --method dense|hybrid|rerank`, mỗi phương pháp dùng thư mục output riêng, bỏ `--selection` cho lượt thí nghiệm dev. Lỗi API được lưu để chạy lại bằng `--retry-errors`; giữ nguyên cấu hình. Hạn mức OpenRouter được tính cho cả dựng index và query embedding.
 
 Demo agent mặc định dùng cấu hình được chọn; có thể chỉ định `--method dense`, `hybrid` hoặc `rerank`:
 

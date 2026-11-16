@@ -38,6 +38,6 @@ Nộp code, cách chạy, cấu hình, benchmark, trace và [báo cáo](report/i
 - [Cài đặt, dựng index và lệnh chạy](src/README.md); thư viện trong `requirements.txt`, cấu hình mẫu tại `.env.example`, PostgreSQL/pgvector tại `compose.yaml`.
 - Ba phương pháp: Dense, Hybrid Dense + TF-IDF/RRF, Dense + GPT-4o rerank.
 - [Cấu hình được chọn trên dev](src/configs/selected.json): rerank.
-- [Benchmark cuối](data/questions_final.json): 17 dev + 7 test mới; benchmark thí nghiệm cũ được giữ tại `data/questions.json`.
-- Test cuối: [baseline](results/final_dense/summary.json) và [cấu hình chọn](results/final_selected/summary.json). Mỗi thư mục có trace, nhãn và kết quả từng câu.
+- [Benchmark](data/questions.json): 24 câu, 17 dev + 7 test.
+- Kết quả: [Dense](results/dense_baseline/summary.json), [Hybrid](results/hybrid/summary.json), [Rerank](results/rerank/summary.json). Mỗi thư mục có trace, nhãn và kết quả từng câu (dev + test).
 - Phạm vi nộp hiện tại là phần cơ bản; phần nâng cao chưa thực hiện.

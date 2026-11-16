@@ -12,6 +12,5 @@ Không đưa `gold` hoặc nhãn đáp án vào model và retrieval tool. Ghi ng
 
 - `chunks.json`: 317 chunks trên 64 trang PDF được chọn từ *Workplace Software and Skills* của OpenStax, giấy phép CC BY-NC-SA 4.0. [PDF nguồn](https://assets.openstax.org/oscms-prodcms/media/documents/Workplace_Software_and_Skills_-_WEB_IlfJtcP.pdf). Attribution và quyền sử dụng được giữ trong metadata từng chunk.
 - `chunks_B.jsonl`: snapshot đầu vào từ Lab 6; chuyển sang schema Lab 7 bằng `src/convert_data/convert_chunks.py`, giữ nguyên giá trị ID và nội dung.
-- `questions.json`: 24 câu của các lượt thí nghiệm ban đầu.
-- `questions_final.json`: cùng 17 dev, thay 7 test cũ bằng test mới sau khi đã chọn cấu hình. Năm câu có đáp án và hai câu thiếu evidence đều có nguồn/nhãn hoặc cách kiểm tra thiếu thông tin.
+- `questions.json`: 24 câu, gồm dev (15 có đáp án + 2 thiếu evidence) và test (5 có đáp án + 2 thiếu evidence), đều có nguồn/nhãn hoặc cách kiểm tra thiếu thông tin.
 - ID nguồn và số trang PDF giữ nguyên từ Lab 6; đường dẫn PDF trong chunk là provenance của nguồn cũ. Index có thể dựng lại từ `chunks.json` mà không cần tải PDF.

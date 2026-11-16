@@ -24,7 +24,7 @@
 
 - **Lỗi dev và kết quả trước/sau:** `q15`: Dense hạng 2, Hybrid/rerank hạng 1. `q01`, `q08`: Hybrid hạng 2, rerank đưa về hạng 1. Rerank tăng Hit@1 dev từ 14/15 lên 15/15 so với Dense; top-3 vẫn đủ evidence.
 - **Lỗi câu trả lời:** `q06` có context đúng nhưng cả ba phương pháp đều thêm chi tiết chưa được nguồn xác nhận, nên answer chấm 1. Với rerank, chi tiết vượt evidence là việc deletion xóa hoàn toàn khỏi lịch sử tài liệu.
-- **Tiến độ và lựa chọn:** Đã thử 3/5 phương pháp và đo hai cấu hình cải thiện: Hybrid, rerank. Chưa chọn cấu hình cuối; còn query transformation và multi-stage. Việc chọn/chỉnh tiếp theo dùng dev; nếu dùng test để chỉnh thì cần test mới.
+- **Tiến độ và lựa chọn:** Đã thử 3 phương pháp (Dense, Hybrid, Rerank), trong đó Hybrid và Rerank là hai cấu hình cải thiện. Chọn **Rerank** chỉ dựa trên dev, theo thứ tự tiêu chí: điểm câu trả lời, context evidence, Evidence Hit@3, abstention, Hit@1. Ba cấu hình bằng nhau ở bốn tiêu chí đầu, Rerank thắng ở Hit@1 (15/15) nhưng chi phí cao hơn khoảng 5 lần. Sau khi chốt, cả ba cấu hình được chạy một lần trên test để đối chiếu; test không dùng để chọn hay chỉnh. Chưa thử query transformation và multi-stage.
 
 ## Agent và đánh giá
 
@@ -51,7 +51,7 @@ Context mức 2: cả ba phương pháp có 15/15 câu dev và 5/5 câu test. M�
 
 - **Trace, nhãn, thời gian và chi phí:** [Dense](../../results/dense_baseline/summary.json), [Hybrid](../../results/hybrid/summary.json), [Rerank](../../results/rerank/summary.json). Mỗi thư mục có `traces.json`, `retrieval.json`, `reviews.json`, `summary.json`; nhãn được tổng hợp bằng `starter/agent_metrics.py`. Trace rerank lưu candidates trước/sau và request/usage/chi phí của model xếp hạng.
 - **Lệnh chạy:** `python -X utf8 -B -m src.benchmark --method rerank --split all --output results/rerank`. Dùng `--method dense` hoặc `hybrid` với thư mục output riêng; `--retry-errors` giữ lịch sử lỗi.
-- **Đánh đổi và giới hạn:** Rerank tăng Hit@1 dev nhưng thêm chi phí model; điểm câu trả lời chưa tăng. Cả ba đạt 5/5 câu có đáp án và từ chối đúng 2/2 câu thiếu evidence trên test. Benchmark chủ yếu là câu cần một evidence.
+- **Đánh đổi và giới hạn:** Rerank tăng Hit@1 dev nhưng thêm chi phí model (~5 lần); điểm câu trả lời chưa tăng. Cả ba đạt 5/5 câu có đáp án và từ chối đúng 2/2 câu thiếu evidence trên test, nên test nhỏ (7 câu) không phân biệt được các phương pháp. Benchmark chủ yếu là câu cần một evidence.
 
 ## Thử thách nâng cao (nếu thực hiện)
 

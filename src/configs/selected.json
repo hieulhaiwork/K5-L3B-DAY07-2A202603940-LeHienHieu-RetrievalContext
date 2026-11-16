@@ -103,7 +103,6 @@
     "pricing_checked_on": "2026-11-16",
     "max_finalization_attempts": 2
   },
-  "evaluation_questions": "data/questions_final.json",
-  "prior_test_role": "exploratory; retained in data/questions.json",
-  "test_policy": "New holdout questions evaluated only after this selection was frozen."
+  "evaluation_questions": "data/questions.json",
+  "test_policy": "Selection uses dev only; test is run once after this selection was frozen and is not used for tuning."
 }
