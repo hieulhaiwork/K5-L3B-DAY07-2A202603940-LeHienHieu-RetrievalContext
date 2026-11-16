@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "provider": "OpenRouter",
+  "endpoint": "https://openrouter.ai/api/v1/embeddings",
+  "model": "nvidia/nemotron-3-embed-1b:free",
+  "catalog_canonical_slug": "nvidia/nemotron-3-embed-1b-20260716",
+  "dimensions": 2048,
+  "document_prefix": "passage: ",
+  "query_prefix": "query: ",
+  "normalize_l2": true,
+  "batch_size": 32,
+  "min_request_interval_seconds": 3.2,
+  "collection": "day6_nemotron3_1b_v1",
+  "metric": "cosine",
+  "search_mode": "exact, no ANN index",
+  "C": "alias of B, predeclared filters only",
+  "references": [
+    "https://openrouter.ai/nvidia/nemotron-3-embed-1b:free",
+    "https://huggingface.co/nvidia/Nemotron-3-Embed-1B-BF16",
+    "https://github.com/pgvector/pgvector"
+  ]
+}
