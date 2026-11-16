@@ -71,5 +71,5 @@ Context mức 2: cả ba phương pháp có 15/15 câu dev và 5/5 câu test. M�
 | Thiếu bằng chứng | 5/6 | 83,33% | Câu 27 nhầm trụ sở khách hàng với nơi giao hàng |
 | **Toàn bộ** | **27/30** | **90%** | **Không có lỗi hệ thống** |
 
-- **Kết quả và evidence:** Một lượt chạy test với cấu hình đã chốt, thời gian 209,74 giây, chi phí API ước tính 0,84 USD, gồm 10 lượt vision mới. [Summary](../../advanced/artifacts/benchmark/test_v3_dense_multisearch/summary.json), [trace](../../advanced/artifacts/benchmark/test_v3_dense_multisearch/traces.json), [nhãn từng câu](../../advanced/artifacts/benchmark/test_v3_dense_multisearch/reviews.json); [so sánh dev](../../advanced/artifacts/benchmark/dev_v2_comparison.json).
+- **Kết quả và evidence:** Một lượt chạy test với cấu hình đã chốt, thời gian 209,74 giây, chi phí API ước tính 0,84 USD, gồm 10 lượt vision mới. [Summary](../../advanced/artifacts/benchmark/test_v3_dense_multisearch/summary.json)
 - **Giới hạn:** OCR/trích xuất chưa bảo đảm chất lượng ở mọi vùng bảng và hình; 137 records chưa chắc chắn bị loại khỏi index. Benchmark chỉ đánh giá phạm vi nội dung đã embedding, không đại diện cho độ bao phủ toàn bộ PDF. Các câu biểu đồ tập trung vào hai hình ở trang 7 và 24. Multi-hop và phân biệt phạm vi số liệu vẫn còn lỗi.
