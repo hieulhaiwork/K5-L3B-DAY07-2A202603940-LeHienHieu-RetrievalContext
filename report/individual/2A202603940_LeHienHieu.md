@@ -13,42 +13,45 @@
 
 | Cấu hình | Phương pháp, top-k, filter, rerank, context budget | Giả thuyết / thay đổi | Split | Hit@1 | Evidence Hit@3 | Context Evidence Rate | Thời gian / chi phí |
 |---|---|---|---|---|---|---|---|
-| Baseline | Dense; top-3; filter theo câu hỏi; không rerank; 4.000 ký tự | Mốc đối chiếu | dev | 14/15 — 93,33% | 15/15 — 100% | 15/15 — 100% | 606,35 giây / 0,076580 USD* |
-| Phương pháp 2 / Cải thiện 1 | Dense + TF-IDF; 20 candidates/nhánh; RRF 60; top-3; cùng filter/budget | Lexical hỗ trợ tên lệnh và menu | dev | 13/15 — 86,67% | 15/15 — 100% | 15/15 — 100% | 638,07 giây / 0,077540 USD* |
-| Baseline | Cấu hình Dense giữ nguyên | Đối chiếu baseline | test | 5/5 — 100% | 5/5 — 100% | 5/5 — 100% | 133,39 giây / 0,028448 USD* |
-| Hybrid | Cấu hình Hybrid giữ nguyên | Đối chiếu sau khi chạy lại lỗi dịch vụ | test | 5/5 — 100% | 5/5 — 100% | 5/5 — 100% | 219,12 giây / 0,034135 USD |
+| Baseline | Dense; top-3; filter theo câu hỏi; 4.000 ký tự | Mốc đối chiếu | dev | 14/15 — 93,33% | 15/15 — 100% | 15/15 — 100% | 606,35 giây / 0,076580 USD* |
+| Phương pháp 2 / Cải thiện 1 | Dense + TF-IDF; 20 candidates/nhánh; RRF 60; cùng top-3/filter/budget | Lexical hỗ trợ tên lệnh và menu | dev | 13/15 — 86,67% | 15/15 — 100% | 15/15 — 100% | 638,07 giây / 0,077540 USD* |
+| Phương pháp 3 / Cải thiện 2 | Dense top-20 + GPT-4o rerank; cùng top-3/filter/budget | Ưu tiên đoạn trả lời đúng ý hỏi | dev | 15/15 — 100% | 15/15 — 100% | 15/15 — 100% | 622,67 giây / 0,395848 USD* |
+| Baseline | Dense giữ nguyên | Đối chiếu baseline | test | 5/5 — 100% | 5/5 — 100% | 5/5 — 100% | 133,39 giây / 0,028448 USD* |
+| Hybrid | Hybrid giữ nguyên | Đối chiếu cấu hình cố định | test | 5/5 — 100% | 5/5 — 100% | 5/5 — 100% | 219,12 giây / 0,034135 USD |
+| Rerank | Rerank giữ nguyên | Đối chiếu cấu hình cố định | test | 5/5 — 100% | 5/5 — 100% | 5/5 — 100% | 130,37 giây / 0,154178 USD |
 
-*Chi phí là phần ước tính có usage; tổng chi phí giữ `null` khi còn request thiếu usage. Thời gian gồm API và retry. Sáu câu Hybrid test từng lỗi HTTP 429 đã chạy lại thành công với cấu hình giữ nguyên; lịch sử lỗi được lưu trong `previous_attempts`.*
+*Chi phí là phần ước tính có usage; tổng giữ `null` khi còn request thiếu usage. Rerank tính cả model xếp hạng và agent. Thời gian gồm API và retry; các lần lỗi được giữ trong trace.*
 
-- **Lỗi dev và kết quả trước/sau:** `q15` được đưa từ hạng 2 lên hạng 1; ngược lại `q01`, `q08` từ hạng 1 xuống hạng 2. Hybrid giảm Hit@1 nhưng giữ nguyên đủ evidence trong top-3.
-- **Lỗi câu trả lời:** `q06` có context đúng nhưng cả hai phương pháp đều thêm trạng thái comment chưa được nguồn xác nhận; answer chấm 1. Thay retrieval chưa khắc phục lỗi sinh câu trả lời.
-- **Tiến độ và lựa chọn:** Đã thử 2/5 phương pháp; Hybrid đồng thời là cải thiện 1 nhưng chưa tăng chất lượng tổng thể trên dev. Chưa thực hiện cải thiện 2 và chưa chọn cấu hình cuối. Các bước chọn/chỉnh tiếp theo dùng dev; nếu dùng test để chỉnh thì cần test mới.
+- **Lỗi dev và kết quả trước/sau:** `q15`: Dense hạng 2, Hybrid/rerank hạng 1. `q01`, `q08`: Hybrid hạng 2, rerank đưa về hạng 1. Rerank tăng Hit@1 dev từ 14/15 lên 15/15 so với Dense; top-3 vẫn đủ evidence.
+- **Lỗi câu trả lời:** `q06` có context đúng nhưng cả ba phương pháp đều thêm chi tiết chưa được nguồn xác nhận, nên answer chấm 1. Với rerank, chi tiết vượt evidence là việc deletion xóa hoàn toàn khỏi lịch sử tài liệu.
+- **Tiến độ và lựa chọn:** Đã thử 3/5 phương pháp và đo hai cấu hình cải thiện: Hybrid, rerank. Chưa chọn cấu hình cuối; còn query transformation và multi-stage. Việc chọn/chỉnh tiếp theo dùng dev; nếu dùng test để chỉnh thì cần test mới.
 
 ## Agent và đánh giá
 
-- **Tool, số lượt gọi, điều kiện dừng, context và lỗi:** Một lượt `search` bằng câu hỏi gốc, sau đó `finish_answer` hoặc `abstain`. Context loại trùng và giữ nguyên chunk trong budget; cho phép sửa citation một lần. Lỗi dịch vụ ghi `error`, tách khỏi chấm câu trả lời. Hybrid tái sử dụng TF-IDF trong `starter/baseline.py`; trace lưu ranking từng nhánh và RRF.
+- **Tool, số lượt gọi, điều kiện dừng, context và xử lý lỗi:** Một `search` bằng câu hỏi gốc, rồi `finish_answer` hoặc `abstain`; context loại trùng, giữ nguyên chunk trong budget. Cho phép sửa citation một lần. Rerank thêm một lượt GPT-4o xếp 20 candidates, không nhận gold/đáp án. Output phải có đủ ID, không trùng; `q14` từng trả 19/20 ID và đã chạy lại thành công với cấu hình giữ nguyên.
 
 | Cấu hình / split | Tool use | Số lượt gọi | Grounded answer 0/1/2 và trung bình | Citation hợp lệ | Câu có citation | Abstention đúng | Từ chối nhầm |
 |---|---|---|---|---|---|---|---|
 | Dense / dev | 17/17 | 1 search/câu | 0/1/14; 1,93/2 | 15/16 | 15/15 | 2/2 | 0/15 |
 | Hybrid / dev | 17/17 | 1 search/câu | 0/1/14; 1,93/2 | 16/17 | 15/15 | 2/2 | 0/15 |
+| Rerank / dev | 17/17 | 1 search + 1 rerank/câu | 0/1/14; 1,93/2 | 16/17 | 15/15 | 2/2 | 0/15 |
 | Dense / test | 7/7 | 1 search/câu | 0/0/5; 2,00/2 | 5/5 | 5/5 | 2/2 | 0/5 |
 | Hybrid / test | 7/7 | 1 search/câu | 0/0/5; 2,00/2 | 5/5 | 5/5 | 2/2 | 0/5 |
+| Rerank / test | 7/7 | 1 search + 1 rerank/câu | 0/0/5; 2,00/2 | 5/5 | 5/5 | 2/2 | 0/5 |
 
-Context mức 2: cả Dense và Hybrid đều có 15/15 câu dev và 5/5 câu test. Mỗi phương pháp đã có kết quả và nhãn cho đủ 24 câu.
+Context mức 2: cả ba phương pháp có 15/15 câu dev và 5/5 câu test. Mỗi phương pháp đã có kết quả và nhãn cho đủ 24 câu; không còn lỗi hệ thống ở kết quả cuối.
 
 | Query ID | Loại câu | Tool call và kết quả | Câu trả lời và citation | Nhãn, lý do |
 |---|---|---|---|---|
-| `q15` | Dev có đáp án | PDF 203: Dense hạng 2, Hybrid hạng 1 | Editing > Suggesting; citation đúng | Context 2, answer 2; Hybrid cải thiện ranking |
-| `q01` | Dev có đáp án | PDF 151: Dense hạng 1, Hybrid hạng 2 | Outline cần headings cho section/subsection | Context 2, answer 2; Hybrid giảm Hit@1 |
-| `q06` | Dev có đáp án | Cả hai tìm đúng PDF 171 | So sánh xóa/resolve đúng nhưng thêm chi tiết chưa được hỗ trợ | Context 2, answer 1; citation chưa hỗ trợ toàn bộ giải thích |
-| `q21` | Dev thiếu evidence | Có hướng dẫn Track Changes, không có mã VBA | Từ chối, không bổ sung code | Abstention đúng ở cả hai phương pháp |
-| `q17–q20` | Test có đáp án | Hybrid tìm đủ evidence ở hạng 1 | Trả lời đúng, citation hỗ trợ nguồn | Context 2, answer 2 cho cả bốn câu |
-| `q23–q24` | Test thiếu evidence | Không có code Apps Script hoặc quota API cần hỏi | Từ chối, không bổ sung code hoặc số liệu | Abstention đúng ở cả hai phương pháp |
+| `q15` | Dev có đáp án | PDF 203: Dense hạng 2, Hybrid/rerank hạng 1 | Editing > Suggesting; citation đúng | Context 2, answer 2; cải thiện ranking |
+| `q01, q08` | Dev có đáp án | Rerank đưa evidence từ hạng 2 của Hybrid về hạng 1 | Đủ điều kiện headings/styles; citation hỗ trợ | Context 2, answer 2 |
+| `q06` | Dev có đáp án | Cả ba tìm đúng PDF 171 | So sánh xóa/resolve đúng nhưng thêm chi tiết thiếu nguồn | Context 2, answer 1; citation chưa hỗ trợ toàn bộ giải thích |
+| `q17–q20` | Test có đáp án | Cả ba tìm đủ evidence ở hạng 1 | Trả lời đúng, citation hỗ trợ nguồn | Context 2, answer 2 cho cả bốn câu |
+| `q23–q24` | Test thiếu evidence | Không có code Apps Script hoặc quota API cần hỏi | Từ chối, không bổ sung code/số liệu | Abstention đúng ở cả ba phương pháp |
 
-- **Trace, nhãn, thời gian và chi phí:** [Dense](../../results/dense_baseline/summary.json) và [Hybrid](../../results/hybrid/summary.json); mỗi thư mục có `traces.json`, `retrieval.json`, `reviews.json`, `summary.json`. Nhãn được tổng hợp bằng công cụ trong `starter/agent_metrics.py`.
-- **Lệnh chạy:** `python -X utf8 -B -m src.benchmark --method hybrid --split all --output results/hybrid`. Thêm `--retry-errors` để chạy riêng lỗi dịch vụ và giữ lịch sử; dữ liệu hiện tại đã hoàn tất.
-- **Đánh đổi và giới hạn:** Hybrid giữ nguyên chất lượng trả lời và evidence top-3, nhưng giảm Hit@1 trên dev. Hai phương pháp cùng đạt 5/5 câu có đáp án và từ chối đúng 2/2 câu thiếu evidence trên test; benchmark hiện chủ yếu là câu cần một evidence.
+- **Trace, nhãn, thời gian và chi phí:** [Dense](../../results/dense_baseline/summary.json), [Hybrid](../../results/hybrid/summary.json), [Rerank](../../results/rerank/summary.json). Mỗi thư mục có `traces.json`, `retrieval.json`, `reviews.json`, `summary.json`; nhãn được tổng hợp bằng `starter/agent_metrics.py`. Trace rerank lưu candidates trước/sau và request/usage/chi phí của model xếp hạng.
+- **Lệnh chạy:** `python -X utf8 -B -m src.benchmark --method rerank --split all --output results/rerank`. Dùng `--method dense` hoặc `hybrid` với thư mục output riêng; `--retry-errors` giữ lịch sử lỗi.
+- **Đánh đổi và giới hạn:** Rerank tăng Hit@1 dev nhưng thêm chi phí model; điểm câu trả lời chưa tăng. Cả ba đạt 5/5 câu có đáp án và từ chối đúng 2/2 câu thiếu evidence trên test. Benchmark chủ yếu là câu cần một evidence.
 
 ## Thử thách nâng cao (nếu thực hiện)
 

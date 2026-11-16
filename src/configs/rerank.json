@@ -1,0 +1,7 @@
+{
+  "candidate_k": 20,
+  "model": "gpt-4o",
+  "temperature": 0,
+  "max_completion_tokens": 2048,
+  "ranking": "listwise"
+}

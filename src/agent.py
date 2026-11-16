@@ -64,6 +64,8 @@ def run_agent(question, controller, retriever, config, *, query_id="manual", fil
         raise ValueError("top_k exceeds the store limit")
     started = time.perf_counter()
     call_start = len(controller.calls)
+    reranker = getattr(retriever, "reranker", None)
+    rerank_start = len(getattr(reranker, "calls", []))
     embedder = getattr(retriever, "embedder", None)
     embed_start = len(getattr(embedder, "events", []))
     cache_start = getattr(embedder, "cache_hits", 0)
@@ -74,10 +76,14 @@ def run_agent(question, controller, retriever, config, *, query_id="manual", fil
     system = SYSTEM
     if config.get("retrieval_method") == "hybrid":
         system = system.replace("this Dense baseline", "this Hybrid configuration")
+    if config.get("retrieval_method") == "rerank":
+        system = system.replace("this Dense baseline", "this Dense + rerank configuration")
     messages = [{"role": "system", "content": system}, {"role": "user", "content": question}]
     search_tool = copy.deepcopy(SEARCH)
     if config.get("retrieval_method") == "hybrid":
         search_tool["function"]["description"] = "Find evidence using Dense + TF-IDF retrieval fused by RRF."
+    if config.get("retrieval_method") == "rerank":
+        search_tool["function"]["description"] = "Find evidence using Dense retrieval followed by passage reranking."
     search_tool["function"]["parameters"]["properties"]["query"]["enum"] = [question]
     candidates, searches, finalizations = [], 0, 0
     final_limit = config.get("max_finalization_attempts", 1)
@@ -115,9 +121,9 @@ def run_agent(question, controller, retriever, config, *, query_id="manual", fil
                     results = retriever.search(arguments["query"], filters=filters, top_k=config["top_k"])
                 finally:
                     event["elapsed_ms"] = round((time.perf_counter() - search_start) * 1000, 3)
+                    if getattr(retriever, "last_search", None) is not None:
+                        event["retrieval_details"] = copy.deepcopy(retriever.last_search)
                 event["results"] = results
-                if getattr(retriever, "last_search", None) is not None:
-                    event["retrieval_details"] = copy.deepcopy(retriever.last_search)
                 if len(results) > config["top_k"] or len({r["id"] for r in results}) != len(results):
                     raise ValueError("Retriever returned too many or duplicate chunks")
                 candidates.extend(results)
@@ -163,12 +169,13 @@ def run_agent(question, controller, retriever, config, *, query_id="manual", fil
                       "error": {"stage": stage, "type": type(error).__name__}})
         trace["events"].append({"event": "error", **trace["error"]})
     trace["model_calls"] = copy.deepcopy(controller.calls[call_start:])
+    trace["reranker_calls"] = copy.deepcopy(getattr(reranker, "calls", [])[rerank_start:])
     trace["embedding_events"] = copy.deepcopy(getattr(embedder, "events", [])[embed_start:])
     trace["embedding_cache_hits"] = getattr(embedder, "cache_hits", 0) - cache_start
     trace["search_count"] = sum(e["event"] == "search" for e in trace["events"])
     trace["context_chars"] = len(trace["context"])
     trace["elapsed_ms"] = round((time.perf_counter() - started) * 1000, 3)
-    costs = [c.get("estimated_cost_usd") for c in trace["model_calls"]]
+    costs = [c.get("estimated_cost_usd") for c in trace["model_calls"] + trace["reranker_calls"]]
     trace["estimated_chat_cost_usd"] = sum(costs) if all(c is not None for c in costs) else None
     embedding_costs = [e.get("cost_usd") for e in trace["embedding_events"]]
     trace["reported_embedding_cost_usd"] = (sum(embedding_costs)

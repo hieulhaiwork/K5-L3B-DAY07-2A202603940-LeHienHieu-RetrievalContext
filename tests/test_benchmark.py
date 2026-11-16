@@ -43,6 +43,14 @@ class BenchmarkTests(unittest.TestCase):
         self.assertEqual(summary['dev']['retrieval_coverage'], {'n': 0, 'N': 1, 'rate': 0.0})
         self.assertEqual(summary['dev']['retrieval']['hit3'], {'n': 0, 'N': 0, 'rate': None})
 
+    def test_reranker_usage_and_cost_are_included_in_totals(self):
+        self.traces[0]['reranker_calls'] = [{'estimated_cost_usd': 0.01,
+            'usage': {'prompt_tokens': 100, 'completion_tokens': 20, 'total_tokens': 120}}]
+        _, summary = summarize(self.questions, self.traces)
+        self.assertEqual(summary['dev']['estimated_chat_cost_known_usd'], 0.01)
+        self.assertEqual(summary['dev']['chat_usage']['total_tokens'], 120)
+        self.assertEqual(summary['dev']['reranker_call_count_distribution'], {'1': 1, '0': 1})
+
     def test_matching_text_on_wrong_page_is_not_a_hit(self):
         self.chunk['page'] = 11
         self.assertFalse(retrieval_records(self.questions, self.traces)[0]['hit1'])

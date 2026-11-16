@@ -65,7 +65,7 @@ python -X utf8 -B -m src.benchmark --split all --output results/dense_baseline
 
 Có thể chọn `--split dev` hoặc `--split test`. Runner chỉ truyền question và filter vào agent; gold được dùng sau đó để tính retrieval metrics. Trace được lưu sau từng câu. File trace có sẵn được bảo vệ khỏi chạy đè.
 
-Chỉ chạy lại các câu lỗi mạng/provider, giữ nguyên cấu hình và lưu lịch sử vào `previous_attempts`:
+Chạy lại lỗi mạng/provider hoặc output reranker không hợp lệ, giữ nguyên cấu hình và lưu lịch sử vào `previous_attempts`:
 
 ```powershell
 python -X utf8 -B -m src.benchmark --split all --output results/dense_baseline --retry-errors
@@ -96,3 +96,17 @@ python -X utf8 -B -m src.benchmark --method hybrid --split all --output results/
 Các phương pháp được lưu ở thư mục kết quả riêng; kết quả Dense có sẵn được giữ nguyên. Dùng thư mục output mới nếu muốn chạy lại toàn bộ benchmark.
 
 Khi có lỗi dịch vụ, metrics chất lượng chỉ tính các câu có kết quả để đánh giá; `retrieval_coverage` và `context_evaluation_coverage` ghi số câu đã đánh giá trên tổng số câu có đáp án. Không kết luận kết quả test đầy đủ khi coverage chưa đạt 100%. HTTP 429 `free-models-per-day` là hết hạn mức ngày; giữ trace lỗi và chạy lại khi hạn mức được khôi phục, không dùng cache query của Lab 6.
+
+## Dense + rerank
+
+`src/rerank.py` lấy 20 candidates từ Dense, áp dụng cùng filter, rồi gọi GPT-4o xếp hạng toàn bộ candidates theo mức hỗ trợ câu hỏi. Cấu hình ở `src/configs/rerank.json`: temperature 0, tối đa 2.048 output tokens. Agent sau đó dùng top-3 với cùng context budget và quy tắc citation/abstention.
+
+Reranker chỉ nhận query, đoạn văn và nguồn/metadata; không nhận gold hoặc đáp án. Kết quả phải là hoán vị đầy đủ của các ID đầu vào. Lỗi xếp hạng được ghi riêng, không thay bằng ranking Dense. `score = 1 / rerank_rank` là điểm thứ tự, không phải xác suất.
+
+Trace có `reranker_calls` với request/response, model, token usage, thời gian và chi phí. `retrieval_details` lưu candidates Dense và ranking sau rerank; mỗi kết quả có `dense_rank`, `dense_score`, `rerank_rank`. Tổng chi phí và usage bao gồm cả reranker và agent.
+
+```powershell
+python -X utf8 -B -m src.benchmark --method rerank --split all --output results/rerank
+python -X utf8 -B -m src.benchmark --method rerank --split all --output results/rerank --retry-errors
+python -X utf8 -B -m src.benchmark --method rerank --split all --output results/rerank --summarize-only --reviews results/rerank/reviews.json
+```

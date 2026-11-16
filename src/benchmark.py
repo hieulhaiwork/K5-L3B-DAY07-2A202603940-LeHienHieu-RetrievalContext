@@ -9,6 +9,9 @@ from starter.agent_metrics import aggregate
 from .agent import load_controller, run_agent
 from .dense import ROOT, from_project
 from .hybrid import HybridRetriever
+from .rerank import RerankRetriever
+from .chat import OpenAIController
+from dotenv import dotenv_values
 
 
 def load(path):
@@ -61,7 +64,7 @@ def summarize(questions, traces, reviews=None):
         ans = [r for r in rs if r["answerable"]]
         available = [r for r in ans if r["retrieval_available"]]
         attempts = [a for t in ts for a in t.get("previous_attempts", []) + [t]]
-        costs = [c.get("estimated_cost_usd") for a in attempts for c in a.get("model_calls", [])]
+        costs = [c.get("estimated_cost_usd") for a in attempts for c in a.get("model_calls", []) + a.get("reranker_calls", [])]
         embeddings = [a.get("reported_embedding_cost_usd") for a in attempts]
         retrieval_times = [sum(e.get("elapsed_ms", 0) for e in t["events"] if e["event"] == "search") for t in attempts]
         summary = {"cases": len(cases), "completed_traces": len(ts),
@@ -71,6 +74,7 @@ def summarize(questions, traces, reviews=None):
                                  for metric in ("hit1", "hit3", "context_exact_evidence")},
                    "search_count_distribution": dict(Counter(str(t.get("search_count", 0)) for t in ts)),
                    "model_call_count_distribution": dict(Counter(str(len(t.get("model_calls", []))) for t in ts)),
+                   "reranker_call_count_distribution": dict(Counter(str(len(t.get("reranker_calls", []))) for t in ts)),
                    "elapsed_seconds": sum(t.get("elapsed_ms", 0) for t in attempts) / 1000,
                    "previous_error_attempts": len(attempts) - len(ts),
                    "retrieval_seconds": sum(retrieval_times) / 1000,
@@ -79,7 +83,7 @@ def summarize(questions, traces, reviews=None):
                    "chat_calls_with_unknown_cost": sum(c is None for c in costs),
                    "reported_embedding_cost_usd": sum(embeddings) if all(c is not None for c in embeddings) else None,
                    "chat_usage": {key: sum((c.get("usage") or {}).get(key, 0)
-                                           for t in attempts for c in t.get("model_calls", []))
+                                           for t in attempts for c in t.get("model_calls", []) + t.get("reranker_calls", []))
                                   for key in ("prompt_tokens", "completion_tokens", "total_tokens")}}
         if reviews is not None:
             labels = [r for r in reviews if r["query_id"] in selected_ids]
@@ -102,6 +106,8 @@ def configured_controller(method):
     config['retrieval_method'] = method
     if method == 'hybrid':
         config['hybrid'] = load(ROOT / 'src/configs/hybrid.json')
+    if method == 'rerank':
+        config['rerank'] = load(ROOT / 'src/configs/rerank.json')
     return controller, config
 
 
@@ -109,18 +115,23 @@ def build_retriever(cache, method, config):
     dense = from_project(cache_dir=Path(cache))
     if method == 'hybrid':
         return HybridRetriever(dense, load(ROOT / 'data/chunks.json'), **config['hybrid'])
+    if method == 'rerank':
+        settings = config['rerank']
+        rank_config = {**config, **{k: settings[k] for k in ('model', 'temperature', 'max_completion_tokens')}}
+        reranker = OpenAIController(dotenv_values(ROOT / '.env').get('OPENAI_API_KEY'), rank_config)
+        return RerankRetriever(dense, reranker, candidate_k=settings['candidate_k'])
     return dense
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--method", choices=("dense", "hybrid"), default="dense")
+    parser.add_argument("--method", choices=("dense", "hybrid", "rerank"), default="dense")
     parser.add_argument("--questions", type=Path, default=ROOT / "data/questions.json")
     parser.add_argument("--split", choices=("dev", "test", "all"), required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--summarize-only", action="store_true")
     parser.add_argument("--reviews", type=Path)
-    parser.add_argument("--retry-errors", action="store_true", help="Retry network/provider errors only; retain previous attempts")
+    parser.add_argument("--retry-errors", action="store_true", help="Retry service errors or malformed reranker output; retain previous attempts")
     args = parser.parse_args()
     questions = [q for q in load(args.questions) if args.split == "all" or q["split"] == args.split]
     if not questions or len({q["id"] for q in questions}) != len(questions):
@@ -142,10 +153,15 @@ def main():
                     continue
                 retryable = any(c.get("error", {}).get("type") == "NetworkError"
                                 or c.get("error", {}).get("http_status") in {429, 500, 502, 503, 504}
-                                for c in previous.get("model_calls", []))
+                                for c in previous.get("model_calls", []) + previous.get("reranker_calls", []))
                 retryable |= any(e.get("event") in {"network_error", "provider_error"}
                                  for e in previous.get("embedding_events", []))
                 retryable |= previous.get("error", {}).get("type") in {"OperationalError", "ConnectionTimeout"}
+                # Retry malformed model ranking output, never a low-quality valid ranking.
+                rerank_incomplete = any(e.get("retrieval_details", {}).get("status") == "reranking"
+                                        for e in previous.get("events", []) if e.get("event") == "search")
+                retryable |= (previous.get("error", {}).get("type") == "ValueError"
+                              and bool(previous.get("reranker_calls")) and rerank_incomplete)
                 if not retryable:
                     continue
                 if previous["config"] != config:
