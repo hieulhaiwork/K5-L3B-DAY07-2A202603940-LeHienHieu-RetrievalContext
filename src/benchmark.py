@@ -1,4 +1,4 @@
-"""Run the Dense agent benchmark and aggregate retrieval and reviewed answer metrics."""
+"""Run retrieval/agent benchmarks and aggregate evidence and reviewed answer metrics."""
 import argparse
 import json
 from collections import Counter
@@ -35,6 +35,7 @@ def retrieval_records(questions, traces):
         gold = q.get("gold", [])
         records.append({"query_id": q["id"], "split": q["split"], "answerable": q["answerable"],
                         "status": t["status"], "gold": gold,
+                        "retrieval_available": bool(searches and "results" in searches[0]),
                         "ranking": [{"id": c["id"], "source_id": c["source_id"], "page": c["page"],
                                      "score": c["score"], "evidence_hit": hit(c, gold)} for c in results],
                         "hit1": bool(results and hit(results[0], gold)) if q["answerable"] else None,
@@ -58,13 +59,15 @@ def summarize(questions, traces, reviews=None):
         ts = [t for t in traces if t["query_id"] in selected_ids]
         rs = [r for r in records if r["split"] == split]
         ans = [r for r in rs if r["answerable"]]
+        available = [r for r in ans if r["retrieval_available"]]
         attempts = [a for t in ts for a in t.get("previous_attempts", []) + [t]]
         costs = [c.get("estimated_cost_usd") for a in attempts for c in a.get("model_calls", [])]
         embeddings = [a.get("reported_embedding_cost_usd") for a in attempts]
         retrieval_times = [sum(e.get("elapsed_ms", 0) for e in t["events"] if e["event"] == "search") for t in attempts]
         summary = {"cases": len(cases), "completed_traces": len(ts),
                    "statuses": dict(Counter(t["status"] for t in ts)),
-                   "retrieval": {metric: ratio(sum(bool(r[metric]) for r in ans), len(ans))
+                   "retrieval_coverage": ratio(len(available), len(ans)),
+                   "retrieval": {metric: ratio(sum(bool(r[metric]) for r in available), len(available))
                                  for metric in ("hit1", "hit3", "context_exact_evidence")},
                    "search_count_distribution": dict(Counter(str(t.get("search_count", 0)) for t in ts)),
                    "model_call_count_distribution": dict(Counter(str(len(t.get("model_calls", []))) for t in ts)),
@@ -88,7 +91,8 @@ def summarize(questions, traces, reviews=None):
                 if type(grade) is not int or grade not in (0, 1, 2):
                     raise ValueError("A context grade 0/1/2 is required for each successful answerable case")
             summary["context_grade_counts"] = dict(Counter(str(label_by_id[r["query_id"]]["context_grade"]) for r in successful_ans))
-            summary["context_evidence_rate"] = ratio(sum(label_by_id[r["query_id"]]["context_grade"] == 2 for r in successful_ans), len(ans))
+            summary["context_evaluation_coverage"] = ratio(len(successful_ans), len(ans))
+            summary["context_evidence_rate"] = ratio(sum(label_by_id[r["query_id"]]["context_grade"] == 2 for r in successful_ans), len(successful_ans))
         summaries[split] = summary
     return records, summaries
 

@@ -1,0 +1,943 @@
+[
+  {
+    "query_id": "q01",
+    "split": "dev",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 151,
+        "evidence": "This tab shows the outline of your document, but only if you have placed headings for each section and subsection (which you will learn more about in the section on Formatting Document Content in Microsoft Word)."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "5d133831678b5daace27237f83a978caae6f96c19f73e66357420a0deb007cd1",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 151,
+        "score": 0.032266458495966696,
+        "evidence_hit": false
+      },
+      {
+        "id": "cdd931f82aabe4f97fc8beeeb6c4c38c85d3cc8f252624a391ed440fc69253f9",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 151,
+        "score": 0.032018442622950824,
+        "evidence_hit": true
+      },
+      {
+        "id": "4cf43d0cb38202bac7d8acadc60e1b70b051acb5a644c1bc87ac6d46cd578d98",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 166,
+        "score": 0.03200204813108039,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": false,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "q02",
+    "split": "dev",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 155,
+        "evidence": "To adjust the margins of a page, go to the Layout tab. Select the Margins icon, and a drop-down menu will appear. The default margin is Normal (1 inch on all sides), but this can be adjusted via the prepopulated options, such as for different layouts with narrower margins. If you want to set your own margins, choose the Custom Margins option at the bottom of the drop-down menu."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "3b0d5af459cdb898927e175429808f0a08c08fce01cb66e7b79cecb673be4a2e",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 155,
+        "score": 0.03278688524590164,
+        "evidence_hit": true
+      },
+      {
+        "id": "33ab2df4e0b36c868991477c578026703d1ddec66d93609f958a3ed46c1ca72d",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 155,
+        "score": 0.031754032258064516,
+        "evidence_hit": false
+      },
+      {
+        "id": "752bd24d58a61612b39820deaf86b19b66785a075acad17bed2e7b684984322f",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 153,
+        "score": 0.03125763125763126,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "q03",
+    "split": "dev",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 155,
+        "evidence": "The horizontal layout is known as landscape orientation, and works best for documents with tables and graphs that otherwise would not fit well on a vertical page."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "c507bf8ca42f95992b2ceb8e356c17c99f22796ccac0f2ab03e489138bda50c7",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 155,
+        "score": 0.03278688524590164,
+        "evidence_hit": true
+      },
+      {
+        "id": "752bd24d58a61612b39820deaf86b19b66785a075acad17bed2e7b684984322f",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 153,
+        "score": 0.03200204813108039,
+        "evidence_hit": false
+      },
+      {
+        "id": "026133c6fce725630ddbc23f7e88dff19afdf9323689c9fed69d3f1c7f59b61d",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 155,
+        "score": 0.03149801587301587,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "q04",
+    "split": "dev",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 163,
+        "evidence": "However, double-spacing may be used in working documents, and can be useful when there are multiple collaborators and you are using Track Changes. This allows for better visibility for the changes or edits, and makes it easier to see the revisions in progress."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "afc2e7613c6d45baebd58d9f8d446cd1e038c9ce4b5f93c9f65aaaeb1f7d71f7",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 163,
+        "score": 0.03278688524590164,
+        "evidence_hit": true
+      },
+      {
+        "id": "cf4d3f872e991fd0aacd7773bff1a135cc1f87568213920c283cad714cf8872b",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 156,
+        "score": 0.0315136476426799,
+        "evidence_hit": false
+      },
+      {
+        "id": "579320b765d31ce2df7f7b085986d722a4f9ac63c33c93c8ba92045a32b8c761",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 163,
+        "score": 0.030776515151515152,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "q05",
+    "split": "dev",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 167,
+        "evidence": "In general, color should not be used to indicate levels in a hierarchy since this is neither logical (i.e., it is not clear why one color would be higher or lower than another) nor accessible (some colors are not readily conveyed to users who may be visually impaired or have other accessibility needs)."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "1ed4a54741e20e44698887612d3a2038c8cb8aa6295927c3314d441645e42131",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 167,
+        "score": 0.03252247488101534,
+        "evidence_hit": true
+      },
+      {
+        "id": "a37c8410c965a612a37b0520760740066c4d13da3b5959271555dbd6fc3edd7b",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 167,
+        "score": 0.03252247488101534,
+        "evidence_hit": false
+      },
+      {
+        "id": "2aae6d4fd1f3c368d23eb82ea04ebaacb28d25046efaea922749de1befe10447",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 166,
+        "score": 0.031746031746031744,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "q06",
+    "split": "dev",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 171,
+        "evidence": "Deleting a comment removes it completely from the document, whereas resolving a comment retains the comment in a history stored digitally with the document."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "d2444d18dd2ee3addabf5646a6bfaeae2dd67fffcef7912ffc14e92443d35daf",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 171,
+        "score": 0.03278688524590164,
+        "evidence_hit": true
+      },
+      {
+        "id": "c5b5e94e4850cd139e364c87a31b0556ee14b7536ccb140c472b4bd5b6600dbf",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 150,
+        "score": 0.03125,
+        "evidence_hit": false
+      },
+      {
+        "id": "859cefda244805d54983378e28a2e91ffd38161fcf8091fb5c1461280d6df5c5",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 170,
+        "score": 0.031054405392392875,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "q07",
+    "split": "dev",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 170,
+        "evidence": "It should be noted that spell-check will not always check when a word is misused. For example, if you have typed “four” instead of “for”, spell-check will not indicate a misspelled word. The document creator will still need to proofread the document and not rely entirely on the Spelling and Grammar check tool."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "269315bbbb9009cf38bdce7eace8526ceb7b477a13160e8c0ecd6e0dd011ad1e",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 170,
+        "score": 0.03278688524590164,
+        "evidence_hit": true
+      },
+      {
+        "id": "ab1a33380f656ea435b5562ed4c25333c8a608d8b714f13040d1e178b9de9761",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 169,
+        "score": 0.03200204813108039,
+        "evidence_hit": false
+      },
+      {
+        "id": "a6aca2a2b22f6ba5e837d4afc7a832342548829f8f05c9690cc6ffdfc39ec7b4",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 200,
+        "score": 0.028985507246376812,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "q08",
+    "split": "dev",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 176,
+        "evidence": "By choosing the style, you are coding the document so that Word knows how to format various sections. These codes tell Word which parts of the text are body text, titles, subtitles, and so on. Without these style codes, the theme won’t know how to apply itself to your document."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "77ac78b5f17f74ca08c1a5331b0614306dbed9ba83fde8495d4f0fdc4ef52d54",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 176,
+        "score": 0.03200204813108039,
+        "evidence_hit": false
+      },
+      {
+        "id": "a07ae04c1c78db52862e80dc7c83421ae6a546fcda8e2b64420d6c630cb9c137",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 176,
+        "score": 0.03177805800756621,
+        "evidence_hit": true
+      },
+      {
+        "id": "e11fe753c964b68626110940ca20426586a00a22c83354712341fbd0c41dde69",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 176,
+        "score": 0.031754032258064516,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": false,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "q09",
+    "split": "dev",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 179,
+        "evidence": "There are a few options to alter the text’s appearance on the page. For instance, if you want to change the text to be less visible, choose Semitransparent."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "f92321cbda7a859488ce8b6b89254d15035eb1db51002c9148789f25cfacc94b",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 179,
+        "score": 0.03278688524590164,
+        "evidence_hit": true
+      },
+      {
+        "id": "46931dd50a72353feb66f0c8c8a715186d2434c2a5451f368f75f4a369892cab",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 179,
+        "score": 0.03200204813108039,
+        "evidence_hit": false
+      },
+      {
+        "id": "80d1e16def2f9b3af7e5e36333a700d1e99be658597bc7b20ead1efb9f7653ed",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 179,
+        "score": 0.0315136476426799,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "q10",
+    "split": "dev",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 181,
+        "evidence": "Paste without formatting is a useful tool for copying and pasting text only, without any of the source formatting (such as font, font size, or color). This is particularly helpful when copying and pasting from an email or website."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "7cefc6559dc1c7d55384366a08b4599c7f984303df7e587f27f72e410c72a1f8",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 181,
+        "score": 0.03278688524590164,
+        "evidence_hit": true
+      },
+      {
+        "id": "5be23c33210638fd7c2071f93b811565bcbac0d941de3f3fe2a90812f0d2f909",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 181,
+        "score": 0.03055037313432836,
+        "evidence_hit": false
+      },
+      {
+        "id": "8971525af7c60041349a354bb8f7e9052767a94f1bf3ca864d02ea75dd2a17fa",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 185,
+        "score": 0.03055037313432836,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "q11",
+    "split": "dev",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 188,
+        "evidence": "The heading text was also added to the document outline on the left. This is an important feature of styles in Docs. As you continue to apply styles within a hierarchy, the outline in the document pane will reflect that hierarchy."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "41f5fa309109c033cf289cc4d1503bd10f21695983db84b1e2645e2b25faba2b",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 188,
+        "score": 0.03278688524590164,
+        "evidence_hit": true
+      },
+      {
+        "id": "24223a6bf87d13f7f026a185ad2c29f17fac98efb207c13e8119be72c13655d8",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 187,
+        "score": 0.031746031746031744,
+        "evidence_hit": false
+      },
+      {
+        "id": "2aae6d4fd1f3c368d23eb82ea04ebaacb28d25046efaea922749de1befe10447",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 166,
+        "score": 0.0315136476426799,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "q12",
+    "split": "dev",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 190,
+        "evidence": "But if you want to move the entire paragraph to the right, click anywhere in the paragraph and go to the Format menu, then hover over Align & indent, and lastly, select Increase indent (Figure 3.47)."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "1e7219ea9c285d741230328de53c84a986ef96ad5c886bed03fe8d66e7438d66",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 190,
+        "score": 0.03278688524590164,
+        "evidence_hit": true
+      },
+      {
+        "id": "c117d458d499cb393527230dd9e451ab1141f1e1cec1f56da13a832e136e6cf9",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 190,
+        "score": 0.03225806451612903,
+        "evidence_hit": false
+      },
+      {
+        "id": "b7d81b4d73aa6f35ba939fa906a311ce4f651d114e56dc6e70120d50583170ce",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 189,
+        "score": 0.03125763125763126,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "q13",
+    "split": "dev",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 195,
+        "evidence": "Select Section break (Continuous) if you want the break to stay on the same page, or Section break (next page) to start a new section on a new page, such as starting a new chapter."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "d3047032c87cce000a2c62be1dcf7764763fdeb907ee4617c7320f6e20c70d51",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 195,
+        "score": 0.03278688524590164,
+        "evidence_hit": true
+      },
+      {
+        "id": "0ab715088edaa1fdfd5a6e1415e0b6f5e3e4f1504fb2322ee4a23e428eace551",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 159,
+        "score": 0.031754032258064516,
+        "evidence_hit": false
+      },
+      {
+        "id": "0c18823a737cb5f15a54e4012bbb0bab41476501eb141055d879fce7eb2e9672",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 159,
+        "score": 0.03125763125763126,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "q14",
+    "split": "dev",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 196,
+        "evidence": "(Note that section breaks must be deleted using the Delete key from the left in Docs; you cannot put your cursor to the right of the section break and use the Backspace key to remove it.)"
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "4fd64690fe3a33ea8147872062ee4520d99426baf88cfc4c8952abc73766b438",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 196,
+        "score": 0.03278688524590164,
+        "evidence_hit": true
+      },
+      {
+        "id": "642a5be7f35e31d79c367f026225176694af5ba0b268b25b9456378a390538ec",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 196,
+        "score": 0.03200204813108039,
+        "evidence_hit": false
+      },
+      {
+        "id": "d3047032c87cce000a2c62be1dcf7764763fdeb907ee4617c7320f6e20c70d51",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 195,
+        "score": 0.03200204813108039,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "q15",
+    "split": "dev",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 203,
+        "evidence": "The way to do this is through Suggesting mode, as the chapter on Essentials of Software Applications for Business introduced. To turn on Suggesting mode, go to the top right of the Docs window and look for the drop-down menu that says Editing. As you click on it, select Suggesting, as Figure 3.62 shows."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "5021d4ff94839d7c13080f4221d35061a9b15dbb33ef1e46a1c75ad612c0f0c9",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 203,
+        "score": 0.03252247488101534,
+        "evidence_hit": true
+      },
+      {
+        "id": "091ffb37c45cc7597aeb388efac68660451a934db8ff7af51ff0699e5174b288",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 203,
+        "score": 0.032266458495966696,
+        "evidence_hit": false
+      },
+      {
+        "id": "2956d9cc924d434a8a152851c7feec3d05e2609a6cd9ecdfc980c21e145bb30e",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 204,
+        "score": 0.031009615384615385,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "q21",
+    "split": "dev",
+    "answerable": false,
+    "status": "abstain",
+    "gold": [],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "e92f52f2f23b4a6db25f78e7463ab2a1f313934aeb4b07e286f6c3a7f3736764",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 172,
+        "score": 0.03278688524590164,
+        "evidence_hit": false
+      },
+      {
+        "id": "d4ae361092e6fb1d6cdbd5a114b61435bd67cb29304e634cecd9a2a2d424aa0a",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 205,
+        "score": 0.03225806451612903,
+        "evidence_hit": false
+      },
+      {
+        "id": "5bf82d02f03ba1b69d52c966b17efb81d2c93bbdd61ee1b92f05bcc62f16e94e",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 214,
+        "score": 0.030776515151515152,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": null,
+    "hit3": null,
+    "context_exact_evidence": null
+  },
+  {
+    "query_id": "q22",
+    "split": "dev",
+    "answerable": false,
+    "status": "abstain",
+    "gold": [],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "9ac553eda21e4b6fd3dc12e0183a63f786cd174be3a66d14ff9bbe0f987cd23d",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 214,
+        "score": 0.03252247488101534,
+        "evidence_hit": false
+      },
+      {
+        "id": "2d1ba27af696bf0438ecb23f2732406fb21b7abc378cf9e9859053e4e81b12b8",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 207,
+        "score": 0.032266458495966696,
+        "evidence_hit": false
+      },
+      {
+        "id": "4dd9970a1efa34db5edaa0fef09d0f900327fdedcf01cf4e593aaefc2eea3f74",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 216,
+        "score": 0.030536130536130537,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": null,
+    "hit3": null,
+    "context_exact_evidence": null
+  },
+  {
+    "query_id": "q16",
+    "split": "test",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 207,
+        "evidence": "This version history can be accessed by going to the File menu, then hovering over Version history, then selecting See version history."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "a831631dbea6e3089a2d8cccec604c24c8ae92b67bc08b3a6b90736dfff4e236",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 207,
+        "score": 0.03252247488101534,
+        "evidence_hit": true
+      },
+      {
+        "id": "de5b881e6ff774f2d3385865e76b3301fa694e3a3040a5922acf152eb3653252",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 208,
+        "score": 0.03252247488101534,
+        "evidence_hit": false
+      },
+      {
+        "id": "a8bfce61e30b31ff503402d6744a1a6cc6fa74592cd7b893993c2d5bd79b8a2d",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 216,
+        "score": 0.03125763125763126,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "q17",
+    "split": "test",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 209,
+        "evidence": "If you want to find out who made the changes, hover the mouse above the text you want to query, and the name of the collaborator will appear."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "78476f32bacffd67b208051799e10c6ca3c3cbe00915ab8da09e500d2e671589",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 209,
+        "score": 0.03278688524590164,
+        "evidence_hit": true
+      },
+      {
+        "id": "0efc9a74d43e6d10f246471440f71e514fba000a0510b7e1ab4dc5791daecae0",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 209,
+        "score": 0.029571646010002173,
+        "evidence_hit": false
+      },
+      {
+        "id": "da277683eb2ed67604bcdda0247abcdcbe21e60c32315c96509f7567458e2285",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 207,
+        "score": 0.02946236559139785,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "q18",
+    "split": "test",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 212,
+        "evidence": "When a copy is made of any version of a document, it is saved as a new Doc, without the version history attached to it. The comments and suggestions are also not copied."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "4d27258058f37e603f4254bbd744d0ef133d89f6fc9a7f3f03c4626ebb1fdefb",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 212,
+        "score": 0.03252247488101534,
+        "evidence_hit": true
+      },
+      {
+        "id": "c451a5a5b0338541732c71d549b57591d735c657ec55281b34e04f59ff0fc6c1",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 211,
+        "score": 0.03252247488101534,
+        "evidence_hit": false
+      },
+      {
+        "id": "de5b881e6ff774f2d3385865e76b3301fa694e3a3040a5922acf152eb3653252",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 208,
+        "score": 0.03149801587301587,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "q19",
+    "split": "test",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 213,
+        "evidence": "You can access these micro changes in each session by clicking on the triangle on the left of the version."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "8e6ec6d7f513f8da7a3e6dafd652b41e9cf96cde4bca0fe302df43ede4334dfd",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 213,
+        "score": 0.03252247488101534,
+        "evidence_hit": true
+      },
+      {
+        "id": "de5b881e6ff774f2d3385865e76b3301fa694e3a3040a5922acf152eb3653252",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 208,
+        "score": 0.03252247488101534,
+        "evidence_hit": false
+      },
+      {
+        "id": "db0fad8c58e48437a658bf2cbea0766802ec83f277f0f6d2d43d7fc8954567d8",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 213,
+        "score": 0.031009615384615385,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "q20",
+    "split": "test",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 214,
+        "evidence": "Microsoft Office has many options for accessing version histories but can be done only if the file is stored in OneDrive or SharePoint Figure 3.73."
+      },
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 207,
+        "evidence": "In Word, there are fewer options for accessing and using version history features, but they do exist if you keep your documents stored on Microsoft’s cloud service, OneDrive, or on a SharePoint server."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "9ac553eda21e4b6fd3dc12e0183a63f786cd174be3a66d14ff9bbe0f987cd23d",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 214,
+        "score": 0.03278688524590164,
+        "evidence_hit": true
+      },
+      {
+        "id": "a8bfce61e30b31ff503402d6744a1a6cc6fa74592cd7b893993c2d5bd79b8a2d",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 216,
+        "score": 0.03225806451612903,
+        "evidence_hit": false
+      },
+      {
+        "id": "2d1ba27af696bf0438ecb23f2732406fb21b7abc378cf9e9859053e4e81b12b8",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 207,
+        "score": 0.031024531024531024,
+        "evidence_hit": true
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "q23",
+    "split": "test",
+    "answerable": false,
+    "status": "abstain",
+    "gold": [],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "e15b92828d06150462c204516092ca27b46564ca266fe0b2437df595af5124ce",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 180,
+        "score": 0.03278688524590164,
+        "evidence_hit": false
+      },
+      {
+        "id": "8971525af7c60041349a354bb8f7e9052767a94f1bf3ca864d02ea75dd2a17fa",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 185,
+        "score": 0.031754032258064516,
+        "evidence_hit": false
+      },
+      {
+        "id": "832059786fe723cf5bea946df3aa5f194d0199167ac64de406d2f3d2476a8375",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 186,
+        "score": 0.030621785881252923,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": null,
+    "hit3": null,
+    "context_exact_evidence": null
+  },
+  {
+    "query_id": "q24",
+    "split": "test",
+    "answerable": false,
+    "status": "abstain",
+    "gold": [],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "e15b92828d06150462c204516092ca27b46564ca266fe0b2437df595af5124ce",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 180,
+        "score": 0.031544957774465976,
+        "evidence_hit": false
+      },
+      {
+        "id": "021d4bbb057867863d71b244d0cb0fcf05ce1ea00200c9a150845236fa51c7db",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 182,
+        "score": 0.030798389007344232,
+        "evidence_hit": false
+      },
+      {
+        "id": "a6aca2a2b22f6ba5e837d4afc7a832342548829f8f05c9690cc6ffdfc39ec7b4",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 200,
+        "score": 0.03055037313432836,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": null,
+    "hit3": null,
+    "context_exact_evidence": null
+  }
+]

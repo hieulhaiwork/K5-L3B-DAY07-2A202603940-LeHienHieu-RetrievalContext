@@ -1,0 +1,208 @@
+[
+  {
+    "query_id": "q01",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Evidence đủ điều kiện headings ở hạng 2, trang 151; câu trả lời trích đúng đoạn. Hạng 1 chỉ giới thiệu Navigation pane, nên Hit@1 giảm so với Dense."
+  },
+  {
+    "query_id": "q02",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Trang 155 nêu đủ Layout > Margins > Custom Margins và hộp thoại; câu trả lời được hỗ trợ đầy đủ."
+  },
+  {
+    "query_id": "q03",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Trang 155 xác nhận landscape phù hợp bảng/đồ thị không vừa trang đứng; câu trả lời đúng điều kiện."
+  },
+  {
+    "query_id": "q04",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Trang 163 hỗ trợ cả tăng khả năng quan sát revisions và định nghĩa double-spacing; câu trả lời đủ và có citation."
+  },
+  {
+    "query_id": "q05",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Trang 167 nêu hai lý do logic và accessibility; câu trả lời giữ đủ cả hai ý."
+  },
+  {
+    "query_id": "q06",
+    "answer_grade": 1,
+    "context_grade": 2,
+    "citation_support": [
+      false
+    ],
+    "reason": "Phân biệt xóa và resolve đúng với trang 171, nhưng câu trả lời thêm rằng comment không còn active trong tài liệu. Các đoạn context không xác nhận trạng thái này; cùng tiêu chí chấm với lỗi suy diễn q06 của Dense."
+  },
+  {
+    "query_id": "q07",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Trang 170 nêu ví dụ four/for, giới hạn spell-check và yêu cầu proofread; câu trả lời giữ đủ các ý."
+  },
+  {
+    "query_id": "q08",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true,
+      true,
+      true
+    ],
+    "reason": "Ba đoạn trang 176 hỗ trợ định nghĩa theme, vai trò mã style và điều kiện áp dụng style trước theme. Câu trả lời đúng và đủ; evidence chuẩn ở hạng 2."
+  },
+  {
+    "query_id": "q09",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Trang 179 nêu trực tiếp Semitransparent làm watermark ít hiện hơn; câu trả lời đúng."
+  },
+  {
+    "query_id": "q10",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Trang 181 xác nhận Paste without formatting loại font, size, color của nguồn; câu trả lời đầy đủ."
+  },
+  {
+    "query_id": "q11",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Trang 188 nêu heading được thêm vào outline và outline phản ánh hierarchy; ví dụ trong câu trả lời có trong nguồn."
+  },
+  {
+    "query_id": "q12",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Trang 190 phân biệt dịch cả paragraph và thụt đầu dòng; đường dẫn Format > Align & indent > Increase indent đầy đủ."
+  },
+  {
+    "query_id": "q13",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Trang 195 hỗ trợ đúng hai trường hợp Continuous cùng trang và next page mở trang mới."
+  },
+  {
+    "query_id": "q14",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Trang 196 xác nhận Delete từ bên trái và không Backspace từ bên phải; câu trả lời đủ điều kiện."
+  },
+  {
+    "query_id": "q15",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Evidence trang 203 được Hybrid đưa lên hạng 1 thay vì hạng 2 của Dense; câu trả lời nêu đúng Editing > Suggesting."
+  },
+  {
+    "query_id": "q21",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "Corpus/context chỉ nêu thao tác chấp nhận Track Changes qua giao diện, không có mã VBA; agent từ chối và không tự bổ sung mã."
+  },
+  {
+    "query_id": "q22",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "Context có điều kiện dùng version history và số phiên bản SharePoint, không có thời hạn OneDrive tính bằng ngày; agent từ chối đúng."
+  },
+  {
+    "query_id": "q16",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Trang 207 nêu đủ File > Version history > See version history; câu trả lời và citation khớp."
+  },
+  {
+    "query_id": "q17",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Trang 209 nêu hover trên đoạn thay đổi để thấy tên người sửa; câu trả lời và citation đúng, evidence ở hạng 1."
+  },
+  {
+    "query_id": "q18",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Trang 212 xác nhận bản copy không có version history, comments và suggestions; câu trả lời giữ đủ ba thành phần."
+  },
+  {
+    "query_id": "q19",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Trang 213 nêu nhấn tam giác bên trái version để xem micro changes trong phiên; câu trả lời đúng và evidence ở hạng 1."
+  },
+  {
+    "query_id": "q20",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Trang 214 nêu điều kiện lưu trên OneDrive hoặc SharePoint; câu trả lời giữ đủ hai lựa chọn và có citation đúng."
+  },
+  {
+    "query_id": "q23",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "Context chỉ hướng dẫn giao diện tạo Docs, không có Apps Script xuất PDF; câu trả lời cuối từ chối, không tự bổ sung mã."
+  },
+  {
+    "query_id": "q24",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "Context không cung cấp quota API theo phút/người dùng; agent từ chối và không đưa ra con số thiếu nguồn."
+  }
+]

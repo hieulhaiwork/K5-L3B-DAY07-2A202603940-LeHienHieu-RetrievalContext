@@ -37,6 +37,12 @@ class BenchmarkTests(unittest.TestCase):
         self.assertIsNone(summary['dev']['estimated_chat_cost_usd'])
         self.assertEqual(summary['dev']['chat_calls_with_unknown_cost'], 1)
 
+    def test_service_error_does_not_become_a_retrieval_quality_miss(self):
+        self.traces[0].update({'status': 'error', 'events': [{'event': 'search'}]})
+        _, summary = summarize(self.questions, self.traces)
+        self.assertEqual(summary['dev']['retrieval_coverage'], {'n': 0, 'N': 1, 'rate': 0.0})
+        self.assertEqual(summary['dev']['retrieval']['hit3'], {'n': 0, 'N': 0, 'rate': None})
+
     def test_matching_text_on_wrong_page_is_not_a_hit(self):
         self.chunk['page'] = 11
         self.assertFalse(retrieval_records(self.questions, self.traces)[0]['hit1'])

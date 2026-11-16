@@ -1,0 +1,187 @@
+{
+  "dev": {
+    "cases": 17,
+    "completed_traces": 17,
+    "statuses": {
+      "answered": 15,
+      "abstain": 2
+    },
+    "retrieval_coverage": {
+      "n": 15,
+      "N": 15,
+      "rate": 1.0
+    },
+    "retrieval": {
+      "hit1": {
+        "n": 13,
+        "N": 15,
+        "rate": 0.8666666666666667
+      },
+      "hit3": {
+        "n": 15,
+        "N": 15,
+        "rate": 1.0
+      },
+      "context_exact_evidence": {
+        "n": 15,
+        "N": 15,
+        "rate": 1.0
+      }
+    },
+    "search_count_distribution": {
+      "1": 17
+    },
+    "model_call_count_distribution": {
+      "2": 15,
+      "3": 2
+    },
+    "elapsed_seconds": 638.067237,
+    "previous_error_attempts": 0,
+    "retrieval_seconds": 149.62582200000003,
+    "estimated_chat_cost_usd": null,
+    "estimated_chat_cost_known_usd": 0.07754000000000001,
+    "chat_calls_with_unknown_cost": 2,
+    "reported_embedding_cost_usd": null,
+    "chat_usage": {
+      "prompt_tokens": 18972,
+      "completion_tokens": 3011,
+      "total_tokens": 21983
+    },
+    "agent": {
+      "cases": 17,
+      "provider_errors": 0,
+      "tool_use": {
+        "n": 17,
+        "N": 17
+      },
+      "grounded_answer": {
+        "0": 0,
+        "1": 1,
+        "2": 14,
+        "N": 15,
+        "mean": 1.9333333333333333
+      },
+      "citation_validity": {
+        "n": 16,
+        "N": 17
+      },
+      "answer_citation_coverage": {
+        "n": 15,
+        "N": 15
+      },
+      "abstention": {
+        "n": 2,
+        "N": 2
+      },
+      "false_abstention": {
+        "n": 0,
+        "N": 15
+      }
+    },
+    "context_grade_counts": {
+      "2": 15
+    },
+    "context_evaluation_coverage": {
+      "n": 15,
+      "N": 15,
+      "rate": 1.0
+    },
+    "context_evidence_rate": {
+      "n": 15,
+      "N": 15,
+      "rate": 1.0
+    }
+  },
+  "test": {
+    "cases": 7,
+    "completed_traces": 7,
+    "statuses": {
+      "answered": 5,
+      "abstain": 2
+    },
+    "retrieval_coverage": {
+      "n": 5,
+      "N": 5,
+      "rate": 1.0
+    },
+    "retrieval": {
+      "hit1": {
+        "n": 5,
+        "N": 5,
+        "rate": 1.0
+      },
+      "hit3": {
+        "n": 5,
+        "N": 5,
+        "rate": 1.0
+      },
+      "context_exact_evidence": {
+        "n": 5,
+        "N": 5,
+        "rate": 1.0
+      }
+    },
+    "search_count_distribution": {
+      "1": 7
+    },
+    "model_call_count_distribution": {
+      "2": 7
+    },
+    "elapsed_seconds": 219.12373799999997,
+    "previous_error_attempts": 6,
+    "retrieval_seconds": 91.264942,
+    "estimated_chat_cost_usd": 0.034135,
+    "estimated_chat_cost_known_usd": 0.034135,
+    "chat_calls_with_unknown_cost": 0,
+    "reported_embedding_cost_usd": null,
+    "chat_usage": {
+      "prompt_tokens": 9054,
+      "completion_tokens": 1150,
+      "total_tokens": 10204
+    },
+    "agent": {
+      "cases": 7,
+      "provider_errors": 0,
+      "tool_use": {
+        "n": 7,
+        "N": 7
+      },
+      "grounded_answer": {
+        "0": 0,
+        "1": 0,
+        "2": 5,
+        "N": 5,
+        "mean": 2.0
+      },
+      "citation_validity": {
+        "n": 5,
+        "N": 5
+      },
+      "answer_citation_coverage": {
+        "n": 5,
+        "N": 5
+      },
+      "abstention": {
+        "n": 2,
+        "N": 2
+      },
+      "false_abstention": {
+        "n": 0,
+        "N": 5
+      }
+    },
+    "context_grade_counts": {
+      "2": 5
+    },
+    "context_evaluation_coverage": {
+      "n": 5,
+      "N": 5,
+      "rate": 1.0
+    },
+    "context_evidence_rate": {
+      "n": 5,
+      "N": 5,
+      "rate": 1.0
+    }
+  }
+}

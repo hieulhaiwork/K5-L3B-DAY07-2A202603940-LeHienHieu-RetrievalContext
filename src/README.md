@@ -80,3 +80,19 @@ python -X utf8 -B -m src.benchmark --split all --output results/dense_baseline -
 Kết quả gồm `traces.json`, `retrieval.json`, `reviews.json` và `summary.json`. Nhãn câu trả lời/citation được tổng hợp bằng `starter/agent_metrics.py`. Câu thiếu evidence không tham gia mẫu số retrieval. `context_exact_evidence` ghi khớp trích dẫn nguyên văn; Context Evidence Rate dùng nhãn đủ bằng chứng của context cuối. ID citation hợp lệ vẫn cần được đối chiếu với các khẳng định trong câu trả lời.
 
 Thời gian và usage có tính cả lịch sử retry. Chi phí chat được ước tính từ usage đã nhận; nếu request lỗi không có usage, tổng chi phí giữ `null` và báo riêng phần đã xác định cùng số request chưa xác định.
+
+## Hybrid retrieval
+
+`src/hybrid.py` tái sử dụng `TfidfIndex` từ `starter/baseline.py`, kết hợp với Dense bằng [Reciprocal Rank Fusion](https://cormack.uwaterloo.ca/cormack/cormacksigir09-rrf.pdf): mỗi nhánh đóng góp `1 / (60 + rank)`. Cấu hình `src/configs/hybrid.json` cố định 20 candidates mỗi nhánh; kết quả hợp nhất trả top-3 theo cấu hình agent.
+
+Cả hai nhánh dùng cùng corpus và filter. Nhánh TF-IDF lọc metadata trước khi cắt candidates; IDF được tính trên toàn corpus. Context, model GPT-4o và quy tắc citation/abstention giữ cùng cấu hình Dense. Trace lưu thêm `retrieval_details.component_rankings`, còn kết quả top-3 có rank và score từng nhánh.
+
+```powershell
+python -X utf8 -B -m src.benchmark --method hybrid --split all --output results/hybrid
+python -X utf8 -B -m src.benchmark --method hybrid --split all --output results/hybrid --retry-errors
+python -X utf8 -B -m src.benchmark --method hybrid --split all --output results/hybrid --summarize-only --reviews results/hybrid/reviews.json
+```
+
+Các phương pháp được lưu ở thư mục kết quả riêng; kết quả Dense có sẵn được giữ nguyên. Dùng thư mục output mới nếu muốn chạy lại toàn bộ benchmark.
+
+Khi có lỗi dịch vụ, metrics chất lượng chỉ tính các câu có kết quả để đánh giá; `retrieval_coverage` và `context_evaluation_coverage` ghi số câu đã đánh giá trên tổng số câu có đáp án. Không kết luận kết quả test đầy đủ khi coverage chưa đạt 100%. HTTP 429 `free-models-per-day` là hết hạn mức ngày; giữ trace lỗi và chạy lại khi hạn mức được khôi phục, không dùng cache query của Lab 6.
