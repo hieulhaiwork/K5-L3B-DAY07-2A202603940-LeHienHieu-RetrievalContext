@@ -1,0 +1,29 @@
+{
+  "questions_hash": "8d6d4f77cc05354a84ad996ac9cd13733165ef1dc9014b4c70365377edfee6a9",
+  "config": {
+    "provider": "OpenAI",
+    "model": "gpt-4o",
+    "temperature": 0,
+    "max_completion_tokens": 1800,
+    "retrieval_method": "dense",
+    "top_k": 8,
+    "max_searches": 1,
+    "context_budget_chars": 24000,
+    "context_selection": "rank order, unique IDs, whole chunks only",
+    "query_policy": "original question verbatim",
+    "prices_per_million_tokens": {
+      "input": 2.5,
+      "cached_input": 1.25,
+      "output": 10
+    },
+    "pricing_source": "https://developers.openai.com/api/docs/models/gpt-4o",
+    "pricing_checked_on": "2026-11-16",
+    "max_finalization_attempts": 2
+  },
+  "collection": "nvidia2026_1d7224ab301933d7",
+  "snapshot_hash": "1d7224ab301933d76afaee25719778d6b9f8c1f017524dd27b120ad918820ac5",
+  "split": "dev",
+  "questions_file": "advanced/data/dev_questions.json",
+  "runtime_agent_sha256": "527f816154c4b775520e4edc2e83b9c85023ad784c01a0173c4efa53b0dfe0fb",
+  "runner_sha256": "547b092c1c2d1dc939809967128dbaf284a3cc2fb38be22b98dc6725efa02d90"
+}

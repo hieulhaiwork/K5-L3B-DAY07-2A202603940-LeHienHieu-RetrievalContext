@@ -1,0 +1,51 @@
+{
+  "split": "dev",
+  "total": 18,
+  "completed": 18,
+  "status_counts": {
+    "answered": 14,
+    "abstain": 4
+  },
+  "review_complete": true,
+  "passed": 14,
+  "pass_rate_percent": 77.77777777777777,
+  "groups": {
+    "abstention": {
+      "total": 3,
+      "reviewed": 3,
+      "passed": 3
+    },
+    "chart": {
+      "total": 3,
+      "reviewed": 3,
+      "passed": 2
+    },
+    "image": {
+      "total": 3,
+      "reviewed": 3,
+      "passed": 2
+    },
+    "multi_hop": {
+      "total": 3,
+      "reviewed": 3,
+      "passed": 1
+    },
+    "table": {
+      "total": 3,
+      "reviewed": 3,
+      "passed": 3
+    },
+    "text": {
+      "total": 3,
+      "reviewed": 3,
+      "passed": 3
+    }
+  },
+  "elapsed_seconds_sum": 245.883,
+  "estimated_chat_cost_usd": 1.4840999999999998,
+  "chat_cost_complete": true,
+  "new_embedding_prompt_tokens": 121,
+  "estimated_embedding_cost_usd": 2.42e-06,
+  "pricing_note": "Estimates from configured GPT-4o rates and embedding rate USD 0.02/million input tokens; not invoices.",
+  "grade_note": "Binary grades require review of answer, citations and original PDF. Retrieval diagnostics are not grades."
+}

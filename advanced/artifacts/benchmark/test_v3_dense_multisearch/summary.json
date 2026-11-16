@@ -1,0 +1,66 @@
+{
+  "split": "test",
+  "total": 30,
+  "completed": 30,
+  "status_counts": {
+    "answered": 24,
+    "abstain": 6
+  },
+  "review_complete": true,
+  "passed": 27,
+  "pass_rate_percent": 90.0,
+  "groups": {
+    "abstention": {
+      "total": 6,
+      "reviewed": 6,
+      "passed": 5
+    },
+    "chart": {
+      "total": 5,
+      "reviewed": 5,
+      "passed": 5
+    },
+    "image": {
+      "total": 5,
+      "reviewed": 5,
+      "passed": 5
+    },
+    "multi_hop": {
+      "total": 4,
+      "reviewed": 4,
+      "passed": 2
+    },
+    "table": {
+      "total": 6,
+      "reviewed": 6,
+      "passed": 6
+    },
+    "text": {
+      "total": 4,
+      "reviewed": 4,
+      "passed": 4
+    }
+  },
+  "elapsed_seconds_sum": 209.737,
+  "estimated_chat_cost_usd": 0.8397250000000002,
+  "chat_cost_complete": true,
+  "new_embedding_prompt_tokens": 1226,
+  "estimated_embedding_cost_usd": 2.452e-05,
+  "pricing_note": "Estimates from configured GPT-4o rates and embedding rate USD 0.02/million input tokens; not invoices.",
+  "grade_note": "Binary grades require review of answer, citations and original PDF. Retrieval diagnostics are not grades.",
+  "benchmark_version": "v3_indexed_scope_simple",
+  "scope_note": "Evaluation covers useful content retained in the verified index. Excluded or uncertain PDF regions are outside answerable coverage. This benchmark does not establish complete PDF extraction or indexing coverage.",
+  "selection_file": "advanced/artifacts/benchmark/test_v3_selection.json",
+  "questions_hash": "7b1bc7b95c463ebebc960a2f70a758497cfaa340cb2e655b4eb6b143b3b62704",
+  "minimum_required_passes": 27,
+  "test_score_threshold_percent": 90,
+  "test_score_threshold_met": true,
+  "failure_ids": [
+    "adv_test_v3_17",
+    "adv_test_v3_18",
+    "adv_test_v3_27"
+  ],
+  "new_vision_api_attempts": 10,
+  "estimated_total_api_cost_usd": 0.8397495200000001,
+  "evaluation_note": "One frozen full-test execution. The numeric threshold is met within the declared retained-index scope; this does not establish complete PDF coverage or all Advanced bonus conditions."
+}

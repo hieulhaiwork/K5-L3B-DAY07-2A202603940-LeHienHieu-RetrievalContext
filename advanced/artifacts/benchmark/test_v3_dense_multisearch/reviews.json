@@ -1,0 +1,1446 @@
+[
+  {
+    "query_id": "adv_test_v3_01",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "table",
+    "answerable": true,
+    "reason": "Correct work-in-process balance 8822 USD million at Jan 25, 2026; original page 155 inventories table and cited source region support it.",
+    "failure_category": "none",
+    "citation_pages": [
+      155
+    ],
+    "citation_sources": {
+      "adv-759fbe4107382e86c6ae8af7": {
+        "page": 155,
+        "source_records": [
+          {
+            "bbox": [
+              38.93,
+              449.65,
+              554.85,
+              537.03
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p155-b011.png",
+            "page": 155,
+            "record_id": "p155-b011",
+            "content_type": "table",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coordinate_table"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      155
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_02",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "table",
+    "answerable": true,
+    "reason": "Correct fiscal 2026 interest income 2300 USD million; original page 130 table row and date column match the citation.",
+    "failure_category": "none",
+    "citation_pages": [
+      130
+    ],
+    "citation_sources": {
+      "adv-9bb001f70a48aeb1e8387c27": {
+        "page": 130,
+        "source_records": [
+          {
+            "bbox": [
+              38.32,
+              96.18,
+              553.38,
+              199.42
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p130-b004.png",
+            "page": 130,
+            "record_id": "p130-b004",
+            "content_type": "table",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coordinate_table"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      130
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_03",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "table",
+    "answerable": true,
+    "reason": "Correct weighted-average ESPP purchase price 49.13 USD per share; original page 149 ESPP table supports the cited value.",
+    "failure_category": "none",
+    "citation_pages": [
+      149
+    ],
+    "citation_sources": {
+      "adv-929354e4c4e1c77803b653e0": {
+        "page": 149,
+        "source_records": [
+          {
+            "bbox": [
+              41.6,
+              504.0,
+              66.8,
+              515.2
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p149-b012.png",
+            "page": 149,
+            "record_id": "p149-b012",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              40.1,
+              512.36,
+              551.85,
+              561.02
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p149-b013.png",
+            "page": 149,
+            "record_id": "p149-b013",
+            "content_type": "table",
+            "verification": "automated_checks_only",
+            "extraction_method": "paddleocr_layout_ocr_and_table_v2"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      149
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_04",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "table",
+    "answerable": true,
+    "reason": "Correct current federal income tax 19039 USD million; original page 160 current/Federal row supports the claim.",
+    "failure_category": "none",
+    "citation_pages": [
+      160
+    ],
+    "citation_sources": {
+      "adv-1052b5244858ab3b182ee1dc": {
+        "page": 160,
+        "source_records": [
+          {
+            "bbox": [
+              39.01,
+              476.22,
+              554.17,
+              681.75
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p160-b009.png",
+            "page": 160,
+            "record_id": "p160-b009",
+            "content_type": "table",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coordinate_table"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      160
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_05",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "table",
+    "answerable": true,
+    "reason": "Correct fiscal 2026 Data Center Networking revenue 31376 USD million; original page 167 indented Networking row supports it.",
+    "failure_category": "none",
+    "citation_pages": [
+      167
+    ],
+    "citation_sources": {
+      "adv-8751c5fd03b5ffb083540256": {
+        "page": 167,
+        "source_records": [
+          {
+            "bbox": [
+              39.54,
+              89.05,
+              552.87,
+              250.06
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p167-b003.png",
+            "page": 167,
+            "record_id": "p167-b003",
+            "content_type": "table",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coordinate_table"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      167
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_06",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "table",
+    "answerable": true,
+    "reason": "Correct operating lease assets obtained in exchange for obligations 1439 USD million; original page 168 supplemental lease table supports it.",
+    "failure_category": "none",
+    "citation_pages": [
+      168
+    ],
+    "citation_sources": {
+      "adv-ea1b134308783ab9865f1566": {
+        "page": 168,
+        "source_records": [
+          {
+            "bbox": [
+              39.05,
+              113.31,
+              553.33,
+              204.38
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p168-b005.png",
+            "page": 168,
+            "record_id": "p168-b005",
+            "content_type": "table",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coordinate_table"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      168
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_07",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "image",
+    "answerable": true,
+    "reason": "Original page 3 stack diagram has Energy as its bottom layer; citation resolves to an inspected original crop.",
+    "failure_category": "none",
+    "citation_pages": [
+      3
+    ],
+    "citation_sources": {
+      "vision-d57a74322699e51fdf76ca5e": {
+        "page": 3,
+        "source_records": [
+          {
+            "record_id": "p003-b001",
+            "page": 3,
+            "bbox": [
+              0.0,
+              0.0,
+              1148.98,
+              773.27
+            ],
+            "crop": "PDF-render-on-demand",
+            "content_type": "informative_image"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      3
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_08",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "image",
+    "answerable": true,
+    "reason": "Original page 3 application icons include the coding label AI Coder; inspected crop citation supports it.",
+    "failure_category": "none",
+    "citation_pages": [
+      3
+    ],
+    "citation_sources": {
+      "vision-b16a50e7a9736f9842b57d12": {
+        "page": 3,
+        "source_records": [
+          {
+            "record_id": "p003-b001",
+            "page": 3,
+            "bbox": [
+              0.0,
+              0.0,
+              1148.98,
+              773.27
+            ],
+            "crop": "PDF-render-on-demand",
+            "content_type": "informative_image"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      3
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_09",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "image",
+    "answerable": true,
+    "reason": "Original page 8 diagram names OpenShell; capitalization is immaterial and the original visual is cited.",
+    "failure_category": "none",
+    "citation_pages": [
+      8
+    ],
+    "citation_sources": {
+      "vision-02f34be896be901e9e27b5c9": {
+        "page": 8,
+        "source_records": [
+          {
+            "record_id": "p008-b001",
+            "page": 8,
+            "bbox": [
+              0.0,
+              0.24,
+              1188.0,
+              774.0
+            ],
+            "crop": "PDF-render-on-demand",
+            "content_type": "diagram"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      8
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_10",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "image",
+    "answerable": true,
+    "reason": "Identifies the original vertical-axis throughput measure as Tokens per Second For Factory. This is a valid semantic identification of the metric, not an exact-string requirement for the word Throughput; checked directly on original page 14.",
+    "failure_category": "none",
+    "citation_pages": [
+      14
+    ],
+    "citation_sources": {
+      "vision-7b7503a39b38c30dfa6b4aa0": {
+        "page": 14,
+        "source_records": [
+          {
+            "record_id": "p014-b002",
+            "page": 14,
+            "bbox": [
+              201.37,
+              32.87,
+              533.9,
+              324.23
+            ],
+            "crop": "PDF-render-on-demand",
+            "content_type": "diagram"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      14
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_11",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "image",
+    "answerable": true,
+    "reason": "Correct displayed Gaming revenue 16.0 USD billion on original page 23 infographic. Added 41% year-on-year growth is also supported by the same cited image.",
+    "failure_category": "none",
+    "citation_pages": [
+      23
+    ],
+    "citation_sources": {
+      "vision-ecc0175a15b17e953993c796": {
+        "page": 23,
+        "source_records": [
+          {
+            "record_id": "p023-b010",
+            "page": 23,
+            "bbox": [
+              33.76,
+              515.57,
+              557.74,
+              672.6
+            ],
+            "crop": "PDF-render-on-demand",
+            "content_type": "informative_image"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      23
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_12",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "chart",
+    "answerable": true,
+    "reason": "Original page 7 chart vertical axis is labeled Repos and counts repositories; inspected crop supports the answer.",
+    "failure_category": "none",
+    "citation_pages": [
+      7
+    ],
+    "citation_sources": {
+      "vision-3526b2adf0b8d125ab551491": {
+        "page": 7,
+        "source_records": [
+          {
+            "record_id": "p007-b001",
+            "page": 7,
+            "bbox": [
+              0.0,
+              0.0,
+              1188.0,
+              774.0
+            ],
+            "crop": "PDF-render-on-demand",
+            "content_type": "chart"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      7
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_13",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "chart",
+    "answerable": true,
+    "reason": "Original page 24 TSR chart labels the one-year value 32%; correct chart, period and citation.",
+    "failure_category": "none",
+    "citation_pages": [
+      24
+    ],
+    "citation_sources": {
+      "vision-086b510f24c1b93808051043": {
+        "page": 24,
+        "source_records": [
+          {
+            "record_id": "p024-b010",
+            "page": 24,
+            "bbox": [
+              28.29,
+              369.18,
+              565.38,
+              706.34
+            ],
+            "crop": "PDF-render-on-demand",
+            "content_type": "chart"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      24
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_14",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "chart",
+    "answerable": true,
+    "reason": "Original page 24 return-of-capital chart labels three-year total 86.3 USD billion. Added stock repurchases 84.1 and dividends 2.2 are also supported.",
+    "failure_category": "none",
+    "citation_pages": [
+      24
+    ],
+    "citation_sources": {
+      "vision-12e17aaa684d6af00f344f65": {
+        "page": 24,
+        "source_records": [
+          {
+            "record_id": "p024-b010",
+            "page": 24,
+            "bbox": [
+              28.29,
+              369.18,
+              565.38,
+              706.34
+            ],
+            "crop": "PDF-render-on-demand",
+            "content_type": "chart"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      24
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_15",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "chart",
+    "answerable": true,
+    "reason": "Original page 24 return-of-capital legend uses green for Stock Repurchases; correct inspected visual citation.",
+    "failure_category": "none",
+    "citation_pages": [
+      24
+    ],
+    "citation_sources": {
+      "vision-237c3db14a7feb4e253b1873": {
+        "page": 24,
+        "source_records": [
+          {
+            "record_id": "p024-b010",
+            "page": 24,
+            "bbox": [
+              28.29,
+              369.18,
+              565.38,
+              706.34
+            ],
+            "crop": "PDF-render-on-demand",
+            "content_type": "chart"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      24
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_16",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "chart",
+    "answerable": true,
+    "reason": "Original page 24 five-year stock-repurchase segment is 94.2 USD billion, distinct from total capital returned 97.2; correct citation.",
+    "failure_category": "none",
+    "citation_pages": [
+      24
+    ],
+    "citation_sources": {
+      "vision-bc08d118d78c477dd8d9cc70": {
+        "page": 24,
+        "source_records": [
+          {
+            "record_id": "p024-b010",
+            "page": 24,
+            "bbox": [
+              28.29,
+              369.18,
+              565.38,
+              706.34
+            ],
+            "crop": "PDF-render-on-demand",
+            "content_type": "chart"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      24
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_17",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": false,
+    "primary_group": "multi_hop",
+    "answerable": true,
+    "reason": "Abstains on an answerable two-source question. Original page 143 discloses cash paid for income taxes, net, 20288 and page 139 discloses tax expense 21383 USD million; retrieval failed to supply the former.",
+    "failure_category": "retrieval_miss",
+    "citation_pages": [],
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      139,
+      143
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_18",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": false,
+    "primary_group": "multi_hop",
+    "answerable": true,
+    "reason": "Partial answer only: liquidity total 62556 USD million is correct, but the response declines to provide non-marketable equity securities 22251 USD million from original page 155. Both requested disclosures are required.",
+    "failure_category": "incomplete_two_source_answer",
+    "citation_pages": [
+      130
+    ],
+    "citation_sources": {
+      "adv-91d132a6d123ac2fc246b602": {
+        "page": 130,
+        "source_records": [
+          {
+            "bbox": [
+              38.79,
+              598.21,
+              552.93,
+              651.8
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p130-b017.png",
+            "page": 130,
+            "record_id": "p130-b017",
+            "content_type": "table",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coordinate_table"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      130,
+      155
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_19",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "multi_hop",
+    "answerable": true,
+    "reason": "Correct exact inventory balance: 21.403 USD billion equals 21403 USD million, supported by original page 155. Original page 138 supports the named excess/obsolete inventory and excess purchase-commitment provisions. Both sources are cited.",
+    "failure_category": "none",
+    "citation_pages": [
+      138,
+      155
+    ],
+    "citation_sources": {
+      "adv-21666e7f01f95d2d95ca4907": {
+        "page": 138,
+        "source_records": [
+          {
+            "bbox": [
+              37.63,
+              48.84,
+              553.26,
+              121.87
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p138-b002.png",
+            "page": 138,
+            "record_id": "p138-b002",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              40.5,
+              132.63,
+              513.64,
+              143.97
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p138-native003.png",
+            "page": 138,
+            "record_id": "p138-native003",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coverage_fallback"
+          },
+          {
+            "bbox": [
+              37.5,
+              153.08,
+              553.35,
+              237.49
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p138-b004.png",
+            "page": 138,
+            "record_id": "p138-b004",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.54,
+              248.75,
+              553.03,
+              312.19
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p138-b005.png",
+            "page": 138,
+            "record_id": "p138-b005",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.62,
+              322.54,
+              553.22,
+              440.29
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p138-b006.png",
+            "page": 138,
+            "record_id": "p138-b006",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          }
+        ]
+      },
+      "adv-4e4d0b4b296c429504606ff1": {
+        "page": 155,
+        "source_records": [
+          {
+            "bbox": [
+              496.0,
+              564.4,
+              544.0,
+              576.0
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p155-b013.png",
+            "page": 155,
+            "record_id": "p155-b013",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              496.99,
+              566.08,
+              543.29,
+              586.42
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p155-native026.png",
+            "page": 155,
+            "record_id": "p155-native026",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coverage_fallback"
+          },
+          {
+            "bbox": [
+              38.93,
+              449.65,
+              554.85,
+              537.03
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p155-b011.png",
+            "page": 155,
+            "record_id": "p155-b011",
+            "content_type": "table",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coordinate_table"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      138,
+      155
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_20",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "multi_hop",
+    "answerable": true,
+    "reason": "Original page 133 supports substantially all sales in USD and page 157 supports forwards hedging exchange-rate movements on operating expenses; both source pages are cited.",
+    "failure_category": "none",
+    "citation_pages": [
+      133,
+      157
+    ],
+    "citation_sources": {
+      "adv-61c434c43fb9a20bc314f92a": {
+        "page": 157,
+        "source_records": [
+          {
+            "bbox": [
+              40.5,
+              146.0,
+              243.71,
+              158.6
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p157-native003.png",
+            "page": 157,
+            "record_id": "p157-native003",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coverage_fallback"
+          },
+          {
+            "bbox": [
+              40.5,
+              170.28,
+              165.4,
+              181.62
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p157-native004.png",
+            "page": 157,
+            "record_id": "p157-native004",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coverage_fallback"
+          },
+          {
+            "bbox": [
+              37.5,
+              184.67,
+              553.05,
+              247.96
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p157-b006.png",
+            "page": 157,
+            "record_id": "p157-b006",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          }
+        ]
+      },
+      "adv-3e95ccb77153d8b9e4281feb": {
+        "page": 133,
+        "source_records": [
+          {
+            "bbox": [
+              36.84,
+              31.96,
+              553.01,
+              62.67
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p133-b001.png",
+            "page": 133,
+            "record_id": "p133-b001",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              36.99,
+              73.4,
+              552.91,
+              114.23
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p133-b002.png",
+            "page": 133,
+            "record_id": "p133-b002",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.28,
+              125.2,
+              552.89,
+              144.75
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p133-b003.png",
+            "page": 133,
+            "record_id": "p133-b003",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.0,
+              173.01,
+              552.95,
+              225.37
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p133-b005.png",
+            "page": 133,
+            "record_id": "p133-b005",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              36.97,
+              235.41,
+              553.02,
+              287.99
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p133-b006.png",
+            "page": 133,
+            "record_id": "p133-b006",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.17,
+              298.85,
+              553.04,
+              351.49
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p133-b007.png",
+            "page": 133,
+            "record_id": "p133-b007",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.31,
+              361.79,
+              552.83,
+              413.8
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p133-b008.png",
+            "page": 133,
+            "record_id": "p133-b008",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.66,
+              424.77,
+              552.64,
+              444.13
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p133-b009.png",
+            "page": 133,
+            "record_id": "p133-b009",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              40.5,
+              457.55,
+              299.82,
+              470.15
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p133-native010.png",
+            "page": 133,
+            "record_id": "p133-native010",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coverage_fallback"
+          },
+          {
+            "bbox": [
+              37.98,
+              476.28,
+              553.23,
+              496.23
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p133-b011.png",
+            "page": 133,
+            "record_id": "p133-b011",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.64,
+              509.8,
+              501.09,
+              536.51
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p133-b012.png",
+            "page": 133,
+            "record_id": "p133-b012",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      133,
+      157
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_21",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "text",
+    "answerable": true,
+    "reason": "Correct non-exclusive Groq license; original page 149 licensing paragraph supports the response and added technology description.",
+    "failure_category": "none",
+    "citation_pages": [
+      149
+    ],
+    "citation_sources": {
+      "adv-51af52fe3e3877a7ee11d7d4": {
+        "page": 149,
+        "source_records": [
+          {
+            "bbox": [
+              37.34,
+              78.88,
+              553.43,
+              164.16
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p149-b003.png",
+            "page": 149,
+            "record_id": "p149-b003",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.47,
+              195.2,
+              552.69,
+              215.25
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p149-b005.png",
+            "page": 149,
+            "record_id": "p149-b005",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.98,
+              225.94,
+              424.92,
+              235.29
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p149-b006.png",
+            "page": 149,
+            "record_id": "p149-b006",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              43.13,
+              249.93,
+              476.26,
+              261.27
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p149-native006.png",
+            "page": 149,
+            "record_id": "p149-native006",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coverage_fallback"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      149
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_22",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "text",
+    "answerable": true,
+    "reason": "Correct foundational platform NVIDIA CUDA; original page 92 also supports the added all-GPU scope and computational workload explanation.",
+    "failure_category": "none",
+    "citation_pages": [
+      92
+    ],
+    "citation_sources": {
+      "adv-c04463b97a6e9a54108b72a9": {
+        "page": 92,
+        "source_records": [
+          {
+            "bbox": [
+              37.35,
+              90.45,
+              553.17,
+              110.57
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p092-b004.png",
+            "page": 92,
+            "record_id": "p092-b004",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.36,
+              121.03,
+              553.35,
+              195.33
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p092-b005.png",
+            "page": 92,
+            "record_id": "p092-b005",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.17,
+              205.75,
+              553.21,
+              257.95
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p092-b006.png",
+            "page": 92,
+            "record_id": "p092-b006",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.28,
+              268.92,
+              553.28,
+              364.51
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p092-b007.png",
+            "page": 92,
+            "record_id": "p092-b007",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.42,
+              374.89,
+              553.08,
+              448.39
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p092-b008.png",
+            "page": 92,
+            "record_id": "p092-b008",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      92
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_23",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "text",
+    "answerable": true,
+    "reason": "Correctly says the critical audit matter communication does not alter the overall financial-statement opinion. Added no-separate-opinion and complex-judgment statements are supported by original page 138.",
+    "failure_category": "none",
+    "citation_pages": [
+      138
+    ],
+    "citation_sources": {
+      "adv-66e62512cb6f14de603d4cc5": {
+        "page": 138,
+        "source_records": [
+          {
+            "bbox": [
+              40.5,
+              31.23,
+              131.9,
+              42.57
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p138-native001.png",
+            "page": 138,
+            "record_id": "p138-native001",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coverage_fallback"
+          },
+          {
+            "bbox": [
+              37.63,
+              48.84,
+              553.26,
+              121.87
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p138-b002.png",
+            "page": 138,
+            "record_id": "p138-b002",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      138
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_24",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "text",
+    "answerable": true,
+    "reason": "Correct remaining performance-obligation revenue 2.3 USD billion for contracts longer than one year at Jan 25, 2026. Added 1.9 billion deferred and 390 million unbilled components match original page 157.",
+    "failure_category": "none",
+    "citation_pages": [
+      157
+    ],
+    "citation_sources": {
+      "adv-410027d4b2adf1eee3bd3edd": {
+        "page": 157,
+        "source_records": [
+          {
+            "bbox": [
+              37.37,
+              60.67,
+              552.8,
+              81.15
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p157-b002.png",
+            "page": 157,
+            "record_id": "p157-b002",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.08,
+              91.23,
+              552.92,
+              133.67
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p157-b003.png",
+            "page": 157,
+            "record_id": "p157-b003",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.5,
+              184.67,
+              553.05,
+              247.96
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p157-b006.png",
+            "page": 157,
+            "record_id": "p157-b006",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.48,
+              258.63,
+              553.43,
+              310.76
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p157-b007.png",
+            "page": 157,
+            "record_id": "p157-b007",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.98,
+              321.25,
+              421.36,
+              330.83
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p157-b008.png",
+            "page": 157,
+            "record_id": "p157-b008",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      157
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_25",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "abstention",
+    "answerable": false,
+    "reason": "Correct abstention: the original fiscal 2026 report does not disclose audited full-year fiscal 2027 revenue; document-wide absence check is retained in the question.",
+    "failure_category": "none",
+    "citation_pages": [],
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      139
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_26",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "abstention",
+    "answerable": false,
+    "reason": "Correct abstention on undisclosed absolute median per-token latency in milliseconds for GB300 NVL72; no conversion from relative throughput was invented.",
+    "failure_category": "none",
+    "citation_pages": [],
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      6,
+      14
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_27",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": false,
+    "primary_group": "abstention",
+    "answerable": false,
+    "reason": "Incorrectly asserts 42345 USD million as revenue from physical shipments to Taiwan. Original page 166 explicitly defines that figure by customer headquarters and says shipping locations may differ. The following headquarters qualifier does not retract the unsupported shipping claim.",
+    "failure_category": "wrong_geographic_scope",
+    "citation_pages": [
+      166
+    ],
+    "citation_sources": {
+      "adv-bfe122d865c5c011ee1b40ab": {
+        "page": 166,
+        "source_records": [
+          {
+            "bbox": [
+              39.43,
+              340.6,
+              552.1,
+              441.88
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p166-b009.png",
+            "page": 166,
+            "record_id": "p166-b009",
+            "content_type": "table",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coordinate_table"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      166
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_28",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "abstention",
+    "answerable": false,
+    "reason": "Correct abstention on an undisclosed joint gender/engineering-role/Taiwan employee count; no aggregate workforce count is substituted.",
+    "failure_category": "none",
+    "citation_pages": [],
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      99
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_29",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "abstention",
+    "answerable": false,
+    "reason": "Correct abstention on AMD fiscal 2026 gross margin, which is not disclosed in this NVIDIA report.",
+    "failure_category": "none",
+    "citation_pages": [],
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      97,
+      129
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  },
+  {
+    "query_id": "adv_test_v3_30",
+    "benchmark_version": "v3_indexed_scope_simple",
+    "passed": true,
+    "primary_group": "abstention",
+    "answerable": false,
+    "reason": "Correct abstention on a causal percentage of revenue growth attributable to OpenClaw, which the report does not quantify.",
+    "failure_category": "none",
+    "citation_pages": [],
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      8,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129
+    ],
+    "review_method": "Binary original-PDF review: compare every requested fact, unit, period and citation; accept semantically equivalent wording and correct unit conversions. Partial answers, wrong scope, answerable abstentions and system errors fail. No API judge was called."
+  }
+]

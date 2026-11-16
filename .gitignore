@@ -7,11 +7,18 @@ __pycache__/
 .codex-log/
 
 # Local datasets and generated output; share permitted artifacts deliberately
-starter/data/
-starter/results/
+starter/data/*
+starter/results/*
 
-# Advanced: copyrighted source PDF and regenerable renders/crops are not committed
+# Ignore too large files
+data/*.pdf
 advanced/data/*.pdf
-advanced/artifacts/
+advanced/artifacts/extraction/cache/
+advanced/artifacts/extraction/crops/
+advanced/artifacts/extraction/pages/
+advanced/artifacts/index/cache/
+advanced/artifacts/benchmark/cache/
+
+
 
 

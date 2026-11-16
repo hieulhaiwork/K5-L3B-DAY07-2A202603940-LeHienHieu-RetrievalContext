@@ -1,0 +1,281 @@
+[
+  {
+    "query_id": "adv_dev_v2_01",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": false,
+    "primary_group": "table",
+    "reason": "System error counts as failure: Listwise ranking was incomplete, duplicated or cut off; no final answer was produced.",
+    "failure_category": "ranking_output_error",
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      159
+    ]
+  },
+  {
+    "query_id": "adv_dev_v2_02",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": true,
+    "primary_group": "table",
+    "reason": "Complete original-page-164 tax-benefit reconciliation and correct citation.",
+    "failure_category": "none",
+    "citation_sources": {
+      "adv-13a5597148fc1955ef733c8a": {
+        "page": 164,
+        "source_records": [
+          {
+            "bbox": [
+              38.89,
+              89.22,
+              552.87,
+              219.73
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p164-b004.png",
+            "page": 164,
+            "record_id": "p164-b004",
+            "content_type": "table",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coordinate_table"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      164
+    ]
+  },
+  {
+    "query_id": "adv_dev_v2_03",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": false,
+    "primary_group": "table",
+    "reason": "System error counts as failure: Listwise ranking was incomplete, duplicated or cut off; no final answer was produced.",
+    "failure_category": "ranking_output_error",
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      151
+    ]
+  },
+  {
+    "query_id": "adv_dev_v2_04",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": false,
+    "primary_group": "image",
+    "reason": "System error counts as failure: Listwise ranking was incomplete, duplicated or cut off; no final answer was produced.",
+    "failure_category": "ranking_output_error",
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      3
+    ]
+  },
+  {
+    "query_id": "adv_dev_v2_05",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": false,
+    "primary_group": "image",
+    "reason": "Names cuVFS instead of cuVS in the original page 8 diagram; requested library name is wrong.",
+    "failure_category": "visual_transcription",
+    "citation_sources": {
+      "vision-8c59a8f120951dc37c961d4f": {
+        "page": 8,
+        "source_records": [
+          {
+            "record_id": "p008-b001",
+            "page": 8,
+            "bbox": [
+              0.0,
+              0.24,
+              1188.0,
+              774.0
+            ],
+            "crop": "PDF-render-on-demand",
+            "content_type": "diagram"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      8
+    ]
+  },
+  {
+    "query_id": "adv_dev_v2_06",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": false,
+    "primary_group": "image",
+    "reason": "System error counts as failure: Listwise ranking was incomplete, duplicated or cut off; no final answer was produced.",
+    "failure_category": "ranking_output_error",
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      23
+    ]
+  },
+  {
+    "query_id": "adv_dev_v2_07",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": false,
+    "primary_group": "chart",
+    "reason": "System error counts as failure: Listwise ranking was incomplete, duplicated or cut off; no final answer was produced.",
+    "failure_category": "ranking_output_error",
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      7
+    ]
+  },
+  {
+    "query_id": "adv_dev_v2_08",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": false,
+    "primary_group": "chart",
+    "reason": "System error counts as failure: Listwise ranking was incomplete, duplicated or cut off; no final answer was produced.",
+    "failure_category": "ranking_output_error",
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      24
+    ]
+  },
+  {
+    "query_id": "adv_dev_v2_09",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": false,
+    "primary_group": "chart",
+    "reason": "System error counts as failure: OpenAI returned HTTP 429 after bounded retries.",
+    "failure_category": "provider_429",
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      24
+    ]
+  },
+  {
+    "query_id": "adv_dev_v2_10",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": false,
+    "primary_group": "multi_hop",
+    "reason": "System error counts as failure: OpenAI returned HTTP 429 after bounded retries.",
+    "failure_category": "provider_429",
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      143,
+      139
+    ]
+  },
+  {
+    "query_id": "adv_dev_v2_11",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": false,
+    "primary_group": "multi_hop",
+    "reason": "System error counts as failure: OpenAI returned HTTP 429 after bounded retries.",
+    "failure_category": "provider_429",
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      164,
+      149
+    ]
+  },
+  {
+    "query_id": "adv_dev_v2_12",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": false,
+    "primary_group": "multi_hop",
+    "reason": "System error counts as failure: OpenAI returned HTTP 429 after bounded retries.",
+    "failure_category": "provider_429",
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      164,
+      139
+    ]
+  },
+  {
+    "query_id": "adv_dev_v2_13",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": false,
+    "primary_group": "text",
+    "reason": "System error counts as failure: OpenAI returned HTTP 429 after bounded retries.",
+    "failure_category": "provider_429",
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      150
+    ]
+  },
+  {
+    "query_id": "adv_dev_v2_14",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": false,
+    "primary_group": "text",
+    "reason": "System error counts as failure: OpenAI returned HTTP 429 after bounded retries.",
+    "failure_category": "provider_429",
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      165
+    ]
+  },
+  {
+    "query_id": "adv_dev_v2_15",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": false,
+    "primary_group": "text",
+    "reason": "System error counts as failure: OpenAI returned HTTP 429 after bounded retries.",
+    "failure_category": "provider_429",
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      159
+    ]
+  },
+  {
+    "query_id": "adv_dev_v2_16",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": false,
+    "primary_group": "abstention",
+    "reason": "System error counts as failure: OpenAI returned HTTP 429 after bounded retries.",
+    "failure_category": "provider_429",
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      15,
+      24,
+      99,
+      102,
+      131,
+      143,
+      149
+    ]
+  },
+  {
+    "query_id": "adv_dev_v2_17",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": false,
+    "primary_group": "abstention",
+    "reason": "System error counts as failure: OpenAI returned HTTP 429 after bounded retries.",
+    "failure_category": "provider_429",
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      15,
+      16,
+      24,
+      110,
+      132,
+      166
+    ]
+  },
+  {
+    "query_id": "adv_dev_v2_18",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": false,
+    "primary_group": "abstention",
+    "reason": "System error counts as failure: OpenAI returned HTTP 429 after bounded retries.",
+    "failure_category": "provider_429",
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      5,
+      6,
+      13,
+      14,
+      15,
+      86,
+      87,
+      95,
+      104,
+      109,
+      110,
+      124
+    ]
+  }
+]

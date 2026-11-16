@@ -55,4 +55,21 @@ Context mức 2: cả ba phương pháp có 15/15 câu dev và 5/5 câu test. M�
 
 ## Thử thách nâng cao (nếu thực hiện)
 
-Chưa thực hiện; phạm vi hiện tại là phần cơ bản với corpus 64 trang.
+- **Tài liệu:** *NVIDIA 2026 Annual Report*, 175 trang PDF; [nguồn công khai](https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf). Chưa xác định giấy phép tái phân phối nên cung cấp liên kết bản gốc.
+- **Trích xuất và index:** Kết hợp text native, PaddleOCR và GPT-4o cho bảng/hình khó. Các vấn đề chính là lệch hàng/cột bảng, mất ngữ cảnh và mô tả thiếu quan hệ trong sơ đồ. Đã bổ sung trích bảng theo tọa độ, giữ tiêu đề/đơn vị, loại trùng và kiểm tra chất lượng. Giữ lại 2.352 records, tạo 875 chunks thuộc 173 trang; embedding bằng `text-embedding-3-small`, 1.536 chiều, lưu trong PostgreSQL/pgvector riêng cho Advanced. Mỗi chunk giữ trang và vùng evidence gốc.
+- **Benchmark:** Dev gồm 18 câu (15 có đáp án, 3 thiếu bằng chứng); test gồm 30 câu (24 có đáp án, 6 thiếu bằng chứng), bao phủ bảng, ảnh/sơ đồ, biểu đồ, multi-hop và text. Câu hỏi test chủ yếu tra cứu trực tiếp; multi-hop kết hợp hai nguồn. Chấm đạt/không đạt bằng đối chiếu PDF gốc; đáp án chuẩn không truyền vào agent.
+- **Thử nghiệm và cải thiện:** Truy vấn đơn dễ thiếu một vế của câu multi-hop nên bổ sung tách truy vấn, đọc thêm chunks trên trang đã tìm được và tìm kiếm từ khóa. Với sơ đồ, bổ sung đọc crop gốc, lưu quan hệ/vị trí và kiểm tra bất định. Rerank từng trả thiếu/lặp ID, đã chuyển sang schema chấm điểm từng ứng viên. Trên dev, Dense và Dense + rerank cùng đạt 14/18; Dense nhanh và ít tốn phí hơn nên được chọn.
+- **Cấu hình chốt:** GPT-4o, Dense + multi-hop + vision; top-8 mỗi truy vấn, tối đa 6 lượt tìm kiếm, context 24.000 ký tự. Vision có cache, tối đa 2 vùng/câu và 12 lượt gọi mới cho toàn bộ test.
+
+| Nhóm test | Đạt / tổng | Tỷ lệ | Lỗi / nhận xét |
+|---|---|---|---|
+| Bảng | 6/6 | 100% | Đúng hàng, cột và đơn vị |
+| Ảnh, sơ đồ | 5/5 | 100% | Đối chiếu crop gốc |
+| Biểu đồ | 5/5 | 100% | Đọc đúng nhãn, chú giải và giá trị |
+| Multi-hop | 2/4 | 50% | Câu 17 thiếu evidence; câu 18 trả lời chưa đủ |
+| Text | 4/4 | 100% | Đúng nội dung và điều kiện |
+| Thiếu bằng chứng | 5/6 | 83,33% | Câu 27 nhầm trụ sở khách hàng với nơi giao hàng |
+| **Toàn bộ** | **27/30** | **90%** | **Không có lỗi hệ thống** |
+
+- **Kết quả và evidence:** Một lượt chạy test với cấu hình đã chốt, thời gian 209,74 giây, chi phí API ước tính 0,84 USD, gồm 10 lượt vision mới. [Summary](../../advanced/artifacts/benchmark/test_v3_dense_multisearch/summary.json), [trace](../../advanced/artifacts/benchmark/test_v3_dense_multisearch/traces.json), [nhãn từng câu](../../advanced/artifacts/benchmark/test_v3_dense_multisearch/reviews.json); [so sánh dev](../../advanced/artifacts/benchmark/dev_v2_comparison.json).
+- **Giới hạn:** OCR/trích xuất chưa bảo đảm chất lượng ở mọi vùng bảng và hình; 137 records chưa chắc chắn bị loại khỏi index. Benchmark chỉ đánh giá phạm vi nội dung đã embedding, không đại diện cho độ bao phủ toàn bộ PDF. Các câu biểu đồ tập trung vào hai hình ở trang 7 và 24. Multi-hop và phân biệt phạm vi số liệu vẫn còn lỗi.

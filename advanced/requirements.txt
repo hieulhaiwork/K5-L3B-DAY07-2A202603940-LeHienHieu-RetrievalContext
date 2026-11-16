@@ -1,4 +1,10 @@
-﻿pymupdf>=1.24
-psycopg[binary]>=3.2
-python-dotenv>=1.0
+# Target: Windows x64, Python 3.11, NVIDIA driver compatible with CUDA 11.8.
+# The GPU wheel brings CUDA/cuDNN runtime dependencies into this environment.
+paddlepaddle-gpu @ https://paddle-whl.cdn.bcebos.com/stable/cu118/paddlepaddle-gpu/paddlepaddle_gpu-3.2.2-cp311-cp311-win_amd64.whl
+paddleocr[doc-parser]==3.3.3
+paddlex==3.3.13
+pymupdf==1.26.7
+python-dotenv>=1.0,<2
 
+psycopg[binary]>=3.2,<4
+tiktoken==0.14.0

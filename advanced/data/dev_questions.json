@@ -1,0 +1,1124 @@
+[
+  {
+    "id": "adv_dev_v2_01",
+    "split": "dev",
+    "type": "table",
+    "primary_group": "table",
+    "question": "Reconcile the product warranty liability for fiscal 2026 from beginning balance, additions and utilization. State the ending balance and unit.",
+    "expected_answer": "USD 1,290 million + USD 2,474 million - USD 957 million = USD 2,807 million ending product warranty liability.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 159,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "table",
+        "bbox": [
+          34.43,
+          69.79,
+          557.58,
+          228.69
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Product warranty activity table; Jan 25, 2026 column; all four rows.",
+        "evidence": "Beginning 1,290; Additions 2,474; Utilization (957); Ending 2,807.",
+        "unit": "USD million",
+        "record_id": "p159-b005",
+        "crop": "advanced/artifacts/extraction/crops/p159-b005.png",
+        "indexed_chunk_ids": [
+          "adv-2d1455fec03ede0ccbb9ff6a",
+          "adv-e954c17aee0a38b825ab57a5"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "signed_amount",
+      "rollforward"
+    ],
+    "reason": "Tests warranty rollforward and the negative utilization amount.",
+    "grading_criteria": [
+      "Pass only if all requested facts are correct and complete, including units, scope and calculations.",
+      "Citations must identify the original PDF page and relevant evidence region; verify against the original PDF.",
+      "A partial answer, unsupported assertion, incorrect citation, abstention or system error fails."
+    ],
+    "calculations": [
+      {
+        "formula": "1290 + 2474 - 957",
+        "result": 2807,
+        "unit": "USD million",
+        "decimal_places": 0,
+        "rounding": "round half up at final result"
+      }
+    ],
+    "previous_id": "adv_dev_01",
+    "benchmark_version": "v2_indexed_scope",
+    "evaluation_scope": "retained_indexed_content"
+  },
+  {
+    "id": "adv_dev_v2_02",
+    "split": "dev",
+    "type": "table",
+    "primary_group": "table",
+    "question": "Using the fiscal 2026 gross unrecognized tax benefits reconciliation, show how the beginning balance becomes the ending balance. Include every increase and deduction.",
+    "expected_answer": "USD 2,861 million + 1,959 + 57 - 224 - 157 - 76 = USD 4,420 million. The deductions are lapse in statute of limitations, decreases for prior years, and settlements.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 164,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "table",
+        "bbox": [
+          34.89,
+          41.22,
+          556.87,
+          237.73
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Gross unrecognized tax benefits table; Jan 25, 2026 column; all reconciliation rows.",
+        "evidence": "Beginning 2,861; current-year increases 1,959; prior-year increases 57; lapse (224); prior-year decreases (157); settlements (76); ending 4,420.",
+        "unit": "USD million",
+        "record_id": "p164-b004",
+        "crop": "advanced/artifacts/extraction/crops/p164-b004.png",
+        "indexed_chunk_ids": [
+          "adv-13a5597148fc1955ef733c8a"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "rollforward",
+      "multiple_deductions"
+    ],
+    "reason": "Tests complete reconciliation rather than omitting one negative row.",
+    "grading_criteria": [
+      "Pass only if all requested facts are correct and complete, including units, scope and calculations.",
+      "Citations must identify the original PDF page and relevant evidence region; verify against the original PDF.",
+      "A partial answer, unsupported assertion, incorrect citation, abstention or system error fails."
+    ],
+    "calculations": [
+      {
+        "formula": "2861 + 1959 + 57 - 224 - 157 - 76",
+        "result": 4420,
+        "unit": "USD million",
+        "decimal_places": 0,
+        "rounding": "round half up at final result"
+      }
+    ],
+    "previous_id": "adv_dev_02",
+    "benchmark_version": "v2_indexed_scope",
+    "evaluation_scope": "retained_indexed_content"
+  },
+  {
+    "id": "adv_dev_v2_03",
+    "split": "dev",
+    "type": "table",
+    "primary_group": "table",
+    "question": "Reconcile fiscal 2026 basic and diluted weighted-average shares, then state the number of anti-dilutive equity awards excluded from diluted net income per share. Use millions of shares.",
+    "expected_answer": "Basic weighted-average shares of 24,359 million plus a dilutive impact of 155 million equals 24,514 million diluted weighted-average shares. Anti-dilutive equity awards of 41 million were excluded.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 151,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "table",
+        "record_id": "p151-b014",
+        "bbox": [
+          34.59,
+          355.04,
+          556.6,
+          573.08
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "crop": "advanced/artifacts/extraction/crops/p151-b014.png",
+        "region": "Note 4 table; Jan 25, 2026 column; denominator and anti-dilutive award rows.",
+        "evidence": "Basic weighted average shares 24,359; dilutive impact 155; diluted weighted average shares 24,514; anti-dilutive equity awards excluded 41.",
+        "unit": "million shares",
+        "indexed_chunk_ids": [
+          "adv-f3c1d789fac42406b152805d"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "indexed_evidence",
+      "source_verified",
+      "table"
+    ],
+    "reason": "Replacement assesses retained indexed evidence within the declared v2 scope; original-PDF evidence remains the grading reference.",
+    "grading_criteria": [
+      "Pass only if all requested facts are correct and complete, including units, scope and calculations.",
+      "Citations must identify the original PDF page and relevant evidence region; verify against the original PDF.",
+      "A partial answer, unsupported assertion, incorrect citation, abstention or system error fails."
+    ],
+    "previous_id": "adv_dev_03",
+    "benchmark_version": "v2_indexed_scope",
+    "evaluation_scope": "retained_indexed_content",
+    "calculations": [
+      {
+        "formula": "24359 + 155",
+        "result": 24514,
+        "decimal_places": 0,
+        "unit": "million shares",
+        "rounding": "round half up at final result"
+      }
+    ]
+  },
+  {
+    "id": "adv_dev_v2_04",
+    "split": "dev",
+    "type": "image",
+    "primary_group": "image",
+    "question": "Which ten model abbreviations are displayed in the model boxes of the five-layer AI stack diagram?",
+    "expected_answer": "LLM, VLM, VLA, MMLLM, GPT, DM, GNN, MOE, SSM and LBM.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 3,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "image_diagram",
+        "record_id": "p003-b001",
+        "bbox": [
+          0.0,
+          0.0,
+          1148.98,
+          773.27
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "crop": "advanced/artifacts/extraction/crops/p003-b001.png",
+        "region": "Two rows of model abbreviation boxes in the stack diagram.",
+        "evidence": "Model-box labels: LLM, VLM, VLA, MMLLM, GPT, DM, GNN, MOE, SSM, LBM.",
+        "unit": "not applicable",
+        "indexed_chunk_ids": [
+          "adv-c81c8a9717ed988e72fc0524"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "indexed_evidence",
+      "source_verified",
+      "image"
+    ],
+    "reason": "Replacement assesses retained indexed evidence within the declared v2 scope; original-PDF evidence remains the grading reference.",
+    "grading_criteria": [
+      "Pass only if all requested facts are correct and complete, including units, scope and calculations.",
+      "Citations must identify the original PDF page and relevant evidence region; verify against the original PDF.",
+      "A partial answer, unsupported assertion, incorrect citation, abstention or system error fails."
+    ],
+    "previous_id": "adv_dev_04",
+    "benchmark_version": "v2_indexed_scope",
+    "evaluation_scope": "retained_indexed_content"
+  },
+  {
+    "id": "adv_dev_v2_05",
+    "split": "dev",
+    "type": "image",
+    "primary_group": "image",
+    "question": "Which two cu-prefixed libraries and which GPU virtualization component are named in the NemoClaw diagram?",
+    "expected_answer": "The libraries are cuDF and cuVS; the GPU virtualization component is vGPU.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 8,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "image_diagram",
+        "record_id": "p008-b001",
+        "bbox": [
+          0.0,
+          0.24,
+          1188.0,
+          774.0
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "crop": "advanced/artifacts/extraction/crops/p008-b001.png",
+        "region": "NemoClaw diagram; named libraries and virtualization label in the left-hand green box.",
+        "evidence": "Labels include CuDF, cuVS and vGPU.",
+        "unit": "not applicable",
+        "indexed_chunk_ids": [
+          "adv-face17c4b95ed9d8392159cf"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "indexed_evidence",
+      "source_verified",
+      "image"
+    ],
+    "reason": "Replacement assesses retained indexed evidence within the declared v2 scope; original-PDF evidence remains the grading reference.",
+    "grading_criteria": [
+      "Pass only if all requested facts are correct and complete, including units, scope and calculations.",
+      "Citations must identify the original PDF page and relevant evidence region; verify against the original PDF.",
+      "A partial answer, unsupported assertion, incorrect citation, abstention or system error fails."
+    ],
+    "previous_id": "adv_dev_05",
+    "benchmark_version": "v2_indexed_scope",
+    "evaluation_scope": "retained_indexed_content"
+  },
+  {
+    "id": "adv_dev_v2_06",
+    "split": "dev",
+    "type": "image",
+    "primary_group": "image",
+    "question": "In the Fiscal 2026 Market Platforms infographic, which market has the highest reported year-on-year revenue growth and what is that growth rate?",
+    "expected_answer": "Professional Visualization has the highest reported growth, at 70% year on year.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 23,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "image_diagram",
+        "record_id": "p023-b010",
+        "bbox": [
+          33.76,
+          515.57,
+          557.74,
+          672.6
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "crop": "advanced/artifacts/extraction/crops/p023-b010.png",
+        "region": "Four labeled market cards and their year-on-year growth labels.",
+        "evidence": "Data Center up 68%; Gaming up 41%; Professional Visualization up 70%; Automotive up 39%.",
+        "unit": "percent year-on-year growth",
+        "indexed_chunk_ids": [
+          "adv-5f304572534e71bb342c3972"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "indexed_evidence",
+      "source_verified",
+      "image"
+    ],
+    "reason": "Replacement assesses retained indexed evidence within the declared v2 scope; original-PDF evidence remains the grading reference.",
+    "grading_criteria": [
+      "Pass only if all requested facts are correct and complete, including units, scope and calculations.",
+      "Citations must identify the original PDF page and relevant evidence region; verify against the original PDF.",
+      "A partial answer, unsupported assertion, incorrect citation, abstention or system error fails."
+    ],
+    "previous_id": "adv_dev_06",
+    "benchmark_version": "v2_indexed_scope",
+    "evaluation_scope": "retained_indexed_content"
+  },
+  {
+    "id": "adv_dev_v2_07",
+    "split": "dev",
+    "type": "chart",
+    "primary_group": "chart",
+    "question": "At the right-hand endpoint of the open-source AI contribution chart, which contributor is second-highest, and is its series higher or lower than Meta's? Do not estimate exact repository counts.",
+    "expected_answer": "Alibaba Cloud is second-highest, and its series is higher than Meta's.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 7,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "chart",
+        "bbox": [
+          0.0,
+          0.0,
+          1188.0,
+          774.0
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Upper-right open-source AI line chart; right-hand endpoint labels and relative heights.",
+        "evidence": "At the final endpoint, Alibaba Cloud is below NVIDIA but above all remaining series, including Meta.",
+        "unit": "relative repository counts",
+        "record_id": "p007-b001",
+        "crop": "advanced/artifacts/extraction/crops/p007-b001.png",
+        "indexed_chunk_ids": [
+          "adv-4b3d2ee893e531480d30af3b"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "ranking",
+      "relative_comparison"
+    ],
+    "reason": "Tests endpoint ranking, distinct from the test's axis units and time interval.",
+    "grading_criteria": [
+      "Pass only if all requested facts are correct and complete, including units, scope and calculations.",
+      "Citations must identify the original PDF page and relevant evidence region; verify against the original PDF.",
+      "A partial answer, unsupported assertion, incorrect citation, abstention or system error fails."
+    ],
+    "previous_id": "adv_dev_07",
+    "benchmark_version": "v2_indexed_scope",
+    "evaluation_scope": "retained_indexed_content"
+  },
+  {
+    "id": "adv_dev_v2_08",
+    "split": "dev",
+    "type": "chart",
+    "primary_group": "chart",
+    "question": "What five-year cumulative total shareholder return is labeled in the Fiscal 2026 Shareholder Returns graphic? Is it an annualized return?",
+    "expected_answer": "The five-year TSR is 1,349%. It is cumulative, with dividends reinvested, not an annualized rate.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 24,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "chart",
+        "bbox": [
+          28.29,
+          369.18,
+          565.38,
+          706.34
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Left TSR panel; 5-Year bar and explanatory footnote.",
+        "evidence": "5-Year TSR bar: 1,349%. Footnote: cumulative stock price appreciation with dividends reinvested.",
+        "unit": "percent cumulative return",
+        "record_id": "p024-b010",
+        "crop": "advanced/artifacts/extraction/crops/p024-b010.png",
+        "indexed_chunk_ids": [
+          "adv-64fab2c730c0896b4294af45"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "cumulative_vs_annualized",
+      "footnote"
+    ],
+    "reason": "Tests the five-year value and definition, rather than the test's one-/three-year difference or capital-return ratio.",
+    "grading_criteria": [
+      "Pass only if all requested facts are correct and complete, including units, scope and calculations.",
+      "Citations must identify the original PDF page and relevant evidence region; verify against the original PDF.",
+      "A partial answer, unsupported assertion, incorrect citation, abstention or system error fails."
+    ],
+    "previous_id": "adv_dev_08",
+    "benchmark_version": "v2_indexed_scope",
+    "evaluation_scope": "retained_indexed_content"
+  },
+  {
+    "id": "adv_dev_v2_09",
+    "split": "dev",
+    "type": "chart",
+    "primary_group": "chart",
+    "question": "In the one-year Return of Capital stacked bar, what percentage of the total returned capital was dividends? State both input amounts and round to two decimals.",
+    "expected_answer": "Dividends were USD 1.0 billion out of USD 41.4 billion total capital returned, or 2.42%.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 24,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "chart",
+        "record_id": "p024-b010",
+        "bbox": [
+          28.29,
+          369.18,
+          565.38,
+          706.34
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "crop": "advanced/artifacts/extraction/crops/p024-b010.png",
+        "region": "Right-hand stacked-bar panel; one-year dividend segment, legend and total label.",
+        "evidence": "1-Year Return of Capital: Dividends $1.0B; total $41.4B.",
+        "unit": "USD billion; percent",
+        "indexed_chunk_ids": [
+          "adv-64fab2c730c0896b4294af45"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "indexed_evidence",
+      "source_verified",
+      "chart"
+    ],
+    "reason": "Replacement assesses retained indexed evidence within the declared v2 scope; original-PDF evidence remains the grading reference.",
+    "grading_criteria": [
+      "Pass only if all requested facts are correct and complete, including units, scope and calculations.",
+      "Citations must identify the original PDF page and relevant evidence region; verify against the original PDF.",
+      "A partial answer, unsupported assertion, incorrect citation, abstention or system error fails."
+    ],
+    "previous_id": "adv_dev_09",
+    "benchmark_version": "v2_indexed_scope",
+    "evaluation_scope": "retained_indexed_content",
+    "calculations": [
+      {
+        "formula": "1.0 / 41.4 * 100",
+        "result": 2.42,
+        "decimal_places": 2,
+        "unit": "percent",
+        "rounding": "round half up at final result"
+      }
+    ]
+  },
+  {
+    "id": "adv_dev_v2_10",
+    "split": "dev",
+    "type": "multi_hop",
+    "primary_group": "multi_hop",
+    "question": "Combine the cash-flow statement and income statement: what percentage of fiscal 2026 revenue was net cash provided by operating activities? State both figures in USD millions and round to two decimals.",
+    "expected_answer": "Net cash provided by operating activities was USD 102,718 million and revenue was USD 215,938 million. The ratio was 47.57%.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 143,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "table",
+        "record_id": "p143-b002",
+        "bbox": [
+          36.02,
+          16.51,
+          558.41,
+          731.82
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "crop": "advanced/artifacts/extraction/crops/p143-b002.png",
+        "region": "Consolidated Statements of Cash Flows; Jan 25, 2026 column; net operating cash flow row.",
+        "evidence": "Net cash provided by operating activities 102,718.",
+        "unit": "USD million",
+        "indexed_chunk_ids": [
+          "adv-d48aa5f96890734734fe684f"
+        ]
+      },
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 139,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "table",
+        "record_id": "p139-b003",
+        "bbox": [
+          40.13,
+          25.5,
+          553.56,
+          450.42
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "crop": "advanced/artifacts/extraction/crops/p139-b003.png",
+        "region": "Consolidated Statements of Income; Jan 25, 2026 Revenue row.",
+        "evidence": "Revenue 215,938.",
+        "unit": "USD million",
+        "indexed_chunk_ids": [
+          "adv-53061870cd3c413eb2e12b41"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "indexed_evidence",
+      "source_verified",
+      "multi_hop"
+    ],
+    "reason": "Replacement assesses retained indexed evidence within the declared v2 scope; original-PDF evidence remains the grading reference.",
+    "grading_criteria": [
+      "Pass only if all requested facts are correct and complete, including units, scope and calculations.",
+      "Citations must identify the original PDF page and relevant evidence region; verify against the original PDF.",
+      "A partial answer, unsupported assertion, incorrect citation, abstention or system error fails."
+    ],
+    "previous_id": "adv_dev_10",
+    "benchmark_version": "v2_indexed_scope",
+    "evaluation_scope": "retained_indexed_content",
+    "calculations": [
+      {
+        "formula": "102718 / 215938 * 100",
+        "result": 47.57,
+        "decimal_places": 2,
+        "unit": "percent",
+        "rounding": "round half up at final result"
+      }
+    ]
+  },
+  {
+    "id": "adv_dev_v2_11",
+    "split": "dev",
+    "type": "multi_hop",
+    "primary_group": "multi_hop",
+    "question": "For fiscal 2026, what percentage of total stock-based compensation expense was employee retirement-plan contribution expense? Use Note 15 and the stock-based compensation expense table; round to two decimals.",
+    "expected_answer": "Retirement-plan contribution expense was USD 442 million and total stock-based compensation expense was USD 6,386 million. Their ratio was 6.92%. This is a comparison of two expenses, not a claim that retirement contributions are included in stock-based compensation.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 164,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "text",
+        "bbox": [
+          40.5,
+          626.33,
+          556.23,
+          648.47
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Note 15 - Employee Retirement Plans; contribution expense sentence.",
+        "evidence": "Our contribution expense for fiscal years 2026, 2025, and 2024 was $442 million, $314 million, and $255 million, respectively.",
+        "unit": "USD million",
+        "text_anchors": [
+          "Our contribution expense"
+        ],
+        "indexed_chunk_ids": [
+          "adv-4ea5ccdf0e3c4134c5c5d462"
+        ]
+      },
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 149,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "table",
+        "bbox": [
+          34.44,
+          204.49,
+          557.71,
+          375.4
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Stock-based compensation expense table; Total row; Jan 25, 2026 column.",
+        "evidence": "Fiscal 2026 total stock-based compensation expense: 6,386.",
+        "unit": "USD million",
+        "record_id": "p149-b007",
+        "crop": "advanced/artifacts/extraction/crops/p149-b007.png",
+        "indexed_chunk_ids": [
+          "adv-0fd30e1993c35d9d9f114354"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "two_pages",
+      "expense_comparison",
+      "rounding"
+    ],
+    "reason": "Combines separate compensation-related expense disclosures without treating one as a component of the other.",
+    "grading_criteria": [
+      "Pass only if all requested facts are correct and complete, including units, scope and calculations.",
+      "Citations must identify the original PDF page and relevant evidence region; verify against the original PDF.",
+      "A partial answer, unsupported assertion, incorrect citation, abstention or system error fails."
+    ],
+    "calculations": [
+      {
+        "formula": "442 / 6386 * 100",
+        "result": 6.92,
+        "unit": "percent",
+        "decimal_places": 2,
+        "rounding": "round half up at final result"
+      }
+    ],
+    "previous_id": "adv_dev_11",
+    "benchmark_version": "v2_indexed_scope",
+    "evaluation_scope": "retained_indexed_content"
+  },
+  {
+    "id": "adv_dev_v2_12",
+    "split": "dev",
+    "type": "multi_hop",
+    "primary_group": "multi_hop",
+    "question": "Using fiscal 2026 cash dividends paid and fiscal 2026 net income, calculate the dividend payout ratio. Use the disclosed dollar amounts, not rounded amounts in the return-of-capital chart, and round to two decimals.",
+    "expected_answer": "Cash dividends paid were USD 974 million and net income was USD 120,067 million. The dividend payout ratio was 0.81%.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 164,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "text",
+        "bbox": [
+          40.5,
+          563.93,
+          555.89,
+          596.87
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Note 14 - Shareholders' Equity; cash-dividend paragraph.",
+        "evidence": "In fiscal years 2026, 2025, and 2024, cash dividends paid were $974 million, $834 million, and $395 million, respectively.",
+        "unit": "USD million",
+        "text_anchors": [
+          "we paid cash dividends"
+        ],
+        "indexed_chunk_ids": [
+          "adv-4ea5ccdf0e3c4134c5c5d462"
+        ]
+      },
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 139,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "table",
+        "bbox": [
+          40.13,
+          25.5,
+          553.56,
+          450.42
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Consolidated Statements of Income; Net income row; Jan 25, 2026 column.",
+        "evidence": "Net income for year ended Jan 25, 2026: 120,067.",
+        "unit": "USD million",
+        "record_id": "p139-b003",
+        "crop": "advanced/artifacts/extraction/crops/p139-b003.png",
+        "indexed_chunk_ids": [
+          "adv-53061870cd3c413eb2e12b41"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "two_pages",
+      "payout_ratio",
+      "precision"
+    ],
+    "reason": "Uses exact disclosed dividend and income amounts rather than the chart's rounded billions.",
+    "grading_criteria": [
+      "Pass only if all requested facts are correct and complete, including units, scope and calculations.",
+      "Citations must identify the original PDF page and relevant evidence region; verify against the original PDF.",
+      "A partial answer, unsupported assertion, incorrect citation, abstention or system error fails."
+    ],
+    "calculations": [
+      {
+        "formula": "974 / 120067 * 100",
+        "result": 0.81,
+        "unit": "percent",
+        "decimal_places": 2,
+        "rounding": "round half up at final result"
+      }
+    ],
+    "previous_id": "adv_dev_12",
+    "benchmark_version": "v2_indexed_scope",
+    "evaluation_scope": "retained_indexed_content"
+  },
+  {
+    "id": "adv_dev_v2_13",
+    "split": "dev",
+    "type": "text",
+    "primary_group": "text",
+    "question": "Under the 2012 Employee Stock Purchase Plan, what maximum earnings withholding is allowed, how is the purchase price determined, and may the Board reduce the withholding percentage?",
+    "expected_answer": "Up to 25% of earnings may be withheld; the Board may decrease that percentage. The purchase price is 85% of the lower of fair market value on the offering commencement date or on the relevant purchase date.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 150,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "text",
+        "bbox": [
+          40.5,
+          545.78,
+          556.16,
+          621.92
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Amended and Restated 2012 Employee Stock Purchase Plan; withholding and pricing paragraph.",
+        "evidence": "Participants may have up to 25% of earnings withheld; the Board may decrease this percentage. Purchase price equals 85% of the lower of fair market value at offering commencement or on each purchase date within the offering.",
+        "unit": "percent of earnings; percent of reference market value",
+        "text_anchors": [
+          "may have up to 25%",
+          "85% of the lower"
+        ],
+        "indexed_chunk_ids": [
+          "adv-301ac12f8134e9cf44e56c2e"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "conditions",
+      "lower_of_two",
+      "board_discretion"
+    ],
+    "reason": "Tests plan rules, distinct from the test's realized ESPP per-share metrics.",
+    "grading_criteria": [
+      "Pass only if all requested facts are correct and complete, including units, scope and calculations.",
+      "Citations must identify the original PDF page and relevant evidence region; verify against the original PDF.",
+      "A partial answer, unsupported assertion, incorrect citation, abstention or system error fails."
+    ],
+    "previous_id": "adv_dev_13",
+    "benchmark_version": "v2_indexed_scope",
+    "evaluation_scope": "retained_indexed_content"
+  },
+  {
+    "id": "adv_dev_v2_14",
+    "split": "dev",
+    "type": "text",
+    "primary_group": "text",
+    "question": "Name three categories of expenses not allocated to either Compute & Networking or Graphics when making operating decisions or assessing financial performance.",
+    "expected_answer": "Any three of: stock-based compensation expense; corporate infrastructure and support costs; acquisition-related and other costs; other non-recurring charges and benefits deemed enterprise in nature by the CODM.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 165,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "text",
+        "bbox": [
+          40.5,
+          152.28,
+          556.15,
+          196.02
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Segment Information; paragraph beginning Certain expenses are not allocated.",
+        "evidence": "Unallocated expenses include stock-based compensation expense, corporate infrastructure and support costs, acquisition-related and other costs, and other non-recurring charges and benefits the CODM deems enterprise in nature.",
+        "unit": "not applicable",
+        "text_anchors": [
+          "Certain expenses are not allocated"
+        ],
+        "indexed_chunk_ids": [
+          "adv-456ba96e38b9562f39694559"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "segment_scope",
+      "any_three"
+    ],
+    "reason": "Tests segment-allocation exceptions and accepts any three disclosed categories.",
+    "grading_criteria": [
+      "Pass only if all requested facts are correct and complete, including units, scope and calculations.",
+      "Citations must identify the original PDF page and relevant evidence region; verify against the original PDF.",
+      "A partial answer, unsupported assertion, incorrect citation, abstention or system error fails."
+    ],
+    "previous_id": "adv_dev_14",
+    "benchmark_version": "v2_indexed_scope",
+    "evaluation_scope": "retained_indexed_content"
+  },
+  {
+    "id": "adv_dev_v2_15",
+    "split": "dev",
+    "type": "text",
+    "primary_group": "text",
+    "question": "For the indemnification provisions described after product warranties, why can maximum potential future payments not be estimated, and has NVIDIA recorded a liability for those indemnifications?",
+    "expected_answer": "Many agreements do not have a maximum stated liability, so maximum potential future payments cannot be estimated. No liability for those indemnifications was recorded in the Consolidated Financial Statements.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 159,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "text",
+        "bbox": [
+          40.5,
+          252.23,
+          556.15,
+          295.97
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Indemnities paragraph immediately following product warranty activity, before Litigation.",
+        "evidence": "Maximum potential future payments cannot be estimated because many agreements do not have a maximum stated liability. No liability has been recorded in the Consolidated Financial Statements for such indemnifications.",
+        "unit": "not applicable",
+        "text_anchors": [
+          "Maximum potential future",
+          "such indemnifications"
+        ],
+        "indexed_chunk_ids": [
+          "adv-fdc4dbc1c27661b9155e8979"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "explicit_negative",
+      "scope_limit"
+    ],
+    "reason": "Tests an answerable negative disclosure limited to indemnifications, not all contingent liabilities.",
+    "grading_criteria": [
+      "Pass only if all requested facts are correct and complete, including units, scope and calculations.",
+      "Citations must identify the original PDF page and relevant evidence region; verify against the original PDF.",
+      "A partial answer, unsupported assertion, incorrect citation, abstention or system error fails."
+    ],
+    "previous_id": "adv_dev_15",
+    "benchmark_version": "v2_indexed_scope",
+    "evaluation_scope": "retained_indexed_content"
+  },
+  {
+    "id": "adv_dev_v2_16",
+    "split": "dev",
+    "type": "abstention",
+    "primary_group": "abstention",
+    "question": "Exactly how many Groq employees did NVIDIA hire in connection with the December 2025 licensing arrangement?",
+    "expected_answer": "Insufficient evidence: Note 2 says NVIDIA hired certain Groq employees but does not disclose their exact number. The total NVIDIA workforce cannot determine this transaction-specific count.",
+    "filter": null,
+    "gold": [],
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "tags": [
+      "undisclosed_headcount",
+      "transaction_detail"
+    ],
+    "reason": "Tests abstention for an undisclosed transaction-specific count despite a nearby qualitative statement.",
+    "absence_reason": "Note 2 identifies the hiring of certain Groq employees without a numerical headcount. Other Groq mentions describe the technology, financial consideration or business risks; the aggregate workforce disclosure does not identify Groq hires.",
+    "absence_check": {
+      "source_id": "0e725ba048221539",
+      "source": "advanced/data/2026-Annual-Report-Web.pdf",
+      "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+      "page_numbering": "physical_pdf_1_based",
+      "scope": "Entire 175-page original PDF",
+      "method": "Case-insensitive native-text search across all PDF pages, followed by reading the related original sections. Keyword hits alone do not establish the requested fact; retrieval or index omissions alone do not establish absence.",
+      "terms_with_matching_pages": {
+        "Groq": [
+          15,
+          24,
+          102,
+          131,
+          143,
+          149
+        ],
+        "hired certain": [
+          149
+        ],
+        "employees": [
+          18,
+          28,
+          32,
+          38,
+          44,
+          46,
+          49,
+          51,
+          53,
+          58,
+          61,
+          66,
+          67,
+          68,
+          69,
+          72,
+          73,
+          82,
+          83,
+          84,
+          85,
+          88,
+          99,
+          101,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          117,
+          149,
+          150,
+          164
+        ]
+      },
+      "reviewed_related_pages": [
+        15,
+        24,
+        99,
+        102,
+        131,
+        143,
+        149
+      ],
+      "reviewed_regions": "All Groq-related passages, especially Note 2 on PDF page 149; Human Capital Management aggregate headcount on page 99.",
+      "conclusion": "Note 2 identifies the hiring of certain Groq employees without a numerical headcount. Other Groq mentions describe the technology, financial consideration or business risks; the aggregate workforce disclosure does not identify Groq hires."
+    },
+    "grading_criteria": [
+      "Pass only for an explicit abstention or clear statement that the document does not supply the requested information.",
+      "Do not invent a number, identify an anonymous customer without evidence, substitute another metric or reporting period, or import external facts.",
+      "A system error or missing output fails."
+    ],
+    "previous_id": "adv_dev_16",
+    "benchmark_version": "v2_indexed_scope",
+    "evaluation_scope": "original_pdf_absence_check"
+  },
+  {
+    "id": "adv_dev_v2_17",
+    "split": "dev",
+    "type": "abstention",
+    "primary_group": "abstention",
+    "question": "What exact amount of NVIDIA fiscal 2026 revenue came from sales to OpenAI, in USD millions?",
+    "expected_answer": "Insufficient evidence: this report does not disclose a fiscal 2026 revenue amount attributed specifically to OpenAI. Anonymous customer concentration percentages and an investment or partnership discussion cannot establish that amount.",
+    "filter": null,
+    "gold": [],
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "tags": [
+      "unnamed_customer",
+      "revenue_vs_investment"
+    ],
+    "reason": "Tests customer identity and accounting scope: an investment or an anonymous customer percentage is not named-customer sales revenue.",
+    "absence_reason": "OpenAI is discussed in ecosystem and investment/partnership passages, without a named fiscal 2026 sales figure. Note 16 reports concentration percentages for unnamed direct customers; it does not identify those customers as OpenAI.",
+    "absence_check": {
+      "source_id": "0e725ba048221539",
+      "source": "advanced/data/2026-Annual-Report-Web.pdf",
+      "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+      "page_numbering": "physical_pdf_1_based",
+      "scope": "Entire 175-page original PDF",
+      "method": "Case-insensitive native-text search across all PDF pages, followed by reading the related original sections. Keyword hits alone do not establish the requested fact; retrieval or index omissions alone do not establish absence.",
+      "terms_with_matching_pages": {
+        "OpenAI": [
+          15,
+          16,
+          24,
+          110,
+          132
+        ],
+        "Direct Customers": [
+          93,
+          111,
+          129,
+          155,
+          166
+        ],
+        "22%": [
+          111,
+          129,
+          166
+        ],
+        "14%": [
+          111,
+          129,
+          166
+        ]
+      },
+      "reviewed_related_pages": [
+        15,
+        16,
+        24,
+        110,
+        132,
+        166
+      ],
+      "reviewed_regions": "All OpenAI mentions and Note 16 direct-customer concentration disclosure on PDF page 166.",
+      "conclusion": "OpenAI is discussed in ecosystem and investment/partnership passages, without a named fiscal 2026 sales figure. Note 16 reports concentration percentages for unnamed direct customers; it does not identify those customers as OpenAI."
+    },
+    "grading_criteria": [
+      "Pass only for an explicit abstention or clear statement that the document does not supply the requested information.",
+      "Do not invent a number, identify an anonymous customer without evidence, substitute another metric or reporting period, or import external facts.",
+      "A system error or missing output fails."
+    ],
+    "previous_id": "adv_dev_17",
+    "benchmark_version": "v2_indexed_scope",
+    "evaluation_scope": "original_pdf_absence_check"
+  },
+  {
+    "id": "adv_dev_v2_18",
+    "split": "dev",
+    "type": "abstention",
+    "primary_group": "abstention",
+    "question": "What was the exact total electricity consumed by NVIDIA worldwide during fiscal 2026, in megawatt-hours (MWh)?",
+    "expected_answer": "Insufficient evidence: the report does not disclose an exact worldwide fiscal 2026 electricity-consumption total in MWh. Power capacity, throughput per megawatt and electricity-related emissions cannot be substituted for annual energy consumption.",
+    "filter": null,
+    "gold": [],
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "tags": [
+      "power_vs_energy",
+      "reporting_period",
+      "external_report_boundary"
+    ],
+    "reason": "Tests the distinction between capacity, efficiency, emissions and annual energy consumption, without importing numbers from a separately linked sustainability report.",
+    "absence_reason": "The document discusses AI-factory capacity and energy efficiency, climate risks, and electricity-related emissions. It references separate sustainability reporting but does not give the requested fiscal 2026 worldwide electricity-consumption total. Zero market-based electricity emissions for FY25 do not mean zero electricity use or supply an FY26 MWh total.",
+    "absence_check": {
+      "source_id": "0e725ba048221539",
+      "source": "advanced/data/2026-Annual-Report-Web.pdf",
+      "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+      "page_numbering": "physical_pdf_1_based",
+      "scope": "Entire 175-page original PDF",
+      "method": "Case-insensitive native-text search across all PDF pages, followed by reading the related original sections. Keyword hits alone do not establish the requested fact; retrieval or index omissions alone do not establish absence.",
+      "terms_with_matching_pages": {
+        "electricity": [
+          3,
+          5,
+          13,
+          17,
+          50,
+          86,
+          106
+        ],
+        "energy consumption": [],
+        "MWh": [],
+        "GWh": [],
+        "kilowatt": [
+          13
+        ],
+        "gigawatt": [
+          14
+        ],
+        "consumption": [
+          95
+        ]
+      },
+      "reviewed_related_pages": [
+        5,
+        6,
+        13,
+        14,
+        15,
+        86,
+        87,
+        95,
+        104,
+        109,
+        110,
+        124
+      ],
+      "reviewed_regions": "AI-factory power/efficiency discussion; Proposal 7 and Board response on PDF pages 86-87; climate and infrastructure risk discussion. Linked external reports are outside this PDF benchmark.",
+      "conclusion": "The document discusses AI-factory capacity and energy efficiency, climate risks, and electricity-related emissions. It references separate sustainability reporting but does not give the requested fiscal 2026 worldwide electricity-consumption total. Zero market-based electricity emissions for FY25 do not mean zero electricity use or supply an FY26 MWh total."
+    },
+    "grading_criteria": [
+      "Pass only for an explicit abstention or clear statement that the document does not supply the requested information.",
+      "Do not invent a number, identify an anonymous customer without evidence, substitute another metric or reporting period, or import external facts.",
+      "A system error or missing output fails."
+    ],
+    "previous_id": "adv_dev_18",
+    "benchmark_version": "v2_indexed_scope",
+    "evaluation_scope": "original_pdf_absence_check"
+  }
+]

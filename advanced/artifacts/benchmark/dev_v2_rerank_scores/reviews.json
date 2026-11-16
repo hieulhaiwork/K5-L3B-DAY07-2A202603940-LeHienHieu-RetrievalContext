@@ -1,0 +1,952 @@
+[
+  {
+    "query_id": "adv_dev_v2_01",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": true,
+    "primary_group": "table",
+    "reason": "Original page 159 supports complete 1290 + 2474 - 957 = 2807 USD million warranty rollforward.",
+    "failure_category": "none",
+    "citation_pages": [
+      159
+    ],
+    "citation_sources": {
+      "adv-e954c17aee0a38b825ab57a5": {
+        "page": 159,
+        "source_records": [
+          {
+            "bbox": [
+              389.2,
+              112.4,
+              440.0,
+              122.0
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p159-b004.png",
+            "page": 159,
+            "record_id": "p159-b004",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              38.43,
+              117.79,
+              553.58,
+              210.69
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p159-b005.png",
+            "page": 159,
+            "record_id": "p159-b005",
+            "content_type": "table",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coordinate_table"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      159
+    ],
+    "review_method": "Same binary original-PDF criteria as Dense v2. All requested facts, precision, conditions and citations must be supported; system errors and answerable-question abstentions fail."
+  },
+  {
+    "query_id": "adv_dev_v2_02",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": true,
+    "primary_group": "table",
+    "reason": "Original page 164 supports all gross unrecognized tax benefit movements and ending 4420 USD million.",
+    "failure_category": "none",
+    "citation_pages": [
+      164
+    ],
+    "citation_sources": {
+      "adv-13a5597148fc1955ef733c8a": {
+        "page": 164,
+        "source_records": [
+          {
+            "bbox": [
+              38.89,
+              89.22,
+              552.87,
+              219.73
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p164-b004.png",
+            "page": 164,
+            "record_id": "p164-b004",
+            "content_type": "table",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coordinate_table"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      164
+    ],
+    "review_method": "Same binary original-PDF criteria as Dense v2. All requested facts, precision, conditions and citations must be supported; system errors and answerable-question abstentions fail."
+  },
+  {
+    "query_id": "adv_dev_v2_03",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": true,
+    "primary_group": "table",
+    "reason": "Original page 151 supports 24359 + 155 = 24514 million shares and 41 million excluded anti-dilutive awards; citation is correct.",
+    "failure_category": "none",
+    "citation_pages": [
+      151
+    ],
+    "citation_sources": {
+      "adv-f3c1d789fac42406b152805d": {
+        "page": 151,
+        "source_records": [
+          {
+            "bbox": [
+              38.59,
+              403.04,
+              552.6,
+              555.08
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p151-b014.png",
+            "page": 151,
+            "record_id": "p151-b014",
+            "content_type": "table",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coordinate_table"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      151
+    ],
+    "review_method": "Same binary original-PDF criteria as Dense v2. All requested facts, precision, conditions and citations must be supported; system errors and answerable-question abstentions fail."
+  },
+  {
+    "query_id": "adv_dev_v2_04",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": true,
+    "primary_group": "image",
+    "reason": "All ten model abbreviations match the original page 3 diagram; the inspected original is cited.",
+    "failure_category": "none",
+    "citation_pages": [
+      3
+    ],
+    "citation_sources": {
+      "vision-7516a407e504aab21c1a3ea3": {
+        "page": 3,
+        "source_records": [
+          {
+            "record_id": "p003-b001",
+            "page": 3,
+            "bbox": [
+              0.0,
+              0.0,
+              1148.98,
+              773.27
+            ],
+            "crop": "PDF-render-on-demand",
+            "content_type": "informative_image"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      3
+    ],
+    "review_method": "Same binary original-PDF criteria as Dense v2. All requested facts, precision, conditions and citations must be supported; system errors and answerable-question abstentions fail."
+  },
+  {
+    "query_id": "adv_dev_v2_05",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": false,
+    "primary_group": "image",
+    "reason": "The response says cuVFS, but the original page 8 diagram and retained indexed labels show cuVS. One of the requested library names is incorrect.",
+    "failure_category": "visual_transcription",
+    "citation_pages": [
+      8
+    ],
+    "citation_sources": {
+      "vision-8c59a8f120951dc37c961d4f": {
+        "page": 8,
+        "source_records": [
+          {
+            "record_id": "p008-b001",
+            "page": 8,
+            "bbox": [
+              0.0,
+              0.24,
+              1188.0,
+              774.0
+            ],
+            "crop": "PDF-render-on-demand",
+            "content_type": "diagram"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      8
+    ],
+    "review_method": "Same binary original-PDF criteria as Dense v2. All requested facts, precision, conditions and citations must be supported; system errors and answerable-question abstentions fail."
+  },
+  {
+    "query_id": "adv_dev_v2_06",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": true,
+    "primary_group": "image",
+    "reason": "Original page 23 market graphic identifies Professional Visualization as highest year-on-year growth at 70%; cited inspected crop supports it.",
+    "failure_category": "none",
+    "citation_pages": [
+      23
+    ],
+    "citation_sources": {
+      "vision-fe61036d8ad79f655249cbd8": {
+        "page": 23,
+        "source_records": [
+          {
+            "record_id": "p023-b010",
+            "page": 23,
+            "bbox": [
+              33.76,
+              515.57,
+              557.74,
+              672.6
+            ],
+            "crop": "PDF-render-on-demand",
+            "content_type": "informative_image"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      23
+    ],
+    "review_method": "Same binary original-PDF criteria as Dense v2. All requested facts, precision, conditions and citations must be supported; system errors and answerable-question abstentions fail."
+  },
+  {
+    "query_id": "adv_dev_v2_07",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": true,
+    "primary_group": "chart",
+    "reason": "Original page 7 chart supports Alibaba Cloud as second-highest and above Meta at the final endpoint.",
+    "failure_category": "none",
+    "citation_pages": [
+      7
+    ],
+    "citation_sources": {
+      "vision-d74c3cc025ffc1baecece591": {
+        "page": 7,
+        "source_records": [
+          {
+            "record_id": "p007-b001",
+            "page": 7,
+            "bbox": [
+              0.0,
+              0.0,
+              1188.0,
+              774.0
+            ],
+            "crop": "PDF-render-on-demand",
+            "content_type": "chart"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      7
+    ],
+    "review_method": "Same binary original-PDF criteria as Dense v2. All requested facts, precision, conditions and citations must be supported; system errors and answerable-question abstentions fail."
+  },
+  {
+    "query_id": "adv_dev_v2_08",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": false,
+    "primary_group": "chart",
+    "reason": "The 1349% value is correct, but the response leaves annualization unspecified. The original page 24 footnote defines cumulative price appreciation with dividends reinvested; the annualization subquestion is incomplete.",
+    "failure_category": "answer_completeness",
+    "citation_pages": [
+      24
+    ],
+    "citation_sources": {
+      "vision-53e3d74f46bf82ddd54012e3": {
+        "page": 24,
+        "source_records": [
+          {
+            "record_id": "p024-b010",
+            "page": 24,
+            "bbox": [
+              28.29,
+              369.18,
+              565.38,
+              706.34
+            ],
+            "crop": "PDF-render-on-demand",
+            "content_type": "chart"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      24
+    ],
+    "review_method": "Same binary original-PDF criteria as Dense v2. All requested facts, precision, conditions and citations must be supported; system errors and answerable-question abstentions fail."
+  },
+  {
+    "query_id": "adv_dev_v2_09",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": true,
+    "primary_group": "chart",
+    "reason": "Original page 24 one-year chart labels 1.0 / 41.4 * 100 = 2.42% dividend share with correct USD billion inputs.",
+    "failure_category": "none",
+    "citation_pages": [
+      24
+    ],
+    "citation_sources": {
+      "vision-46ef2572b07e5627e764a1c5": {
+        "page": 24,
+        "source_records": [
+          {
+            "record_id": "p024-b010",
+            "page": 24,
+            "bbox": [
+              28.29,
+              369.18,
+              565.38,
+              706.34
+            ],
+            "crop": "PDF-render-on-demand",
+            "content_type": "chart"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      24
+    ],
+    "review_method": "Same binary original-PDF criteria as Dense v2. All requested facts, precision, conditions and citations must be supported; system errors and answerable-question abstentions fail."
+  },
+  {
+    "query_id": "adv_dev_v2_10",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": false,
+    "primary_group": "multi_hop",
+    "reason": "Rerank retrieves the correct page 143 operating cash-flow table and fixes that citation, but still uses rounded page 23 revenue 215900 rather than income-statement revenue 215938 USD million. The exact revenue is absent from the candidate pool/context; reported 47.58% differs from required 47.57%.",
+    "failure_category": "candidate_recall_and_precision",
+    "citation_pages": [
+      23,
+      143
+    ],
+    "citation_sources": {
+      "adv-d48aa5f96890734734fe684f": {
+        "page": 143,
+        "source_records": [
+          {
+            "bbox": [
+              40.02,
+              64.51,
+              554.41,
+              713.82
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p143-b002.png",
+            "page": 143,
+            "record_id": "p143-b002",
+            "content_type": "table",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coordinate_table"
+          }
+        ]
+      },
+      "adv-0ecb6121c80b75ccd95b6099": {
+        "page": 23,
+        "source_records": [
+          {
+            "bbox": [
+              38.07,
+              158.0,
+              551.52,
+              256.43
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p023-b003.png",
+            "page": 23,
+            "record_id": "p023-b003",
+            "content_type": "table",
+            "verification": "automated_checks_only",
+            "extraction_method": "gpt4o_table_recovery"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      23,
+      139,
+      143
+    ],
+    "review_method": "Same binary original-PDF criteria as Dense v2. All requested facts, precision, conditions and citations must be supported; system errors and answerable-question abstentions fail."
+  },
+  {
+    "query_id": "adv_dev_v2_11",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": true,
+    "primary_group": "multi_hop",
+    "reason": "Original pages 149 and 164 support 442 / 6386 * 100 = 6.92%; both citations and the requested fiscal period are correct.",
+    "failure_category": "none",
+    "citation_pages": [
+      149,
+      164
+    ],
+    "citation_sources": {
+      "adv-0fd30e1993c35d9d9f114354": {
+        "page": 149,
+        "source_records": [
+          {
+            "bbox": [
+              38.44,
+              252.49,
+              553.71,
+              357.4
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p149-b007.png",
+            "page": 149,
+            "record_id": "p149-b007",
+            "content_type": "table",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coordinate_table"
+          }
+        ]
+      },
+      "adv-4ea5ccdf0e3c4134c5c5d462": {
+        "page": 164,
+        "source_records": [
+          {
+            "bbox": [
+              36.98,
+              231.62,
+              552.75,
+              252.23
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p164-b005.png",
+            "page": 164,
+            "record_id": "p164-b005",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.21,
+              262.57,
+              553.2,
+              293.33
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p164-b006.png",
+            "page": 164,
+            "record_id": "p164-b006",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.14,
+              303.98,
+              553.38,
+              367.42
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p164-b007.png",
+            "page": 164,
+            "record_id": "p164-b007",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.41,
+              377.68,
+              553.09,
+              430.08
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p164-b008.png",
+            "page": 164,
+            "record_id": "p164-b008",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.21,
+              481.77,
+              553.07,
+              523.06
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p164-b011.png",
+            "page": 164,
+            "record_id": "p164-b011",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.19,
+              533.73,
+              552.34,
+              553.62
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p164-b012.png",
+            "page": 164,
+            "record_id": "p164-b012",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.21,
+              564.23,
+              552.9,
+              595.17
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p164-b013.png",
+            "page": 164,
+            "record_id": "p164-b013",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.56,
+              626.93,
+              553.22,
+              646.48
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p164-b015.png",
+            "page": 164,
+            "record_id": "p164-b015",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      149,
+      164
+    ],
+    "review_method": "Same binary original-PDF criteria as Dense v2. All requested facts, precision, conditions and citations must be supported; system errors and answerable-question abstentions fail."
+  },
+  {
+    "query_id": "adv_dev_v2_12",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": false,
+    "primary_group": "multi_hop",
+    "reason": "Final output abstains after the citation validator rejects grouped [id; id] references twice. Candidate arithmetic is correct at 0.81%, but runtime abstention on an answerable question fails.",
+    "failure_category": "citation_finalization",
+    "citation_pages": [],
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      139,
+      164
+    ],
+    "review_method": "Same binary original-PDF criteria as Dense v2. All requested facts, precision, conditions and citations must be supported; system errors and answerable-question abstentions fail."
+  },
+  {
+    "query_id": "adv_dev_v2_13",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": true,
+    "primary_group": "text",
+    "reason": "All requested ESPP withholding, Board-discretion and lower-market-value pricing conditions match original page 150.",
+    "failure_category": "none",
+    "citation_pages": [
+      150
+    ],
+    "citation_sources": {
+      "adv-301ac12f8134e9cf44e56c2e": {
+        "page": 150,
+        "source_records": [
+          {
+            "bbox": [
+              37.17,
+              213.24,
+              553.24,
+              276.76
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p150-b005.png",
+            "page": 150,
+            "record_id": "p150-b005",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.63,
+              287.23,
+              552.99,
+              306.22
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p150-b006.png",
+            "page": 150,
+            "record_id": "p150-b006",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.56,
+              334.53,
+              553.28,
+              364.62
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p150-b008.png",
+            "page": 150,
+            "record_id": "p150-b008",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.61,
+              392.64,
+              553.0,
+              456.17
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p150-b010.png",
+            "page": 150,
+            "record_id": "p150-b010",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.14,
+              466.37,
+              553.06,
+              518.27
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p150-b011.png",
+            "page": 150,
+            "record_id": "p150-b011",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              40.5,
+              528.98,
+              299.59,
+              540.32
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p150-native017.png",
+            "page": 150,
+            "record_id": "p150-native017",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coverage_fallback"
+          },
+          {
+            "bbox": [
+              37.22,
+              546.34,
+              553.01,
+              620.1
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p150-b013.png",
+            "page": 150,
+            "record_id": "p150-b013",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      150
+    ],
+    "review_method": "Same binary original-PDF criteria as Dense v2. All requested facts, precision, conditions and citations must be supported; system errors and answerable-question abstentions fail."
+  },
+  {
+    "query_id": "adv_dev_v2_14",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": true,
+    "primary_group": "text",
+    "reason": "Three requested unallocated expense categories match original page 165 and the cited passage.",
+    "failure_category": "none",
+    "citation_pages": [
+      165
+    ],
+    "citation_sources": {
+      "adv-456ba96e38b9562f39694559": {
+        "page": 165,
+        "source_records": [
+          {
+            "bbox": [
+              37.51,
+              61.1,
+              553.1,
+              79.92
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p165-b002.png",
+            "page": 165,
+            "record_id": "p165-b002",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.53,
+              91.56,
+              553.02,
+              111.78
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p165-b003.png",
+            "page": 165,
+            "record_id": "p165-b003",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.89,
+              122.27,
+              552.91,
+              141.69
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p165-b004.png",
+            "page": 165,
+            "record_id": "p165-b004",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.27,
+              153.23,
+              553.14,
+              194.57
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p165-b005.png",
+            "page": 165,
+            "record_id": "p165-b005",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.3,
+              204.95,
+              553.1,
+              235.81
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p165-b006.png",
+            "page": 165,
+            "record_id": "p165-b006",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              43.13,
+              297.03,
+              484.2,
+              308.37
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p165-native009.png",
+            "page": 165,
+            "record_id": "p165-native009",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coverage_fallback"
+          },
+          {
+            "bbox": [
+              43.13,
+              312.78,
+              552.35,
+              324.12
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p165-native010.png",
+            "page": 165,
+            "record_id": "p165-native010",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coverage_fallback"
+          },
+          {
+            "bbox": [
+              43.13,
+              328.53,
+              552.35,
+              339.87
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p165-native011.png",
+            "page": 165,
+            "record_id": "p165-native011",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coverage_fallback"
+          },
+          {
+            "bbox": [
+              43.13,
+              344.28,
+              552.35,
+              355.62
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p165-native012.png",
+            "page": 165,
+            "record_id": "p165-native012",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coverage_fallback"
+          },
+          {
+            "bbox": [
+              43.13,
+              375.03,
+              484.2,
+              386.37
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p165-native013.png",
+            "page": 165,
+            "record_id": "p165-native013",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coverage_fallback"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      165
+    ],
+    "review_method": "Same binary original-PDF criteria as Dense v2. All requested facts, precision, conditions and citations must be supported; system errors and answerable-question abstentions fail."
+  },
+  {
+    "query_id": "adv_dev_v2_15",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": true,
+    "primary_group": "text",
+    "reason": "Original page 159 supports missing maximum liability limits and no recorded liability for those indemnifications.",
+    "failure_category": "none",
+    "citation_pages": [
+      159
+    ],
+    "citation_sources": {
+      "adv-fdc4dbc1c27661b9155e8979": {
+        "page": 159,
+        "source_records": [
+          {
+            "bbox": [
+              37.26,
+              221.58,
+              553.19,
+              242.48
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p159-b006.png",
+            "page": 159,
+            "record_id": "p159-b006",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.12,
+              252.82,
+              553.26,
+              294.36
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p159-b007.png",
+            "page": 159,
+            "record_id": "p159-b007",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          }
+        ]
+      }
+    },
+    "original_pdf_pages_checked": [
+      159
+    ],
+    "review_method": "Same binary original-PDF criteria as Dense v2. All requested facts, precision, conditions and citations must be supported; system errors and answerable-question abstentions fail."
+  },
+  {
+    "query_id": "adv_dev_v2_16",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": true,
+    "primary_group": "abstention",
+    "reason": "Correct explicit abstention on an undisclosed exact Groq employee count; consistent with the original page 149 hiring statement and document-wide absence check.",
+    "failure_category": "none",
+    "citation_pages": [],
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      15,
+      24,
+      99,
+      102,
+      131,
+      143,
+      149
+    ],
+    "review_method": "Same binary original-PDF criteria as Dense v2. All requested facts, precision, conditions and citations must be supported; system errors and answerable-question abstentions fail."
+  },
+  {
+    "query_id": "adv_dev_v2_17",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": true,
+    "primary_group": "abstention",
+    "reason": "Correct abstention on undisclosed OpenAI-specific fiscal 2026 sales revenue, consistent with the original document-wide absence check.",
+    "failure_category": "none",
+    "citation_pages": [],
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      15,
+      16,
+      24,
+      110,
+      132,
+      166
+    ],
+    "review_method": "Same binary original-PDF criteria as Dense v2. All requested facts, precision, conditions and citations must be supported; system errors and answerable-question abstentions fail."
+  },
+  {
+    "query_id": "adv_dev_v2_18",
+    "benchmark_version": "v2_indexed_scope",
+    "passed": true,
+    "primary_group": "abstention",
+    "reason": "Correct abstention on undisclosed fiscal 2026 worldwide electricity consumption in MWh, without substituting capacity or emissions.",
+    "failure_category": "none",
+    "citation_pages": [],
+    "citation_sources": {},
+    "original_pdf_pages_checked": [
+      5,
+      6,
+      13,
+      14,
+      15,
+      86,
+      87,
+      95,
+      104,
+      109,
+      110,
+      124
+    ],
+    "review_method": "Same binary original-PDF criteria as Dense v2. All requested facts, precision, conditions and citations must be supported; system errors and answerable-question abstentions fail."
+  }
+]

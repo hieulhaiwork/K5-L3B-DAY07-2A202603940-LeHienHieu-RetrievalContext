@@ -1,0 +1,639 @@
+[
+  {
+    "query_id": "adv_dev_01",
+    "passed": true,
+    "primary_group": "table",
+    "reason": "Correct complete warranty rollforward: 1290 + 2474 - 957 = 2807 USD million; citation resolves to the original page 159 warranty table.",
+    "failure_category": "none",
+    "original_pdf_pages": [
+      159
+    ],
+    "citation_pages": [
+      159
+    ],
+    "citation_sources": {
+      "adv-2d1455fec03ede0ccbb9ff6a": {
+        "page": 159,
+        "source_records": [
+          {
+            "bbox": [
+              38.43,
+              117.79,
+              553.58,
+              210.69
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p159-b005.png",
+            "page": 159,
+            "record_id": "p159-b005",
+            "content_type": "table",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coordinate_table"
+          }
+        ]
+      }
+    },
+    "review_method": "Answer and cited evidence compared with original PDF text, tables and inspected diagrams/charts; binary ADVANCED.md criteria. No exact-substring grading."
+  },
+  {
+    "query_id": "adv_dev_02",
+    "passed": true,
+    "primary_group": "table",
+    "reason": "All six movements and ending balance are correct: 2861 + 1959 + 57 - 224 - 157 - 76 = 4420 USD million; citation resolves to page 164 tax-benefit reconciliation.",
+    "failure_category": "none",
+    "original_pdf_pages": [
+      164
+    ],
+    "citation_pages": [
+      164
+    ],
+    "citation_sources": {
+      "adv-13a5597148fc1955ef733c8a": {
+        "page": 164,
+        "source_records": [
+          {
+            "bbox": [
+              38.89,
+              89.22,
+              552.87,
+              219.73
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p164-b004.png",
+            "page": 164,
+            "record_id": "p164-b004",
+            "content_type": "table",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coordinate_table"
+          }
+        ]
+      }
+    },
+    "review_method": "Answer and cited evidence compared with original PDF text, tables and inspected diagrams/charts; binary ADVANCED.md criteria. No exact-substring grading."
+  },
+  {
+    "query_id": "adv_dev_03",
+    "passed": false,
+    "primary_group": "table",
+    "reason": "Abstains on an answerable Schedule II question. Original page 169 supplies 1610 + 31 - 873 = 768 USD million; p169-b003 was excluded from the index.",
+    "failure_category": "missing_index_evidence",
+    "original_pdf_pages": [
+      169
+    ],
+    "citation_pages": [],
+    "citation_sources": {},
+    "review_method": "Answer and cited evidence compared with original PDF text, tables and inspected diagrams/charts; binary ADVANCED.md criteria. No exact-substring grading."
+  },
+  {
+    "query_id": "adv_dev_04",
+    "passed": false,
+    "primary_group": "image",
+    "reason": "Abstains on an answerable diagram question. Original page 4 shows Power on the left and Liquid Cooling on the right; source region p004-b001 was excluded from the index.",
+    "failure_category": "missing_index_evidence",
+    "original_pdf_pages": [
+      4
+    ],
+    "citation_pages": [],
+    "citation_sources": {},
+    "review_method": "Answer and cited evidence compared with original PDF text, tables and inspected diagrams/charts; binary ADVANCED.md criteria. No exact-substring grading."
+  },
+  {
+    "query_id": "adv_dev_05",
+    "passed": false,
+    "primary_group": "image",
+    "reason": "Names the four LLM labels correctly but answers CuDF, cuVS for the bottom-right Skills-linked product. The original page 8 diagram shows cuOPT there; CuDF/cuVS are on the left. Citation does not support the claimed mapping.",
+    "failure_category": "answer_grounding",
+    "original_pdf_pages": [
+      8
+    ],
+    "citation_pages": [
+      8
+    ],
+    "citation_sources": {
+      "adv-face17c4b95ed9d8392159cf": {
+        "page": 8,
+        "source_records": [
+          {
+            "bbox": [
+              0.0,
+              3.24,
+              1187.06,
+              771.22
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p008-b001.png",
+            "page": 8,
+            "record_id": "p008-b001",
+            "content_type": "diagram",
+            "verification": "automated_checks_only",
+            "extraction_method": "gpt4o_visual_description"
+          }
+        ]
+      }
+    },
+    "review_method": "Answer and cited evidence compared with original PDF text, tables and inspected diagrams/charts; binary ADVANCED.md criteria. No exact-substring grading."
+  },
+  {
+    "query_id": "adv_dev_06",
+    "passed": false,
+    "primary_group": "image",
+    "reason": "Abstains on an answerable diagram question. Original page 46 assigns financial exposures to AC and stockholder concerns to NCGC; region p046-b004 was excluded.",
+    "failure_category": "missing_index_evidence",
+    "original_pdf_pages": [
+      46
+    ],
+    "citation_pages": [],
+    "citation_sources": {},
+    "review_method": "Answer and cited evidence compared with original PDF text, tables and inspected diagrams/charts; binary ADVANCED.md criteria. No exact-substring grading."
+  },
+  {
+    "query_id": "adv_dev_07",
+    "passed": false,
+    "primary_group": "chart",
+    "reason": "Abstains even though the original page 7 chart and its indexed description support Alibaba Cloud as second-highest and above Meta. The chart chunk was absent from the final Hybrid context.",
+    "failure_category": "retrieval",
+    "original_pdf_pages": [
+      7
+    ],
+    "citation_pages": [],
+    "citation_sources": {},
+    "review_method": "Answer and cited evidence compared with original PDF text, tables and inspected diagrams/charts; binary ADVANCED.md criteria. No exact-substring grading."
+  },
+  {
+    "query_id": "adv_dev_08",
+    "passed": true,
+    "primary_group": "chart",
+    "reason": "Correct 1349% five-year cumulative TSR and correct distinction from annualized return; citation resolves to the original page 24 graphic.",
+    "failure_category": "none",
+    "original_pdf_pages": [
+      24
+    ],
+    "citation_pages": [
+      24
+    ],
+    "citation_sources": {
+      "adv-64fab2c730c0896b4294af45": {
+        "page": 24,
+        "source_records": [
+          {
+            "bbox": [
+              31.29,
+              372.18,
+              562.38,
+              703.34
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p024-b010.png",
+            "page": 24,
+            "record_id": "p024-b010",
+            "content_type": "chart",
+            "verification": "automated_checks_only",
+            "extraction_method": "gpt4o_visual_description"
+          }
+        ]
+      }
+    },
+    "review_method": "Answer and cited evidence compared with original PDF text, tables and inspected diagrams/charts; binary ADVANCED.md criteria. No exact-substring grading."
+  },
+  {
+    "query_id": "adv_dev_09",
+    "passed": false,
+    "primary_group": "chart",
+    "reason": "Abstains on an answerable trend question. All three series fall from January 30, 2022 to January 29, 2023 on the original page 123 chart; region p123-b003 was excluded.",
+    "failure_category": "missing_index_evidence",
+    "original_pdf_pages": [
+      123
+    ],
+    "citation_pages": [],
+    "citation_sources": {},
+    "review_method": "Answer and cited evidence compared with original PDF text, tables and inspected diagrams/charts; binary ADVANCED.md criteria. No exact-substring grading."
+  },
+  {
+    "query_id": "adv_dev_10",
+    "passed": false,
+    "primary_group": "multi_hop",
+    "reason": "Abstains. Schedule II sales-return ending allowance 170 USD million and page 139 revenue 215938 USD million support 0.079%; the required Schedule II region p169-b003 was excluded.",
+    "failure_category": "missing_index_evidence",
+    "original_pdf_pages": [
+      169,
+      139
+    ],
+    "citation_pages": [],
+    "citation_sources": {},
+    "review_method": "Answer and cited evidence compared with original PDF text, tables and inspected diagrams/charts; binary ADVANCED.md criteria. No exact-substring grading."
+  },
+  {
+    "query_id": "adv_dev_11",
+    "passed": false,
+    "primary_group": "multi_hop",
+    "reason": "Abstains despite available indexed evidence: page 164 retirement-plan contribution expense 442 and page 149 stock-based compensation total 6386 imply 6.92%. The returned context lacks the complete required evidence.",
+    "failure_category": "retrieval",
+    "original_pdf_pages": [
+      164,
+      149
+    ],
+    "citation_pages": [],
+    "citation_sources": {},
+    "review_method": "Answer and cited evidence compared with original PDF text, tables and inspected diagrams/charts; binary ADVANCED.md criteria. No exact-substring grading."
+  },
+  {
+    "query_id": "adv_dev_12",
+    "passed": false,
+    "primary_group": "multi_hop",
+    "reason": "Abstains despite available indexed evidence: page 164 dividends paid 974 and page 139 net income 120067 imply 0.81%. Retrieval did not supply the needed income statement.",
+    "failure_category": "retrieval",
+    "original_pdf_pages": [
+      164,
+      139
+    ],
+    "citation_pages": [],
+    "citation_sources": {},
+    "review_method": "Answer and cited evidence compared with original PDF text, tables and inspected diagrams/charts; binary ADVANCED.md criteria. No exact-substring grading."
+  },
+  {
+    "query_id": "adv_dev_13",
+    "passed": true,
+    "primary_group": "text",
+    "reason": "Correct maximum 25% withholding, Board discretion to reduce it and 85%-of-lower-market-value pricing rule; cited page 150 paragraph supports all conditions.",
+    "failure_category": "none",
+    "original_pdf_pages": [
+      150
+    ],
+    "citation_pages": [
+      150
+    ],
+    "citation_sources": {
+      "adv-301ac12f8134e9cf44e56c2e": {
+        "page": 150,
+        "source_records": [
+          {
+            "bbox": [
+              37.17,
+              213.24,
+              553.24,
+              276.76
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p150-b005.png",
+            "page": 150,
+            "record_id": "p150-b005",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.63,
+              287.23,
+              552.99,
+              306.22
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p150-b006.png",
+            "page": 150,
+            "record_id": "p150-b006",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.56,
+              334.53,
+              553.28,
+              364.62
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p150-b008.png",
+            "page": 150,
+            "record_id": "p150-b008",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.61,
+              392.64,
+              553.0,
+              456.17
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p150-b010.png",
+            "page": 150,
+            "record_id": "p150-b010",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.14,
+              466.37,
+              553.06,
+              518.27
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p150-b011.png",
+            "page": 150,
+            "record_id": "p150-b011",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              40.5,
+              528.98,
+              299.59,
+              540.32
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p150-native017.png",
+            "page": 150,
+            "record_id": "p150-native017",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coverage_fallback"
+          },
+          {
+            "bbox": [
+              37.22,
+              546.34,
+              553.01,
+              620.1
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p150-b013.png",
+            "page": 150,
+            "record_id": "p150-b013",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          }
+        ]
+      }
+    },
+    "review_method": "Answer and cited evidence compared with original PDF text, tables and inspected diagrams/charts; binary ADVANCED.md criteria. No exact-substring grading."
+  },
+  {
+    "query_id": "adv_dev_14",
+    "passed": true,
+    "primary_group": "text",
+    "reason": "Provides three valid unallocated expense categories; citation resolves to the original page 165 segment-allocation paragraph.",
+    "failure_category": "none",
+    "original_pdf_pages": [
+      165
+    ],
+    "citation_pages": [
+      165
+    ],
+    "citation_sources": {
+      "adv-456ba96e38b9562f39694559": {
+        "page": 165,
+        "source_records": [
+          {
+            "bbox": [
+              37.51,
+              61.1,
+              553.1,
+              79.92
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p165-b002.png",
+            "page": 165,
+            "record_id": "p165-b002",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.53,
+              91.56,
+              553.02,
+              111.78
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p165-b003.png",
+            "page": 165,
+            "record_id": "p165-b003",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.89,
+              122.27,
+              552.91,
+              141.69
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p165-b004.png",
+            "page": 165,
+            "record_id": "p165-b004",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.27,
+              153.23,
+              553.14,
+              194.57
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p165-b005.png",
+            "page": 165,
+            "record_id": "p165-b005",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.3,
+              204.95,
+              553.1,
+              235.81
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p165-b006.png",
+            "page": 165,
+            "record_id": "p165-b006",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              43.13,
+              297.03,
+              484.2,
+              308.37
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p165-native009.png",
+            "page": 165,
+            "record_id": "p165-native009",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coverage_fallback"
+          },
+          {
+            "bbox": [
+              43.13,
+              312.78,
+              552.35,
+              324.12
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p165-native010.png",
+            "page": 165,
+            "record_id": "p165-native010",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coverage_fallback"
+          },
+          {
+            "bbox": [
+              43.13,
+              328.53,
+              552.35,
+              339.87
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p165-native011.png",
+            "page": 165,
+            "record_id": "p165-native011",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coverage_fallback"
+          },
+          {
+            "bbox": [
+              43.13,
+              344.28,
+              552.35,
+              355.62
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p165-native012.png",
+            "page": 165,
+            "record_id": "p165-native012",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coverage_fallback"
+          },
+          {
+            "bbox": [
+              43.13,
+              375.03,
+              484.2,
+              386.37
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p165-native013.png",
+            "page": 165,
+            "record_id": "p165-native013",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_coverage_fallback"
+          }
+        ]
+      }
+    },
+    "review_method": "Answer and cited evidence compared with original PDF text, tables and inspected diagrams/charts; binary ADVANCED.md criteria. No exact-substring grading."
+  },
+  {
+    "query_id": "adv_dev_15",
+    "passed": true,
+    "primary_group": "text",
+    "reason": "Correctly states the absence of maximum liability limits in many agreements and no recorded indemnification liability; cited original page 159 paragraph supports both.",
+    "failure_category": "none",
+    "original_pdf_pages": [
+      159
+    ],
+    "citation_pages": [
+      159
+    ],
+    "citation_sources": {
+      "adv-fdc4dbc1c27661b9155e8979": {
+        "page": 159,
+        "source_records": [
+          {
+            "bbox": [
+              37.26,
+              221.58,
+              553.19,
+              242.48
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p159-b006.png",
+            "page": 159,
+            "record_id": "p159-b006",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          },
+          {
+            "bbox": [
+              37.12,
+              252.82,
+              553.26,
+              294.36
+            ],
+            "crop": "advanced/artifacts/extraction/crops/p159-b007.png",
+            "page": 159,
+            "record_id": "p159-b007",
+            "content_type": "text",
+            "verification": "automated_checks_only",
+            "extraction_method": "pdf_native_with_model_layout"
+          }
+        ]
+      }
+    },
+    "review_method": "Answer and cited evidence compared with original PDF text, tables and inspected diagrams/charts; binary ADVANCED.md criteria. No exact-substring grading."
+  },
+  {
+    "query_id": "adv_dev_16",
+    "passed": true,
+    "primary_group": "abstention",
+    "reason": "Correct abstention. Original Note 2 page 149 states certain Groq employees were hired without a numerical count; document-wide absence check is recorded in the dev question.",
+    "failure_category": "none",
+    "original_pdf_pages": [
+      15,
+      24,
+      99,
+      102,
+      131,
+      143,
+      149
+    ],
+    "citation_pages": [],
+    "citation_sources": {},
+    "review_method": "Answer and cited evidence compared with original PDF text, tables and inspected diagrams/charts; binary ADVANCED.md criteria. No exact-substring grading."
+  },
+  {
+    "query_id": "adv_dev_17",
+    "passed": true,
+    "primary_group": "abstention",
+    "reason": "Correct abstention. OpenAI partnership/investment passages do not report named fiscal 2026 sales revenue; page 166 concentration percentages concern unnamed customers.",
+    "failure_category": "none",
+    "original_pdf_pages": [
+      15,
+      16,
+      24,
+      110,
+      132,
+      166
+    ],
+    "citation_pages": [],
+    "citation_sources": {},
+    "review_method": "Answer and cited evidence compared with original PDF text, tables and inspected diagrams/charts; binary ADVANCED.md criteria. No exact-substring grading."
+  },
+  {
+    "query_id": "adv_dev_18",
+    "passed": true,
+    "primary_group": "abstention",
+    "reason": "Correct abstention. Power capacity, throughput efficiency and emissions passages do not provide NVIDIA worldwide fiscal 2026 electricity consumption in MWh.",
+    "failure_category": "none",
+    "original_pdf_pages": [
+      5,
+      6,
+      13,
+      14,
+      15,
+      86,
+      87,
+      95,
+      104,
+      109,
+      110,
+      124
+    ],
+    "citation_pages": [],
+    "citation_sources": {},
+    "review_method": "Answer and cited evidence compared with original PDF text, tables and inspected diagrams/charts; binary ADVANCED.md criteria. No exact-substring grading."
+  }
+]

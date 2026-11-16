@@ -1,0 +1,1764 @@
+[
+  {
+    "id": "adv_test_v1_01",
+    "split": "test",
+    "type": "table",
+    "primary_group": "table",
+    "question": "What was work in process at January 25, 2026, in USD millions?",
+    "expected_answer": "USD 8,822 million.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 155,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "table",
+        "bbox": [
+          34.93,
+          401.65,
+          558.85,
+          555.03
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Inventories table; Work in process row; the two date columns.",
+        "evidence": "Work in process: 8,822 (Jan 25, 2026); 3,399 (Jan 26, 2025).",
+        "unit": "USD million",
+        "record_id": "p155-b011",
+        "crop": "advanced/artifacts/extraction/crops/p155-b011.png",
+        "indexed_chunk_ids": [
+          "adv-4e4d0b4b296c429504606ff1",
+          "adv-759fbe4107382e86c6ae8af7"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "direct_lookup",
+      "table"
+    ],
+    "reason": "Direct source lookup with fewer requested facts.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_02",
+    "split": "test",
+    "type": "table",
+    "primary_group": "table",
+    "question": "What was interest income for fiscal 2026, in USD millions?",
+    "expected_answer": "USD 2,300 million.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 130,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "table",
+        "bbox": [
+          34.32,
+          48.18,
+          557.38,
+          217.42
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Total Other Income, Net table; Interest income row; Jan 25, 2026 column.",
+        "evidence": "Interest income: 2,300 for the year ended Jan 25, 2026.",
+        "unit": "USD million",
+        "record_id": "p130-b004",
+        "crop": "advanced/artifacts/extraction/crops/p130-b004.png",
+        "indexed_chunk_ids": [
+          "adv-139bfc6bf259de107c65a319",
+          "adv-9bb001f70a48aeb1e8387c27"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "direct_lookup",
+      "table"
+    ],
+    "reason": "Direct source lookup with fewer requested facts.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_03",
+    "split": "test",
+    "type": "table",
+    "primary_group": "table",
+    "question": "What was the fiscal 2026 weighted-average purchase price per ESPP share?",
+    "expected_answer": "USD 49.13 per share.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 149,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "table",
+        "bbox": [
+          36.1,
+          464.36,
+          555.85,
+          579.02
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "ESPP table; Jan 25, 2026 column; price per share and grant-date fair value per share rows.",
+        "evidence": "Weighted average price per share: $49.13; Weighted average grant-date fair value per share: $20.75.",
+        "unit": "USD per share",
+        "record_id": "p149-b013",
+        "crop": "advanced/artifacts/extraction/crops/p149-b013.png",
+        "indexed_chunk_ids": [
+          "adv-929354e4c4e1c77803b653e0",
+          "adv-e7d06ac58c25cab6615edbbb"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "direct_lookup",
+      "table"
+    ],
+    "reason": "Direct source lookup with fewer requested facts.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_04",
+    "split": "test",
+    "type": "table",
+    "primary_group": "table",
+    "question": "What was current federal income tax for fiscal 2026, in USD millions?",
+    "expected_answer": "USD 19,039 million.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 160,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "table",
+        "bbox": [
+          35.01,
+          428.22,
+          558.17,
+          699.75
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Income tax table; Current income taxes / Federal row; Jan 25, 2026 column.",
+        "evidence": "Current income taxes, Federal: 19,039 for the year ended Jan 25, 2026.",
+        "unit": "USD million",
+        "record_id": "p160-b009",
+        "crop": "advanced/artifacts/extraction/crops/p160-b009.png",
+        "indexed_chunk_ids": [
+          "adv-1052b5244858ab3b182ee1dc",
+          "adv-1fb6be3a7e32ebc0fe840b7c"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "direct_lookup",
+      "table"
+    ],
+    "reason": "Direct source lookup with fewer requested facts.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_05",
+    "split": "test",
+    "type": "table",
+    "primary_group": "table",
+    "question": "What was fiscal 2026 Data Center Networking revenue, in USD millions?",
+    "expected_answer": "USD 31,376 million.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 167,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "table",
+        "bbox": [
+          35.54,
+          41.05,
+          556.87,
+          268.06
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Revenue by End Market table; Jan 25, 2026 column; Data Center and its indented Compute/Networking rows.",
+        "evidence": "Data Center 193,737, consisting of Compute 162,361 and Networking 31,376.",
+        "unit": "USD million; percent",
+        "record_id": "p167-b003",
+        "crop": "advanced/artifacts/extraction/crops/p167-b003.png",
+        "indexed_chunk_ids": [
+          "adv-0f59e272cad36c496553dadb",
+          "adv-8751c5fd03b5ffb083540256"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "direct_lookup",
+      "table"
+    ],
+    "reason": "Direct source lookup with fewer requested facts.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_06",
+    "split": "test",
+    "type": "table",
+    "primary_group": "table",
+    "question": "What was the fiscal 2026 amount of operating lease assets obtained in exchange for lease obligations?",
+    "expected_answer": "USD 1,439 million.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 168,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "table",
+        "bbox": [
+          35.05,
+          65.31,
+          557.33,
+          222.38
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Supplemental cash flows information table; Jan 25, 2026 column; both rows.",
+        "evidence": "Operating cash flow used for operating leases 428; Operating lease assets obtained in exchange for lease obligations 1,439.",
+        "unit": "USD million",
+        "record_id": "p168-b005",
+        "crop": "advanced/artifacts/extraction/crops/p168-b005.png",
+        "indexed_chunk_ids": [
+          "adv-5ce0a5f87770c267526eedd1",
+          "adv-ea1b134308783ab9865f1566"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "direct_lookup",
+      "table"
+    ],
+    "reason": "Direct source lookup with fewer requested facts.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_07",
+    "split": "test",
+    "type": "image",
+    "primary_group": "image",
+    "question": "Which layer is at the bottom of the five-layer AI stack diagram?",
+    "expected_answer": "Energy.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 3,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "image_diagram",
+        "bbox": [
+          0.0,
+          0.0,
+          1148.98,
+          773.27
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Five-layer stack diagram and adjacent AI FACTORIES label.",
+        "evidence": "Bottom-to-top labels: Energy, Chips, Infrastructure, Models, Applications; AI FACTORIES aligns with Infrastructure.",
+        "unit": "not applicable",
+        "record_id": "p003-b001",
+        "crop": "advanced/artifacts/extraction/crops/p003-b001.png",
+        "indexed_chunk_ids": [
+          "adv-c81c8a9717ed988e72fc0524"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "direct_lookup",
+      "image"
+    ],
+    "reason": "Direct source lookup with fewer requested facts.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_08",
+    "split": "test",
+    "type": "image",
+    "primary_group": "image",
+    "question": "Which application label in the five-layer AI stack diagram refers to coding?",
+    "expected_answer": "AI Coder.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 3,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "image_diagram",
+        "record_id": "p003-b001",
+        "bbox": [
+          0.0,
+          0.0,
+          1148.98,
+          773.27
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "crop": "advanced/artifacts/extraction/crops/p003-b001.png",
+        "region": "Eight application icons and labels beside the Applications layer.",
+        "evidence": "Application labels: CHATBOTS; DIGITAL BIOLOGY; ROBOTAXI; ENTERPRISE AI AGENTS; SCIENCE; ROBOTICS; MANUFACTURING; AI CODER.",
+        "unit": "not applicable",
+        "indexed_chunk_ids": [
+          "adv-c81c8a9717ed988e72fc0524"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "direct_lookup",
+      "image"
+    ],
+    "reason": "Direct source lookup with fewer requested facts.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_09",
+    "split": "test",
+    "type": "image",
+    "primary_group": "image",
+    "question": "What protective environment is named in the NemoClaw diagram?",
+    "expected_answer": "OpenShell.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 8,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "image_diagram",
+        "bbox": [
+          0.0,
+          0.24,
+          1188.0,
+          774.0
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "NemoClaw architecture diagram; dashed central circle and three left-hand interaction boxes.",
+        "evidence": "OpenShell is inside the dashed NemoClaw circle. Left-hand labels: Files (Structured, Unstructured); Computer Use; Tools (CLI, MCP).",
+        "unit": "not applicable",
+        "record_id": "p008-b001",
+        "crop": "advanced/artifacts/extraction/crops/p008-b001.png",
+        "indexed_chunk_ids": [
+          "adv-face17c4b95ed9d8392159cf"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "direct_lookup",
+      "image"
+    ],
+    "reason": "Direct source lookup with fewer requested facts.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_10",
+    "split": "test",
+    "type": "image",
+    "primary_group": "image",
+    "question": "What metric labels the vertical axis in the Inference At-Scale is Extreme Computing diagram?",
+    "expected_answer": "Throughput, measured in tokens per second for the factory.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 14,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "image_diagram",
+        "bbox": [
+          201.37,
+          32.87,
+          533.9,
+          324.23
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Conceptual diagram on the presentation screen in the photograph; axis labels, not the presenter.",
+        "evidence": "Vertical axis: Throughput (Tokens per Second For Factory). Rightward arrow: Smart AI / Fast Response.",
+        "unit": "tokens per second for factory",
+        "record_id": "p014-b002",
+        "crop": "advanced/artifacts/extraction/crops/p014-b002.png",
+        "indexed_chunk_ids": [
+          "adv-3d222832f00f71459d46ce60"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "direct_lookup",
+      "image"
+    ],
+    "reason": "Direct source lookup with fewer requested facts.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_11",
+    "split": "test",
+    "type": "image",
+    "primary_group": "image",
+    "question": "What revenue is shown for Gaming in the Fiscal 2026 Market Platforms infographic?",
+    "expected_answer": "USD 16.0 billion.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 23,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "image_diagram",
+        "record_id": "p023-b010",
+        "bbox": [
+          33.76,
+          515.57,
+          557.74,
+          672.6
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "crop": "advanced/artifacts/extraction/crops/p023-b010.png",
+        "region": "Gaming market card, beneath the GPU image; revenue and growth labels.",
+        "evidence": "Gaming: $16.0 billion revenue; up 41% year on year.",
+        "unit": "USD billion; percent year-on-year growth",
+        "indexed_chunk_ids": [
+          "adv-5f304572534e71bb342c3972"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "direct_lookup",
+      "image"
+    ],
+    "reason": "Direct source lookup with fewer requested facts.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_12",
+    "split": "test",
+    "type": "chart",
+    "primary_group": "chart",
+    "question": "What does the vertical axis count in the open-source AI contribution chart?",
+    "expected_answer": "Repositories, labeled Repos.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 7,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "chart",
+        "bbox": [
+          0.0,
+          0.0,
+          1188.0,
+          774.0
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Upper-right line chart; vertical-axis label and horizontal endpoints.",
+        "evidence": "Vertical axis: Repos. Horizontal endpoints: Jan 2025 and Feb 2026.",
+        "unit": "repositories; calendar months",
+        "record_id": "p007-b001",
+        "crop": "advanced/artifacts/extraction/crops/p007-b001.png",
+        "indexed_chunk_ids": [
+          "adv-4b3d2ee893e531480d30af3b"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "direct_lookup",
+      "chart"
+    ],
+    "reason": "Direct source lookup with fewer requested facts.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_13",
+    "split": "test",
+    "type": "chart",
+    "primary_group": "chart",
+    "question": "What one-year TSR is labeled in the Fiscal 2026 Shareholder Returns chart?",
+    "expected_answer": "32%.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 24,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "chart",
+        "bbox": [
+          28.29,
+          369.18,
+          565.38,
+          706.34
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Left panel, Total Shareholder Return; one-year and three-year bars/labels.",
+        "evidence": "Total Shareholder Return panel: 1-Year 32%; 3-Year 822%; 5-Year 1,349%.",
+        "unit": "percent; percentage points",
+        "record_id": "p024-b010",
+        "crop": "advanced/artifacts/extraction/crops/p024-b010.png",
+        "indexed_chunk_ids": [
+          "adv-64fab2c730c0896b4294af45"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "direct_lookup",
+      "chart"
+    ],
+    "reason": "Direct source lookup with fewer requested facts.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_14",
+    "split": "test",
+    "type": "chart",
+    "primary_group": "chart",
+    "question": "What is the three-year total capital returned to shareholders shown in the chart?",
+    "expected_answer": "USD 86.3 billion.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 24,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "chart",
+        "bbox": [
+          28.29,
+          369.18,
+          565.38,
+          706.34
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Right panel, Return of Capital; 3-Year stacked bar, legend and total label.",
+        "evidence": "Return of Capital, 3-Year: Stock Repurchases $84.1B; Dividends $2.2B; Total $86.3B.",
+        "unit": "USD billion; percent",
+        "record_id": "p024-b010",
+        "crop": "advanced/artifacts/extraction/crops/p024-b010.png",
+        "indexed_chunk_ids": [
+          "adv-64fab2c730c0896b4294af45"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "direct_lookup",
+      "chart"
+    ],
+    "reason": "Direct source lookup with fewer requested facts.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_15",
+    "split": "test",
+    "type": "chart",
+    "primary_group": "chart",
+    "question": "What does green represent in the Return of Capital chart legend?",
+    "expected_answer": "Stock repurchases.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 24,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "chart",
+        "record_id": "p024-b010",
+        "bbox": [
+          28.29,
+          369.18,
+          565.38,
+          706.34
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "crop": "advanced/artifacts/extraction/crops/p024-b010.png",
+        "region": "Right-hand chart; color legend and panel unit/title.",
+        "evidence": "Legend: purple Dividends; green Stock Repurchases. Panel title: Return of Capital to Shareholders (in billions).",
+        "unit": "USD billion",
+        "indexed_chunk_ids": [
+          "adv-64fab2c730c0896b4294af45"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "direct_lookup",
+      "chart"
+    ],
+    "reason": "Direct source lookup with fewer requested facts.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_16",
+    "split": "test",
+    "type": "chart",
+    "primary_group": "chart",
+    "question": "What is the five-year stock-repurchase amount labeled in the Return of Capital chart?",
+    "expected_answer": "USD 94.2 billion.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 24,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "chart",
+        "record_id": "p024-b010",
+        "bbox": [
+          28.29,
+          369.18,
+          565.38,
+          706.34
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "crop": "advanced/artifacts/extraction/crops/p024-b010.png",
+        "region": "Right panel; green stock-repurchase segments for five-year and one-year bars.",
+        "evidence": "5-Year Stock Repurchases $94.2B; 1-Year Stock Repurchases $40.4B.",
+        "unit": "USD billion",
+        "indexed_chunk_ids": [
+          "adv-64fab2c730c0896b4294af45"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "direct_lookup",
+      "chart"
+    ],
+    "reason": "Direct source lookup with fewer requested facts.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_17",
+    "split": "test",
+    "type": "multi_hop",
+    "primary_group": "multi_hop",
+    "question": "Using the fiscal 2026 cash-flow statement and income statement, give cash paid for income taxes, net, and income tax expense, in USD millions.",
+    "expected_answer": "Cash paid for income taxes, net: USD 20,288 million. Income tax expense: USD 21,383 million.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 143,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "table",
+        "record_id": "p143-b002",
+        "bbox": [
+          36.02,
+          16.51,
+          558.41,
+          731.82
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "crop": "advanced/artifacts/extraction/crops/p143-b002.png",
+        "region": "Cash-flow statement supplemental disclosures; Jan 25, 2026 column.",
+        "evidence": "Cash paid for income taxes, net 20,288.",
+        "unit": "USD million",
+        "indexed_chunk_ids": [
+          "adv-d48aa5f96890734734fe684f"
+        ]
+      },
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 139,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "table",
+        "record_id": "p139-b003",
+        "bbox": [
+          40.13,
+          25.5,
+          553.56,
+          450.42
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "crop": "advanced/artifacts/extraction/crops/p139-b003.png",
+        "region": "Income statement; Jan 25, 2026 Income tax expense row.",
+        "evidence": "Income tax expense 21,383.",
+        "unit": "USD million",
+        "indexed_chunk_ids": [
+          "adv-53061870cd3c413eb2e12b41"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "simple_two_source",
+      "multi_hop"
+    ],
+    "reason": "Combine two original source regions without ratio or percentage calculations.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails.",
+      "Support both requested disclosures using at least two source pages; no arithmetic is required."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+  },
+  {
+    "id": "adv_test_v1_18",
+    "split": "test",
+    "type": "multi_hop",
+    "primary_group": "multi_hop",
+    "question": "At January 25, 2026, give total cash, cash equivalents and marketable securities, and the carrying balance of non-marketable equity securities, in USD millions.",
+    "expected_answer": "Cash, cash equivalents and marketable securities: USD 62,556 million. Non-marketable equity securities: USD 22,251 million.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 130,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "table",
+        "record_id": "p130-b017",
+        "bbox": [
+          34.79,
+          550.21,
+          556.93,
+          669.8
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "crop": "advanced/artifacts/extraction/crops/p130-b017.png",
+        "region": "Liquidity table; Jan 25, 2026 Total row.",
+        "evidence": "Cash and cash equivalents 10,605; marketable securities 51,951; total 62,556.",
+        "unit": "USD million",
+        "indexed_chunk_ids": [
+          "adv-91d132a6d123ac2fc246b602"
+        ]
+      },
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 155,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "table",
+        "record_id": "p155-b005",
+        "bbox": [
+          35.08,
+          88.64,
+          557.6,
+          287.96
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "crop": "advanced/artifacts/extraction/crops/p155-b005.png",
+        "region": "Non-marketable equity securities rollforward; Jan 25, 2026 ending balance row.",
+        "evidence": "Non-marketable equity securities balance at end of period 22,251.",
+        "unit": "USD million",
+        "indexed_chunk_ids": [
+          "adv-cc4ca8518a57c8dab5c4b88a",
+          "adv-eefb44e9fe11333bc6976e34"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "simple_two_source",
+      "multi_hop"
+    ],
+    "reason": "Combine two original source regions without ratio or percentage calculations.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails.",
+      "Support both requested disclosures using at least two source pages; no arithmetic is required."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_19",
+    "split": "test",
+    "type": "multi_hop",
+    "primary_group": "multi_hop",
+    "question": "What was total inventory at January 25, 2026, and which inventory provisions are named in the auditor's critical audit matter?",
+    "expected_answer": "Total inventory was USD 21,403 million. The critical audit matter names provisions for excess or obsolete inventories and excess product purchase commitments.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 155,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "table",
+        "bbox": [
+          34.93,
+          401.65,
+          558.85,
+          555.03
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Inventories table; Total row and both date columns.",
+        "evidence": "Total inventories 21,403 at Jan 25, 2026 and 10,080 at Jan 26, 2025.",
+        "unit": "USD million",
+        "record_id": "p155-b011",
+        "crop": "advanced/artifacts/extraction/crops/p155-b011.png",
+        "indexed_chunk_ids": [
+          "adv-4e4d0b4b296c429504606ff1",
+          "adv-759fbe4107382e86c6ae8af7"
+        ]
+      },
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 138,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "text",
+        "bbox": [
+          40.5,
+          132.63,
+          556.15,
+          313.17
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Critical Audit Matter; inventory valuation heading and explanatory paragraphs.",
+        "evidence": "Valuation of Inventories - Provisions for Excess or Obsolete Inventories and Excess Product Purchase Commitments; significant management judgment and assumptions related to future demand and market conditions, including regulatory export restrictions.",
+        "unit": "not applicable",
+        "text_anchors": [
+          "Valuation of Inventories",
+          "The principal considerations",
+          "regulatory export restrictions"
+        ],
+        "indexed_chunk_ids": [
+          "adv-21666e7f01f95d2d95ca4907"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "simple_two_source",
+      "multi_hop"
+    ],
+    "reason": "Combine two original source regions without ratio or percentage calculations.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails.",
+      "Support both requested disclosures using at least two source pages; no arithmetic is required."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_20",
+    "split": "test",
+    "type": "multi_hop",
+    "primary_group": "multi_hop",
+    "question": "From the market-risk discussion and Note 10, give the currency of substantially all sales and the cost category hedged by foreign-currency forward contracts.",
+    "expected_answer": "Substantially all sales are in US dollars. The forward contracts hedge foreign-currency movements affecting operating expenses.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 133,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "text",
+        "bbox": [
+          40.5,
+          172.23,
+          556.1,
+          226.77
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Foreign Exchange Rate Risk; opening paragraph.",
+        "evidence": "Direct foreign-exchange exposure is considered minimal as substantially all sales are in United States dollars.",
+        "unit": "not applicable",
+        "text_anchors": [
+          "substantially all of our sales"
+        ],
+        "indexed_chunk_ids": [
+          "adv-3e95ccb77153d8b9e4281feb"
+        ]
+      },
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 157,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "text",
+        "bbox": [
+          40.5,
+          184.08,
+          556.15,
+          249.42
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Note 10 - Derivative Financial Instruments; Foreign Currency Derivatives opening paragraph.",
+        "evidence": "Foreign currency forward contracts mitigate exchange-rate movements on operating expenses; designated accounting hedges; gains or losses recorded in accumulated other comprehensive income or loss and reclassified to operating expense when the related expenses are recognized.",
+        "unit": "not applicable",
+        "text_anchors": [
+          "We utilize foreign currency forward contracts",
+          "reclassified to operating expense"
+        ],
+        "indexed_chunk_ids": [
+          "adv-410027d4b2adf1eee3bd3edd",
+          "adv-61c434c43fb9a20bc314f92a"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "simple_two_source",
+      "multi_hop"
+    ],
+    "reason": "Combine two original source regions without ratio or percentage calculations.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails.",
+      "Support both requested disclosures using at least two source pages; no arithmetic is required."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_21",
+    "split": "test",
+    "type": "text",
+    "primary_group": "text",
+    "question": "Was the December 2025 Groq technology license exclusive or non-exclusive?",
+    "expected_answer": "Non-exclusive.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 149,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "text",
+        "bbox": [
+          40.5,
+          78.48,
+          556.15,
+          165.42
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Note 2 - Groq; opening paragraph.",
+        "evidence": "In December 2025, a non-exclusive license agreement with Groq for its language processing unit technology was entered into and certain Groq employees were hired. No customer contracts, existing products, or equity interests were purchased.",
+        "unit": "not applicable",
+        "text_anchors": [
+          "No customer contracts",
+          "In December 2025"
+        ],
+        "indexed_chunk_ids": [
+          "adv-51af52fe3e3877a7ee11d7d4"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "direct_lookup",
+      "text"
+    ],
+    "reason": "Direct source lookup with fewer requested facts.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_22",
+    "split": "test",
+    "type": "text",
+    "primary_group": "text",
+    "question": "Which foundational development platform is named in NVIDIA's technology stack?",
+    "expected_answer": "NVIDIA CUDA.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 92,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "text",
+        "bbox": [
+          40.5,
+          120.63,
+          556.13,
+          196.77
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Item 1, Business; technology-stack paragraph.",
+        "evidence": "Our technology stack includes the foundational NVIDIA CUDA development platform that runs on all NVIDIA GPUs.",
+        "unit": "not applicable",
+        "text_anchors": [
+          "foundational NVIDIA CUDA"
+        ],
+        "indexed_chunk_ids": [
+          "adv-c04463b97a6e9a54108b72a9"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "direct_lookup",
+      "text"
+    ],
+    "reason": "Direct source lookup with fewer requested facts.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_23",
+    "split": "test",
+    "type": "text",
+    "primary_group": "text",
+    "question": "Does communicating the critical audit matter change the overall financial-statement audit opinion?",
+    "expected_answer": "No. It does not alter the opinion on the consolidated financial statements as a whole.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 138,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "text",
+        "bbox": [
+          40.5,
+          48.03,
+          556.07,
+          124.17
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Auditor's Critical Audit Matter introductory paragraph.",
+        "evidence": "The communication of critical audit matters does not alter the opinion on the consolidated financial statements taken as a whole, and does not provide a separate opinion on the critical audit matter or related accounts/disclosures.",
+        "unit": "not applicable",
+        "text_anchors": [
+          "does not alter in any way",
+          "providing a separate opinion"
+        ],
+        "indexed_chunk_ids": [
+          "adv-21666e7f01f95d2d95ca4907",
+          "adv-66e62512cb6f14de603d4cc5"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "direct_lookup",
+      "text"
+    ],
+    "reason": "Direct source lookup with fewer requested facts.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_24",
+    "split": "test",
+    "type": "text",
+    "primary_group": "text",
+    "question": "As of January 25, 2026, what remaining performance-obligation revenue was disclosed for contracts longer than one year?",
+    "expected_answer": "USD 2.3 billion.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "0e725ba048221539",
+        "source": "advanced/data/2026-Annual-Report-Web.pdf",
+        "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+        "page": 157,
+        "page_numbering": "physical_pdf_1_based",
+        "kind": "text",
+        "bbox": [
+          40.5,
+          91.08,
+          555.99,
+          134.82
+        ],
+        "bbox_coordinate_system": "PDF points, top-left origin",
+        "region": "Paragraph immediately preceding Note 10; remaining performance obligations.",
+        "evidence": "As of January 25, 2026, revenue related to remaining performance obligations from contracts greater than one year in length was $2.3 billion. Approximately 42% of revenue from contracts greater than one year in length will be recognized over the next twelve months.",
+        "unit": "USD billion; percent",
+        "text_anchors": [
+          "remaining performance obligations",
+          "Approximately 42%"
+        ],
+        "indexed_chunk_ids": [
+          "adv-410027d4b2adf1eee3bd3edd"
+        ]
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "tags": [
+      "direct_lookup",
+      "text"
+    ],
+    "reason": "Direct source lookup with fewer requested facts.",
+    "grading_criteria": [
+      "Pass when the requested fact or facts are correct, with the stated unit and reporting period. Do not require facts omitted from this simplified question.",
+      "Citations must identify original PDF pages and regions supporting the requested answer. A wrong citation, invented value, system error or abstention fails."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "retained_indexed_content"
+    
+  },
+  {
+    "id": "adv_test_v1_25",
+    "split": "test",
+    "type": "abstention",
+    "primary_group": "abstention",
+    "question": "What was NVIDIA's audited full-year fiscal 2027 revenue?",
+    "expected_answer": "Insufficient evidence: this fiscal 2026 report does not provide audited full-year fiscal 2027 revenue.",
+    "filter": null,
+    "gold": [],
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "tags": [
+      "simple_abstention",
+      "abstention"
+    ],
+    "reason": "Explicit abstention on a fact not disclosed in the original PDF.",
+    "absence_reason": "Insufficient evidence: this fiscal 2026 report does not provide audited full-year fiscal 2027 revenue.",
+    "absence_check": {
+      "source_id": "0e725ba048221539",
+      "source": "advanced/data/2026-Annual-Report-Web.pdf",
+      "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+      "page_numbering": "physical_pdf_1_based",
+      "scope": "Entire 175-page original PDF",
+      "method": "Case-insensitive native-text search across all PDF pages, followed by reading the related original sections and relevant figures. Keyword hits alone do not prove an answer.",
+      "terms_with_matching_pages": {
+        "2027": [
+          13,
+          20,
+          21,
+          25,
+          28,
+          29,
+          31,
+          32,
+          33,
+          51,
+          64,
+          71,
+          72,
+          73,
+          77,
+          86,
+          94,
+          104,
+          125,
+          131,
+          132,
+          134,
+          144,
+          152,
+          153,
+          158,
+          163,
+          167
+        ],
+        "audited": [
+          77,
+          79,
+          134,
+          137
+        ],
+        "revenue": [
+          5,
+          6,
+          13,
+          14,
+          15,
+          19,
+          22,
+          23,
+          24,
+          27,
+          28,
+          51,
+          57,
+          58,
+          59,
+          60,
+          61,
+          63,
+          64,
+          65,
+          66,
+          67,
+          74,
+          75,
+          82,
+          88,
+          96,
+          98,
+          99,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          111,
+          112,
+          113,
+          114,
+          116,
+          118,
+          124,
+          125,
+          126,
+          127,
+          129,
+          131,
+          132,
+          139,
+          144,
+          145,
+          149,
+          155,
+          156,
+          157,
+          163,
+          164,
+          165,
+          166,
+          167,
+          169
+        ]
+      },
+      "reviewed_related_pages": [
+        139
+      ],
+      "reviewed_regions": "Consolidated Statements of Income; fiscal-year columns, contrasted with future-year mentions.",
+      "conclusion": "Insufficient evidence: this fiscal 2026 report does not provide audited full-year fiscal 2027 revenue."
+    },
+    "grading_criteria": [
+      "Pass only for an explicit abstention or a clear statement of insufficient document evidence.",
+      "Do not invent the requested value, substitute a different scope/entity/period, or infer unsupported causality. Any such assertion fails.",
+      "A system error or missing output fails; retrieval failure alone does not establish document-wide absence."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "original_pdf_absence_check"
+    
+  },
+  {
+    "id": "adv_test_v1_26",
+    "split": "test",
+    "type": "abstention",
+    "primary_group": "abstention",
+    "question": "What exact median per-token latency in milliseconds does the report give for GB300 NVL72?",
+    "expected_answer": "Insufficient evidence: the report does not disclose an exact median per-token latency in milliseconds for GB300 NVL72.",
+    "filter": null,
+    "gold": [],
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "tags": [
+      "simple_abstention",
+      "abstention"
+    ],
+    "reason": "Explicit abstention on a fact not disclosed in the original PDF.",
+    "absence_reason": "Insufficient evidence: the report does not disclose an exact median per-token latency in milliseconds for GB300 NVL72.",
+    "absence_check": {
+      "source_id": "0e725ba048221539",
+      "source": "advanced/data/2026-Annual-Report-Web.pdf",
+      "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+      "page_numbering": "physical_pdf_1_based",
+      "scope": "Entire 175-page original PDF",
+      "method": "Case-insensitive native-text search across all PDF pages, followed by reading the related original sections and relevant figures. Keyword hits alone do not prove an answer.",
+      "terms_with_matching_pages": {
+        "GB300": [
+          6,
+          98,
+          115,
+          124
+        ],
+        "median": [
+          51,
+          60,
+          62,
+          73,
+          74
+        ],
+        "latency": [
+          6,
+          14,
+          15,
+          24,
+          93
+        ],
+        "milliseconds": []
+      },
+      "reviewed_related_pages": [
+        6,
+        14
+      ],
+      "reviewed_regions": "GB300 inference-performance discussion and qualitative inference diagram; relative throughput/cost figures do not provide an absolute median per-token latency.",
+      "conclusion": "Insufficient evidence: the report does not disclose an exact median per-token latency in milliseconds for GB300 NVL72."
+    },
+    "grading_criteria": [
+      "Pass only for an explicit abstention or a clear statement of insufficient document evidence.",
+      "Do not invent the requested value, substitute a different scope/entity/period, or infer unsupported causality. Any such assertion fails.",
+      "A system error or missing output fails; retrieval failure alone does not establish document-wide absence."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "original_pdf_absence_check"
+    
+  },
+  {
+    "id": "adv_test_v1_27",
+    "split": "test",
+    "type": "abstention",
+    "primary_group": "abstention",
+    "question": "What was fiscal 2026 revenue from products physically shipped to Taiwan?",
+    "expected_answer": "Insufficient evidence: the Taiwan revenue figure is based on customer headquarters, not physical shipping destination.",
+    "filter": null,
+    "gold": [],
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "tags": [
+      "simple_abstention",
+      "abstention"
+    ],
+    "reason": "Explicit abstention on a fact not disclosed in the original PDF.",
+    "absence_reason": "Insufficient evidence: the Taiwan revenue figure is based on customer headquarters, not physical shipping destination.",
+    "absence_check": {
+      "source_id": "0e725ba048221539",
+      "source": "advanced/data/2026-Annual-Report-Web.pdf",
+      "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+      "page_numbering": "physical_pdf_1_based",
+      "scope": "Entire 175-page original PDF",
+      "method": "Case-insensitive native-text search across all PDF pages, followed by reading the related original sections and relevant figures. Keyword hits alone do not prove an answer.",
+      "terms_with_matching_pages": {
+        "Taiwan": [
+          37,
+          96,
+          109,
+          116,
+          121,
+          164,
+          166,
+          167
+        ],
+        "shipping": [
+          111,
+          124,
+          129,
+          147,
+          166
+        ],
+        "headquarters": [
+          30,
+          109,
+          121,
+          129,
+          166
+        ]
+      },
+      "reviewed_related_pages": [
+        166
+      ],
+      "reviewed_regions": "Geographic Revenue based upon Customer Headquarters Location table, definition and Taiwan footnote.",
+      "conclusion": "Insufficient evidence: the Taiwan revenue figure is based on customer headquarters, not physical shipping destination."
+    },
+    "grading_criteria": [
+      "Pass only for an explicit abstention or a clear statement of insufficient document evidence.",
+      "Do not invent the requested value, substitute a different scope/entity/period, or infer unsupported causality. Any such assertion fails.",
+      "A system error or missing output fails; retrieval failure alone does not establish document-wide absence."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "original_pdf_absence_check"
+    
+  },
+  {
+    "id": "adv_test_v1_28",
+    "split": "test",
+    "type": "abstention",
+    "primary_group": "abstention",
+    "question": "How many women engineers worked for NVIDIA in Taiwan at fiscal 2026 year-end?",
+    "expected_answer": "Insufficient evidence: the report does not disclose this gender-by-role-by-location count.",
+    "filter": null,
+    "gold": [],
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "tags": [
+      "simple_abstention",
+      "abstention"
+    ],
+    "reason": "Explicit abstention on a fact not disclosed in the original PDF.",
+    "absence_reason": "Insufficient evidence: the report does not disclose this gender-by-role-by-location count.",
+    "absence_check": {
+      "source_id": "0e725ba048221539",
+      "source": "advanced/data/2026-Annual-Report-Web.pdf",
+      "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+      "page_numbering": "physical_pdf_1_based",
+      "scope": "Entire 175-page original PDF",
+      "method": "Case-insensitive native-text search across all PDF pages, followed by reading the related original sections and relevant figures. Keyword hits alone do not prove an answer.",
+      "terms_with_matching_pages": {
+        "women": [
+          84
+        ],
+        "female": [],
+        "engineering": [
+          33,
+          36,
+          37,
+          38,
+          41,
+          53,
+          92,
+          93,
+          94,
+          96,
+          100,
+          102,
+          104,
+          106,
+          107,
+          109,
+          120,
+          165,
+          174
+        ],
+        "Taiwan": [
+          37,
+          96,
+          109,
+          116,
+          121,
+          164,
+          166,
+          167
+        ],
+        "Human Capital": [
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          45,
+          46,
+          85,
+          99
+        ]
+      },
+      "reviewed_related_pages": [
+        99
+      ],
+      "reviewed_regions": "Human Capital Management; employee counts and workforce composition.",
+      "conclusion": "Insufficient evidence: the report does not disclose this gender-by-role-by-location count."
+    },
+    "grading_criteria": [
+      "Pass only for an explicit abstention or a clear statement of insufficient document evidence.",
+      "Do not invent the requested value, substitute a different scope/entity/period, or infer unsupported causality. Any such assertion fails.",
+      "A system error or missing output fails; retrieval failure alone does not establish document-wide absence."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "original_pdf_absence_check"
+    
+  },
+  {
+    "id": "adv_test_v1_29",
+    "split": "test",
+    "type": "abstention",
+    "primary_group": "abstention",
+    "question": "What was AMD's fiscal 2026 gross margin?",
+    "expected_answer": "Insufficient evidence: the report does not disclose AMD's fiscal 2026 gross margin.",
+    "filter": null,
+    "gold": [],
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "tags": [
+      "simple_abstention",
+      "abstention"
+    ],
+    "reason": "Explicit abstention on a fact not disclosed in the original PDF.",
+    "absence_reason": "Insufficient evidence: the report does not disclose AMD's fiscal 2026 gross margin.",
+    "absence_check": {
+      "source_id": "0e725ba048221539",
+      "source": "advanced/data/2026-Annual-Report-Web.pdf",
+      "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+      "page_numbering": "physical_pdf_1_based",
+      "scope": "Entire 175-page original PDF",
+      "method": "Case-insensitive native-text search across all PDF pages, followed by reading the related original sections and relevant figures. Keyword hits alone do not prove an answer.",
+      "terms_with_matching_pages": {
+        "AMD": [
+          86,
+          97,
+          99
+        ],
+        "Advanced Micro Devices": [
+          37,
+          59,
+          97
+        ],
+        "gross margin": [
+          23,
+          103,
+          104,
+          105,
+          106,
+          125,
+          126,
+          129
+        ]
+      },
+      "reviewed_related_pages": [
+        97,
+        129
+      ],
+      "reviewed_regions": "Competition discussion and NVIDIA gross-margin discussion; no AMD comparable financial result.",
+      "conclusion": "Insufficient evidence: the report does not disclose AMD's fiscal 2026 gross margin."
+    },
+    "grading_criteria": [
+      "Pass only for an explicit abstention or a clear statement of insufficient document evidence.",
+      "Do not invent the requested value, substitute a different scope/entity/period, or infer unsupported causality. Any such assertion fails.",
+      "A system error or missing output fails; retrieval failure alone does not establish document-wide absence."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "original_pdf_absence_check"
+    
+  },
+  {
+    "id": "adv_test_v1_30",
+    "split": "test",
+    "type": "abstention",
+    "primary_group": "abstention",
+    "question": "What percentage of NVIDIA's fiscal 2026 revenue growth was caused by OpenClaw adoption?",
+    "expected_answer": "Insufficient evidence: the report does not quantify that causal percentage.",
+    "filter": null,
+    "gold": [],
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "tags": [
+      "simple_abstention",
+      "abstention"
+    ],
+    "reason": "Explicit abstention on a fact not disclosed in the original PDF.",
+    "absence_reason": "Insufficient evidence: the report does not quantify that causal percentage.",
+    "absence_check": {
+      "source_id": "0e725ba048221539",
+      "source": "advanced/data/2026-Annual-Report-Web.pdf",
+      "source_url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/ar/2026-Annual-Report-Web.pdf",
+      "page_numbering": "physical_pdf_1_based",
+      "scope": "Entire 175-page original PDF",
+      "method": "Case-insensitive native-text search across all PDF pages, followed by reading the related original sections and relevant figures. Keyword hits alone do not prove an answer.",
+      "terms_with_matching_pages": {
+        "OpenClaw": [
+          8,
+          16
+        ],
+        "Openclaw": [
+          8,
+          16
+        ],
+        "attributable": [
+          111,
+          129,
+          145,
+          149,
+          163,
+          164,
+          165,
+          166
+        ],
+        "revenue growth": [
+          63,
+          112,
+          124
+        ]
+      },
+      "reviewed_related_pages": [
+        8,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129
+      ],
+      "reviewed_regions": "OpenClaw/agentic-AI discussion and MD&A revenue/operating-results discussion.",
+      "conclusion": "Insufficient evidence: the report does not quantify that causal percentage."
+    },
+    "grading_criteria": [
+      "Pass only for an explicit abstention or a clear statement of insufficient document evidence.",
+      "Do not invent the requested value, substitute a different scope/entity/period, or infer unsupported causality. Any such assertion fails.",
+      "A system error or missing output fails; retrieval failure alone does not establish document-wide absence."
+    ],
+    "benchmark_version": "v1",
+    "evaluation_scope": "original_pdf_absence_check"
+    
+  }
+]
