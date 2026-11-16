@@ -1,0 +1,20 @@
+{
+  "provider": "OpenAI",
+  "model": "gpt-4o",
+  "temperature": 0,
+  "max_completion_tokens": 1024,
+  "retrieval_method": "dense",
+  "top_k": 3,
+  "max_searches": 1,
+  "context_budget_chars": 4000,
+  "context_selection": "rank order, unique IDs, whole chunks only",
+  "query_policy": "original question verbatim",
+  "prices_per_million_tokens": {
+    "input": 2.5,
+    "cached_input": 1.25,
+    "output": 10
+  },
+  "pricing_source": "https://developers.openai.com/api/docs/models/gpt-4o",
+  "pricing_checked_on": "2026-11-16",
+  "max_finalization_attempts": 2
+}
