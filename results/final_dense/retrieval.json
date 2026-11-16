@@ -1,0 +1,270 @@
+[
+  {
+    "query_id": "f01",
+    "split": "test",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 151,
+        "evidence": "The Navigation pane is accessed directly by checking the box on the View tab in the Show command group. You can also get the Navigation pane by selecting Find from the Home tab."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "16b4231b3fc08adf097243dc7435ca3ac4b0a5059190bfabad6d2fb8c034e9b7",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 148,
+        "score": 0.6066890124493259,
+        "evidence_hit": false
+      },
+      {
+        "id": "5d133831678b5daace27237f83a978caae6f96c19f73e66357420a0deb007cd1",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 151,
+        "score": 0.5681342482566873,
+        "evidence_hit": true
+      },
+      {
+        "id": "d26dc4865bbbac774ce362457aa7fae4c9b99ea058f721aca94e386671263ebe",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 152,
+        "score": 0.48045343160629606,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": false,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "f02",
+    "split": "test",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 174,
+        "evidence": "The second option, Editing restrictions, limits the level of editing others can do—from none, to commenting only, to only tracked revisions."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "7292871ec5bf3e002626f5da4af2f39e0ed94074c8808b1f56f9e917693f0c35",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 173,
+        "score": 0.6274272203445435,
+        "evidence_hit": false
+      },
+      {
+        "id": "dfeb402d3b536065cba6ed40951e6a2b8707bea3fb60a0fba2103f42c7752fa6",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 174,
+        "score": 0.6221458315849304,
+        "evidence_hit": true
+      },
+      {
+        "id": "63299a676bdc1be217690ad95737c2cce27335a8b36d531e03081954333f9542",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 174,
+        "score": 0.520714282989502,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": false,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "f03",
+    "split": "test",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 203,
+        "evidence": "To accept the change, choose the check; to reject, choose the cross."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "2956d9cc924d434a8a152851c7feec3d05e2609a6cd9ecdfc980c21e145bb30e",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 204,
+        "score": 0.5213354825973511,
+        "evidence_hit": false
+      },
+      {
+        "id": "ad4f9022faaeb483e6b6c390b3a6cea1bf94d5a6c2fd065bfcb6abed4fd6afe6",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 203,
+        "score": 0.5002619624137878,
+        "evidence_hit": true
+      },
+      {
+        "id": "091ffb37c45cc7597aeb388efac68660451a934db8ff7af51ff0699e5174b288",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 203,
+        "score": 0.49861599492573894,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": false,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "f04",
+    "split": "test",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 211,
+        "evidence": "You can toggle the unidentified versions on and off, on the top of the sidebar with the option Only show named versions, as you can see in Figure 3.68."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "934a2d247f986359ed580381882ca08ec890cfb29f6d340be5ad5b54b2ba6baa",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 211,
+        "score": 0.6367970894812673,
+        "evidence_hit": true
+      },
+      {
+        "id": "91a9b19a83b2e30d07ba713a5f475dd1720de564519462ee165cc2831deb4104",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 211,
+        "score": 0.5287352361898197,
+        "evidence_hit": false
+      },
+      {
+        "id": "a831631dbea6e3089a2d8cccec604c24c8ae92b67bc08b3a6b90736dfff4e236",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 207,
+        "score": 0.500689238350942,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "f05",
+    "split": "test",
+    "answerable": true,
+    "status": "answered",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 212,
+        "evidence": "In this case, you can go to the older version and look for the information that you want to keep, then right-click to show the context menu, and select Copy. Then, go to the newest version and place the cursor where you want the recovered paragraphs to be, and right-click to the context menu Paste."
+      }
+    ],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "971b39f0b13b2a431bf851b563513e1f51a003a2e8a0b1cc07182b114738976a",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 212,
+        "score": 0.6941962242126465,
+        "evidence_hit": true
+      },
+      {
+        "id": "ea8058776b70ff4eac83cb65f6fde871ac5e3df3409a505fa25cd90f3f306ec9",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 213,
+        "score": 0.4721315925238979,
+        "evidence_hit": false
+      },
+      {
+        "id": "96cb8752fad8385696b4704ed31e4f703ee804c9eda3d8f20bb8130b465d6636",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 212,
+        "score": 0.4715918443081335,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context_exact_evidence": true
+  },
+  {
+    "query_id": "f06",
+    "split": "test",
+    "answerable": false,
+    "status": "abstain",
+    "gold": [],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "d2444d18dd2ee3addabf5646a6bfaeae2dd67fffcef7912ffc14e92443d35daf",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 171,
+        "score": 0.4182240242295274,
+        "evidence_hit": false
+      },
+      {
+        "id": "bb862c6b2fe290fe003e5123c0c204e90fefd180ff3a019564288268cc274ee3",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 148,
+        "score": 0.3838006715536926,
+        "evidence_hit": false
+      },
+      {
+        "id": "c5b5e94e4850cd139e364c87a31b0556ee14b7536ccb140c472b4bd5b6600dbf",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 150,
+        "score": 0.3768277021441111,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": null,
+    "hit3": null,
+    "context_exact_evidence": null
+  },
+  {
+    "query_id": "f07",
+    "split": "test",
+    "answerable": false,
+    "status": "abstain",
+    "gold": [],
+    "retrieval_available": true,
+    "ranking": [
+      {
+        "id": "91a9b19a83b2e30d07ba713a5f475dd1720de564519462ee165cc2831deb4104",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 211,
+        "score": 0.4718015193939209,
+        "evidence_hit": false
+      },
+      {
+        "id": "c451a5a5b0338541732c71d549b57591d735c657ec55281b34e04f59ff0fc6c1",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 211,
+        "score": 0.4607202457523085,
+        "evidence_hit": false
+      },
+      {
+        "id": "4dd9970a1efa34db5edaa0fef09d0f900327fdedcf01cf4e593aaefc2eea3f74",
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 216,
+        "score": 0.45620644092559814,
+        "evidence_hit": false
+      }
+    ],
+    "hit1": null,
+    "hit3": null,
+    "context_exact_evidence": null
+  }
+]

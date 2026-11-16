@@ -6,13 +6,9 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 
 from starter.agent_metrics import aggregate
-from .agent import load_controller, run_agent
-from .dense import ROOT, from_project
-from .hybrid import HybridRetriever
-from .rerank import RerankRetriever
-from .chat import OpenAIController
-from dotenv import dotenv_values
-
+from .agent import run_agent
+from .dense import ROOT
+from .retrievers import configured_controller, build_retriever, configuration
 
 def load(path):
     return json.loads(Path(path).read_text(encoding="utf-8"))
@@ -101,26 +97,19 @@ def summarize(questions, traces, reviews=None):
     return records, summaries
 
 
-def configured_controller(method):
-    controller, config = load_controller()
-    config['retrieval_method'] = method
-    if method == 'hybrid':
-        config['hybrid'] = load(ROOT / 'src/configs/hybrid.json')
-    if method == 'rerank':
-        config['rerank'] = load(ROOT / 'src/configs/rerank.json')
-    return controller, config
-
-
-def build_retriever(cache, method, config):
-    dense = from_project(cache_dir=Path(cache))
-    if method == 'hybrid':
-        return HybridRetriever(dense, load(ROOT / 'data/chunks.json'), **config['hybrid'])
-    if method == 'rerank':
-        settings = config['rerank']
-        rank_config = {**config, **{k: settings[k] for k in ('model', 'temperature', 'max_completion_tokens')}}
-        reranker = OpenAIController(dotenv_values(ROOT / '.env').get('OPENAI_API_KEY'), rank_config)
-        return RerankRetriever(dense, reranker, candidate_k=settings['candidate_k'])
-    return dense
+def validate_selection(selection_path, method, questions_path, root=ROOT):
+    selected = load(selection_path)
+    if method not in {selected['selected_method'], selected['baseline_method']}:
+        raise ValueError('Final evaluation permits only the baseline and selected method')
+    key = 'selected_config' if method == selected['selected_method'] else 'baseline_config'
+    if configuration(method, root) != selected[key]:
+        raise ValueError('Current configuration differs from the frozen selection')
+    if Path(questions_path).resolve() != (Path(root) / selected['evaluation_questions']).resolve():
+        raise ValueError('Use the frozen final benchmark file')
+    all_questions = load(questions_path)
+    if [q['id'] for q in all_questions if q['split'] == 'dev'] != selected['dev_question_ids']:
+        raise ValueError('Dev questions differ from selection inputs')
+    return selected
 
 
 def main():
@@ -131,8 +120,11 @@ def main():
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--summarize-only", action="store_true")
     parser.add_argument("--reviews", type=Path)
+    parser.add_argument("--selection", type=Path, help="Enforce frozen final configuration and benchmark")
     parser.add_argument("--retry-errors", action="store_true", help="Retry service errors or malformed reranker output; retain previous attempts")
     args = parser.parse_args()
+    if args.selection:
+        validate_selection(args.selection, args.method, args.questions)
     questions = [q for q in load(args.questions) if args.split == "all" or q["split"] == args.split]
     if not questions or len({q["id"] for q in questions}) != len(questions):
         raise ValueError("Empty questions or duplicate IDs")

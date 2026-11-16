@@ -30,4 +30,14 @@ Index một tài liệu thực tế từ **100 trang** có bảng, ảnh và bi�
 
 ![Các bước thử nghiệm trên dev và đánh giá trên test](assets/experiment-loop.svg)
 
-Nộp code, cách chạy, cấu hình, benchmark, trace và [báo cáo](report/individual/MSSV_HoTen.md). Thời gian ở [checkpoints](CHECKPOINTS.md) là gợi ý, có thể điều chỉnh theo lớp và phạm vi thử nghiệm.
+Nộp code, cách chạy, cấu hình, benchmark, trace và [báo cáo](report/individual/2A202603940_LeHienHieu.md). Thời gian ở [checkpoints](CHECKPOINTS.md) là gợi ý, có thể điều chỉnh theo lớp và phạm vi thử nghiệm.
+
+## Bài nộp cá nhân — 2A202603940
+
+- [Báo cáo cơ bản](report/individual/2A202603940_LeHienHieu.md).
+- [Cài đặt, dựng index và lệnh chạy](src/README.md); thư viện trong `requirements.txt`, cấu hình mẫu tại `.env.example`, PostgreSQL/pgvector tại `compose.yaml`.
+- Ba phương pháp: Dense, Hybrid Dense + TF-IDF/RRF, Dense + GPT-4o rerank.
+- [Cấu hình được chọn trên dev](src/configs/selected.json): rerank.
+- [Benchmark cuối](data/questions_final.json): 17 dev + 7 test mới; benchmark thí nghiệm cũ được giữ tại `data/questions.json`.
+- Test cuối: [baseline](results/final_dense/summary.json) và [cấu hình chọn](results/final_selected/summary.json). Mỗi thư mục có trace, nhãn và kết quả từng câu.
+- Phạm vi nộp hiện tại là phần cơ bản; phần nâng cao chưa thực hiện.

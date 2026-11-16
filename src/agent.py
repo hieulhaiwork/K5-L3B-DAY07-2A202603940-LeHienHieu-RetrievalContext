@@ -184,24 +184,30 @@ def run_agent(question, controller, retriever, config, *, query_id="manual", fil
     return trace
 
 
-def load_controller(root=ROOT):
-    config = json.loads((root / "src/configs/agent.json").read_text(encoding="utf-8"))
-    env = dotenv_values(root / ".env")
-    return OpenAIController(env.get("OPENAI_API_KEY"), config), config
+def load_controller(root=ROOT, method="dense"):
+    from .retrievers import configured_controller
+    return configured_controller(method, root)
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--question", required=True)
+    parser.add_argument("--method", choices=("dense", "hybrid", "rerank"))
     parser.add_argument("--query-id", default="manual")
     parser.add_argument("--filters", type=json.loads)
     parser.add_argument("--output", type=Path, required=True, help="New JSON trace file; existing files are protected")
     args = parser.parse_args()
     if args.output.exists():
         parser.error("Output already exists; choose a new trace filename")
-    controller, config = load_controller()
+    from .retrievers import build_retriever
+    selected_path = ROOT / "src/configs/selected.json"
+    selected = json.loads(selected_path.read_text(encoding="utf-8")) if selected_path.exists() else None
+    method = args.method or (selected["selected_method"] if selected else "dense")
+    controller, config = load_controller(method=method)
+    if args.method is None and selected and config != selected["selected_config"]:
+        raise ValueError("Current configuration differs from the frozen selection")
     with TemporaryDirectory(prefix="lab7-agent-") as cache:
-        retriever = from_project(cache_dir=Path(cache))
+        retriever = build_retriever(cache, method, config)
         try:
             profile = retriever.verify_index(ROOT / "data/chunks.json")
         except Exception as error:

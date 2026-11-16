@@ -1,0 +1,530 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "type": "condition",
+    "question": "In Microsoft Word, under what condition does the Headings tab in the Navigation pane show a document outline?",
+    "expected_answer": "The document must have headings applied to its sections and subsections.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 151,
+        "evidence": "This tab shows the outline of your document, but only if you have placed headings for each section and subsection (which you will learn more about in the section on Formatting Document Content in Microsoft Word)."
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "type": "direct",
+    "question": "In Microsoft Word, where do I go to set my own page margins instead of using a preset?",
+    "expected_answer": "Open Layout, select Margins, then choose Custom Margins at the bottom of the dropdown.",
+    "filter": {
+      "application_scope": "word"
+    },
+    "filter_origin": "The question explicitly specifies Microsoft Word.",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 155,
+        "evidence": "To adjust the margins of a page, go to the Layout tab. Select the Margins icon, and a drop-down menu will appear. The default margin is Normal (1 inch on all sides), but this can be adjusted via the prepopulated options, such as for different layouts with narrower margins. If you want to set your own margins, choose the Custom Margins option at the bottom of the drop-down menu."
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "According to the Word layout guidance, which page orientation works best when a table or graph would not fit well on a vertical page?",
+    "expected_answer": "Landscape, the horizontal page orientation.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 155,
+        "evidence": "The horizontal layout is known as landscape orientation, and works best for documents with tables and graphs that otherwise would not fit well on a vertical page."
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q04",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "Why might a team use double-spacing in a working Word document while collaborators are using Track Changes?",
+    "expected_answer": "It makes changes and edits more visible and makes revisions in progress easier to see.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 163,
+        "evidence": "However, double-spacing may be used in working documents, and can be useful when there are multiple collaborators and you are using Track Changes. This allows for better visibility for the changes or edits, and makes it easier to see the revisions in progress."
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q05",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "Why does the Word heading guidance advise against using color to indicate hierarchy levels?",
+    "expected_answer": "Color has no clear logical ranking and may be inaccessible to people with visual impairments or other accessibility needs.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 167,
+        "evidence": "In general, color should not be used to indicate levels in a hierarchy since this is neither logical (i.e., it is not clear why one color would be higher or lower than another) nor accessible (some colors are not readily conveyed to users who may be visually impaired or have other accessibility needs)."
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "type": "comparison",
+    "question": "In Microsoft Word, how does resolving a comment differ from deleting it?",
+    "expected_answer": "Deleting removes the comment completely; resolving retains it in a digital history stored with the document.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 171,
+        "evidence": "Deleting a comment removes it completely from the document, whereas resolving a comment retains the comment in a history stored digitally with the document."
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q07",
+    "split": "dev",
+    "type": "exception",
+    "question": "If someone types 'four' when they mean 'for', can they rely entirely on Word's spelling check to catch it? What should they do?",
+    "expected_answer": "No. The spelling check may not flag the correctly spelled but misused word; the author must still proofread the document.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 170,
+        "evidence": "It should be noted that spell-check will not always check when a word is misused. For example, if you have typed “four” instead of “for”, spell-check will not indicate a misspelled word. The document creator will still need to proofread the document and not rely entirely on the Spelling and Grammar check tool."
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "type": "condition",
+    "question": "In Word, why should body text and headings be assigned styles before applying a document theme?",
+    "expected_answer": "Styles identify the roles of the text, such as body text, titles and subtitles, so the theme knows how to format each part.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 176,
+        "evidence": "By choosing the style, you are coding the document so that Word knows how to format various sections. These codes tell Word which parts of the text are body text, titles, subtitles, and so on. Without these style codes, the theme won’t know how to apply itself to your document."
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q09",
+    "split": "dev",
+    "type": "direct",
+    "question": "When customizing a text watermark in Word, which option makes its text less visible?",
+    "expected_answer": "Choose Semitransparent.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 179,
+        "evidence": "There are a few options to alter the text’s appearance on the page. For instance, if you want to change the text to be less visible, choose Semitransparent."
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q10",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "In Google Docs, which paste option should I use to bring in text from a website without its original font, size or color?",
+    "expected_answer": "Use Paste without formatting.",
+    "filter": {
+      "application_scope": "google_docs"
+    },
+    "filter_origin": "The question explicitly specifies Google Docs.",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 181,
+        "evidence": "Paste without formatting is a useful tool for copying and pasting text only, without any of the source formatting (such as font, font size, or color). This is particularly helpful when copying and pasting from an email or website."
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "In Google Docs, how does applying heading styles affect the document outline as a heading hierarchy is built?",
+    "expected_answer": "Headings are added to the outline, and the outline reflects the hierarchy of the applied styles.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 188,
+        "evidence": "The heading text was also added to the document outline on the left. This is an important feature of styles in Docs. As you continue to apply styles within a hierarchy, the outline in the document pane will reflect that hierarchy."
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "type": "condition",
+    "question": "In Google Docs, I want to move an entire paragraph to the right rather than indent only its first line. Which command should I use?",
+    "expected_answer": "Click anywhere in the paragraph, then choose Format > Align & indent > Increase indent.",
+    "filter": {
+      "application_scope": "google_docs"
+    },
+    "filter_origin": "The question explicitly specifies Google Docs.",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 190,
+        "evidence": "But if you want to move the entire paragraph to the right, click anywhere in the paragraph and go to the Format menu, then hover over Align & indent, and lastly, select Increase indent (Figure 3.47)."
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q13",
+    "split": "dev",
+    "type": "comparison",
+    "question": "In Google Docs, which section break stays on the same page, and which starts a section on a new page?",
+    "expected_answer": "Section break (Continuous) stays on the same page; Section break (next page) starts a new section on a new page.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 195,
+        "evidence": "Select Section break (Continuous) if you want the break to stay on the same page, or Section break (next page) to start a new section on a new page, such as starting a new chapter."
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q14",
+    "split": "dev",
+    "type": "exception",
+    "question": "According to the Google Docs instructions, can I remove a section break by placing the cursor to its right and pressing Backspace? What is the required method?",
+    "expected_answer": "No. Place the cursor to the left of the section break and press Delete.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 196,
+        "evidence": "(Note that section breaks must be deleted using the Delete key from the left in Docs; you cannot put your cursor to the right of the section break and use the Backspace key to remove it.)"
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q15",
+    "split": "dev",
+    "type": "direct",
+    "question": "In Google Docs, which mode records collaborators' edits as suggestions, and how do they enable it from the Editing dropdown?",
+    "expected_answer": "Use Suggesting mode: open the Editing dropdown at the top right of the Docs window and select Suggesting.",
+    "filter": {
+      "application_scope": "google_docs"
+    },
+    "filter_origin": "The question explicitly specifies Google Docs.",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 203,
+        "evidence": "The way to do this is through Suggesting mode, as the chapter on Essentials of Software Applications for Business introduced. To turn on Suggesting mode, go to the top right of the Docs window and look for the drop-down menu that says Editing. As you click on it, select Suggesting, as Figure 3.62 shows."
+      }
+    ],
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q21",
+    "split": "dev",
+    "type": "insufficient_evidence",
+    "question": "In Microsoft Word, what VBA macro code accepts all tracked changes in the active document?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "expected_answer": "State that the provided corpus does not contain sufficient evidence to answer this question; do not invent the requested code, retention period, or quota.",
+    "gold": [],
+    "filter": null,
+    "absence_reason": "The corpus explains accepting tracked changes through the Review tab, but supplies no VBA code or macro programming instructions.",
+    "absence_check": {
+      "scope": "All 317 chunks across the 64 retained PDF pages in data/chunks.json; no claim about excluded pages or the full book.",
+      "method": "Scan the entire retained corpus for topic terms and inspect the related passages; assess whether they supply the specific requested information rather than relying on top-k retrieval.",
+      "term_checks": [
+        {
+          "pattern": "\\bvba\\b",
+          "matching_chunks": 0,
+          "matching_pages": []
+        },
+        {
+          "pattern": "\\bmacro\\w*",
+          "matching_chunks": 0,
+          "matching_pages": []
+        }
+      ],
+      "related_pages_reviewed": [
+        171,
+        172
+      ]
+    }
+  },
+  {
+    "id": "q22",
+    "split": "dev",
+    "type": "insufficient_evidence",
+    "question": "For a Word document stored in OneDrive, what is the guaranteed retention period in days for previous versions?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "expected_answer": "State that the provided corpus does not contain sufficient evidence to answer this question; do not invent the requested code, retention period, or quota.",
+    "gold": [],
+    "filter": null,
+    "absence_reason": "The corpus describes accessing and restoring versions, but gives no guaranteed OneDrive retention period in days. The reference to 500 versions concerns SharePoint version counts, not a OneDrive retention duration.",
+    "absence_check": {
+      "scope": "All 317 chunks across the 64 retained PDF pages in data/chunks.json; no claim about excluded pages or the full book.",
+      "method": "Scan the entire retained corpus for topic terms and inspect the related passages; assess whether they supply the specific requested information rather than relying on top-k retrieval.",
+      "term_checks": [
+        {
+          "pattern": "\\bretention\\b",
+          "matching_chunks": 0,
+          "matching_pages": []
+        },
+        {
+          "pattern": "\\bretain\\w*",
+          "matching_chunks": 2,
+          "matching_pages": [
+            171,
+            216
+          ]
+        },
+        {
+          "pattern": "\\bOneDrive\\b",
+          "matching_chunks": 2,
+          "matching_pages": [
+            207,
+            214
+          ]
+        }
+      ],
+      "related_pages_reviewed": [
+        207,
+        214,
+        216,
+        217
+      ]
+    }
+  },
+  {
+    "id": "f01",
+    "split": "test",
+    "question": "In Microsoft Word, what two ribbon commands can open the Navigation pane?",
+    "expected_answer": "On the View tab, check Navigation pane in the Show group; alternatively, select Find on the Home tab.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 151,
+        "evidence": "The Navigation pane is accessed directly by checking the box on the View tab in the Show command group. You can also get the Navigation pane by selecting Find from the Home tab."
+      }
+    ],
+    "filter": {
+      "application_scope": "word"
+    },
+    "filter_origin": "Application explicitly stated in the question."
+  },
+  {
+    "id": "f02",
+    "split": "test",
+    "question": "Which type of Restrict Editing setting in Microsoft Word can limit collaborators to making only tracked revisions?",
+    "expected_answer": "Editing restrictions.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 174,
+        "evidence": "The second option, Editing restrictions, limits the level of editing others can do—from none, to commenting only, to only tracked revisions."
+      }
+    ],
+    "filter": {
+      "application_scope": "word"
+    },
+    "filter_origin": "Application explicitly stated in the question."
+  },
+  {
+    "id": "f03",
+    "split": "test",
+    "question": "In Google Docs Suggesting mode, what do the check and cross in a suggestion comment box do?",
+    "expected_answer": "The check accepts the change; the cross rejects the change.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 203,
+        "evidence": "To accept the change, choose the check; to reject, choose the cross."
+      }
+    ],
+    "filter": {
+      "application_scope": "google_docs"
+    },
+    "filter_origin": "Application explicitly stated in the question."
+  },
+  {
+    "id": "f04",
+    "split": "test",
+    "question": "How can I display only named versions in the Google Docs version history sidebar?",
+    "expected_answer": "Use the Only show named versions option at the top of the sidebar.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 211,
+        "evidence": "You can toggle the unidentified versions on and off, on the top of the sidebar with the option Only show named versions, as you can see in Figure 3.68."
+      }
+    ],
+    "filter": {
+      "application_scope": "google_docs"
+    },
+    "filter_origin": "Application explicitly stated in the question."
+  },
+  {
+    "id": "f05",
+    "split": "test",
+    "question": "In Google Docs, how can I bring a paragraph from an older version into the newest version without restoring the entire older document?",
+    "expected_answer": "Open the older version and copy the needed paragraph using the right-click Copy command. Go to the newest version, place the cursor where the recovered paragraph should go, and use right-click Paste.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-workplace-software-skills-local-snapshot",
+        "page": 212,
+        "evidence": "In this case, you can go to the older version and look for the information that you want to keep, then right-click to show the context menu, and select Copy. Then, go to the newest version and place the cursor where you want the recovered paragraphs to be, and right-click to the context menu Paste."
+      }
+    ],
+    "filter": {
+      "application_scope": "google_docs"
+    },
+    "filter_origin": "Application explicitly stated in the question."
+  },
+  {
+    "id": "f06",
+    "split": "test",
+    "question": "What exact keyboard shortcut cycles through only unresolved comments in Microsoft Word on macOS?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "expected_answer": "State that the provided corpus does not contain enough evidence; do not invent a shortcut or a numerical limit.",
+    "gold": [],
+    "filter": null,
+    "absence_reason": "The retained corpus describes comment buttons and general keyboard shortcuts but gives no macOS shortcut for cycling only through unresolved comments.",
+    "absence_check": {
+      "scope": "All 317 chunks on the 64 retained PDF pages, not the full book.",
+      "method": "Scan the entire corpus for topic terms and inspect related passages for the specific requested information.",
+      "term_checks": [
+        {
+          "pattern": "unresolved",
+          "matching_chunks": 0,
+          "matching_pages": []
+        },
+        {
+          "pattern": "next comment",
+          "matching_chunks": 0,
+          "matching_pages": []
+        },
+        {
+          "pattern": "previous comment",
+          "matching_chunks": 0,
+          "matching_pages": []
+        },
+        {
+          "pattern": "keyboard shortcut",
+          "matching_chunks": 3,
+          "matching_pages": [
+            152,
+            181,
+            198
+          ]
+        }
+      ],
+      "related_pages_reviewed": [
+        150,
+        170,
+        171,
+        172,
+        152
+      ]
+    }
+  },
+  {
+    "id": "f07",
+    "split": "test",
+    "question": "What is the maximum number of named versions allowed for one Google Docs document?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "expected_answer": "State that the provided corpus does not contain enough evidence; do not invent a shortcut or a numerical limit.",
+    "gold": [],
+    "filter": null,
+    "absence_reason": "The retained corpus explains naming and filtering versions but does not state a maximum number of named Google Docs versions. The SharePoint version count is not a Google Docs named-version limit.",
+    "absence_check": {
+      "scope": "All 317 chunks on the 64 retained PDF pages, not the full book.",
+      "method": "Scan the entire corpus for topic terms and inspect related passages for the specific requested information.",
+      "term_checks": [
+        {
+          "pattern": "named versions",
+          "matching_chunks": 2,
+          "matching_pages": [
+            211
+          ]
+        },
+        {
+          "pattern": "\\bmaximum\\b",
+          "matching_chunks": 0,
+          "matching_pages": []
+        },
+        {
+          "pattern": "\\blimit\\w*",
+          "matching_chunks": 2,
+          "matching_pages": [
+            155,
+            174
+          ]
+        }
+      ],
+      "related_pages_reviewed": [
+        211,
+        216
+      ]
+    }
+  }
+]

@@ -1,0 +1,109 @@
+{
+  "scope": "basic",
+  "selected_method": "rerank",
+  "baseline_method": "dense",
+  "selection_split": "dev",
+  "criteria_in_priority_order": [
+    "grounded_mean",
+    "context_evidence_rate",
+    "evidence_hit3",
+    "abstention_correct",
+    "hit1"
+  ],
+  "cost_policy": "Report the additional model cost as a tradeoff; no tuning from test results.",
+  "dev_question_ids": [
+    "q01",
+    "q02",
+    "q03",
+    "q04",
+    "q05",
+    "q06",
+    "q07",
+    "q08",
+    "q09",
+    "q10",
+    "q11",
+    "q12",
+    "q13",
+    "q14",
+    "q15",
+    "q21",
+    "q22"
+  ],
+  "dev_comparison": {
+    "dense": {
+      "grounded_mean": 1.9333333333333333,
+      "context_evidence_rate": 1.0,
+      "evidence_hit3": 1.0,
+      "abstention_correct": 1.0,
+      "hit1": 0.9333333333333333,
+      "known_cost_usd": 0.07658000000000002
+    },
+    "hybrid": {
+      "grounded_mean": 1.9333333333333333,
+      "context_evidence_rate": 1.0,
+      "evidence_hit3": 1.0,
+      "abstention_correct": 1.0,
+      "hit1": 0.8666666666666667,
+      "known_cost_usd": 0.07754000000000001
+    },
+    "rerank": {
+      "grounded_mean": 1.9333333333333333,
+      "context_evidence_rate": 1.0,
+      "evidence_hit3": 1.0,
+      "abstention_correct": 1.0,
+      "hit1": 1.0,
+      "known_cost_usd": 0.3958475
+    }
+  },
+  "selected_config": {
+    "provider": "OpenAI",
+    "model": "gpt-4o",
+    "temperature": 0,
+    "max_completion_tokens": 1024,
+    "retrieval_method": "rerank",
+    "top_k": 3,
+    "max_searches": 1,
+    "context_budget_chars": 4000,
+    "context_selection": "rank order, unique IDs, whole chunks only",
+    "query_policy": "original question verbatim",
+    "prices_per_million_tokens": {
+      "input": 2.5,
+      "cached_input": 1.25,
+      "output": 10
+    },
+    "pricing_source": "https://developers.openai.com/api/docs/models/gpt-4o",
+    "pricing_checked_on": "2026-11-16",
+    "max_finalization_attempts": 2,
+    "rerank": {
+      "candidate_k": 20,
+      "model": "gpt-4o",
+      "temperature": 0,
+      "max_completion_tokens": 2048,
+      "ranking": "listwise"
+    }
+  },
+  "baseline_config": {
+    "provider": "OpenAI",
+    "model": "gpt-4o",
+    "temperature": 0,
+    "max_completion_tokens": 1024,
+    "retrieval_method": "dense",
+    "top_k": 3,
+    "max_searches": 1,
+    "context_budget_chars": 4000,
+    "context_selection": "rank order, unique IDs, whole chunks only",
+    "query_policy": "original question verbatim",
+    "prices_per_million_tokens": {
+      "input": 2.5,
+      "cached_input": 1.25,
+      "output": 10
+    },
+    "pricing_source": "https://developers.openai.com/api/docs/models/gpt-4o",
+    "pricing_checked_on": "2026-11-16",
+    "max_finalization_attempts": 2
+  },
+  "evaluation_questions": "data/questions_final.json",
+  "prior_test_role": "exploratory; retained in data/questions.json",
+  "test_policy": "New holdout questions evaluated only after this selection was frozen."
+}

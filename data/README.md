@@ -7,3 +7,11 @@ Các file `example_*.json` chỉ minh họa định dạng, không đủ để n
 - **Câu thiếu evidence:** `id`, `split`, `question`, `answerable: false`, `expected_behavior: "search_and_abstain"`, `absence_reason`. Xem `agent_cases_example.json`.
 
 Không đưa `gold` hoặc nhãn đáp án vào model và retrieval tool. Ghi nguồn dữ liệu và quyền sử dụng. Cách chuyển một số định dạng Day 6: [starter/README.md](../starter/README.md).
+
+## Dữ liệu dùng trong bài nộp
+
+- `chunks.json`: 317 chunks trên 64 trang PDF được chọn từ *Workplace Software and Skills* của OpenStax, giấy phép CC BY-NC-SA 4.0. [PDF nguồn](https://assets.openstax.org/oscms-prodcms/media/documents/Workplace_Software_and_Skills_-_WEB_IlfJtcP.pdf). Attribution và quyền sử dụng được giữ trong metadata từng chunk.
+- `chunks_B.jsonl`: snapshot đầu vào từ Lab 6; chuyển sang schema Lab 7 bằng `src/convert_data/convert_chunks.py`, giữ nguyên giá trị ID và nội dung.
+- `questions.json`: 24 câu của các lượt thí nghiệm ban đầu.
+- `questions_final.json`: cùng 17 dev, thay 7 test cũ bằng test mới sau khi đã chọn cấu hình. Năm câu có đáp án và hai câu thiếu evidence đều có nguồn/nhãn hoặc cách kiểm tra thiếu thông tin.
+- ID nguồn và số trang PDF giữ nguyên từ Lab 6; đường dẫn PDF trong chunk là provenance của nguồn cũ. Index có thể dựng lại từ `chunks.json` mà không cần tải PDF.

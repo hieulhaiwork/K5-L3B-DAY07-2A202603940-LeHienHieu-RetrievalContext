@@ -1,3 +1,57 @@
+# Chạy và tái lập bài nộp cơ bản
+
+Cấu hình được chọn là **Dense + GPT-4o rerank**, ghi tại `src/configs/selected.json`. Kết quả dev của ba phương pháp nằm trong `results/dense_baseline`, `results/hybrid`, `results/rerank`. Kết quả test cuối nằm riêng trong `results/final_dense` và `results/final_selected`.
+
+## Tái lập trên máy mới
+
+Dùng Python 3.11+ và Docker Desktop. Trong thư mục gốc repo:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+if (-not (Test-Path .env)) { Copy-Item .env.example .env }
+```
+
+Điền `OPENAI_API_KEY`, `OPENROUTER_API_KEY` trong `.env`. Cấu hình mẫu dùng PostgreSQL riêng ở cổng 55434; nếu đổi port/password, cập nhật cả `DATABASE_URL`. Máy đang có DB Lab 6 có thể giữ nguyên `DATABASE_URL` hiện tại.
+
+```powershell
+docker compose up -d --wait
+python -X utf8 -B -m src.rebuild_index
+python -X utf8 -B -m src.rebuild_index --check-only
+python -X utf8 -B -m unittest discover -s tests -v
+```
+
+Dựng mới index dùng 317 chunks được chia sẻ tại `data/chunks.json`, gọi embedding tài liệu thật theo batch 32 (10 requests), giữ nguyên ID/nguồn/trang/metadata. Không cần PDF để tái tạo từ snapshot. Index B có sẵn được đối chiếu và giữ nguyên; dữ liệu không khớp sẽ báo lỗi. Query embedding luôn tương thích model 2.048 chiều và prefix của Lab 6.
+
+## Cấu hình chọn và đánh giá cuối
+
+Tiêu chí chọn chỉ dùng dev: grounded answer, Context Evidence Rate, Evidence Hit@3, abstention, rồi Hit@1 khi hòa. Rerank đạt Hit@1 15/15 so với Dense 14/15; chi phí model bổ sung được báo như đánh đổi. Cấu hình được khóa trước khi đánh giá trên test mới.
+
+- `data/questions.json`: benchmark thí nghiệm ban đầu; test cũ chỉ giữ để đối chiếu lịch sử.
+- `data/questions_final.json`: giữ nguyên 17 câu dev và dùng 7 câu test mới (`f01–f07`).
+- `src/configs/selected.json`: tiêu chí, kết quả dev và snapshot cấu hình chọn/baseline.
+- `--selection`: từ chối cấu hình hoặc file benchmark khác với snapshot đã khóa.
+
+Chạy lại đánh giá cuối, dùng thư mục output mới để giữ kết quả đã nộp:
+
+```powershell
+python -X utf8 -B -m src.benchmark --method dense --questions data/questions_final.json --split test --selection src/configs/selected.json --output results/reproduction/final_dense
+python -X utf8 -B -m src.benchmark --method rerank --questions data/questions_final.json --split test --selection src/configs/selected.json --output results/reproduction/final_selected
+```
+
+Dev của cả ba phương pháp có thể tái chạy bằng `--questions data/questions_final.json --split dev --method dense|hybrid|rerank`, mỗi phương pháp dùng thư mục output riêng, bỏ `--selection` cho lượt thí nghiệm dev. Lỗi API được lưu để chạy lại bằng `--retry-errors`; giữ nguyên cấu hình. Hạn mức OpenRouter được tính cho cả dựng index và query embedding.
+
+Demo agent mặc định dùng cấu hình được chọn; có thể chỉ định `--method dense`, `hybrid` hoặc `rerank`:
+
+```powershell
+python -X utf8 -B -m src.agent --question "How do collaborators review changes in a document?" --output results/demo.json
+```
+
+Không đưa gold vào model. Sau khi đối chiếu từng câu/citation với context, điền `reviews.json` cho đúng lượt trace, rồi dùng `--summarize-only --reviews <file>` để tổng hợp không gọi thêm API. Các thư mục kết quả đã nộp có đủ trace, nhãn và summary; có thể đọc mà không cần API key.
+
+---
+
 # Code
 
 Đặt code tại đây hoặc mở rộng [starter](../starter/README.md). Agent trong `src/agent.py` đã kết nối model điều phối GPT-4o và Dense retriever thật.
@@ -43,7 +97,7 @@ Model gọi `search` bằng câu hỏi gốc, sau đó chọn `finish_answer` ho
 Chạy một câu ngoài benchmark và lưu trace mới:
 
 ```powershell
-python -X utf8 -B -m src.agent --question "In Microsoft Word, how do I add a comment to selected text?" --output results/agent_manual.json
+python -X utf8 -B -m src.agent --method dense --question "In Microsoft Word, how do I add a comment to selected text?" --output results/agent_manual.json
 ```
 
 File output là JSON array để dùng với công cụ tổng hợp của starter. File có sẵn sẽ không bị ghi đè. CLI kiểm tra index trước khi gọi model và dùng cache embedding tạm thời. Các lần chạy nhiều câu nên dùng lại retriever/cache và gọi `run_agent` để tránh gọi embedding trùng.
